@@ -1,0 +1,340 @@
+body{
+
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+
+/*header items photo and name*/
+header{
+
+    text-align: center;
+    background-color: #164e70;
+    color: white; /*text color*/
+    position: relative; /*mantem o hamburguer no lado direito*/
+}
+
+.top-menu{
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.top-menu img{
+
+    width: 20vw;
+    max-width: 150px;
+
+}
+/*navegation items (menu)*/
+nav{
+
+    background-color: black;
+    
+    
+}
+
+nav ul{
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+nav ul li{
+
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a{
+
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+
+    color: rgb(238, 196, 8);
+}
+
+/*hamburguer*/
+.hamburguer{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburguer span{
+
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+/*main*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+/*course work*/
+.coursework{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid transparence;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 0px;
+    
+}
+.coursework h2{
+
+    background-color: #164e70;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+}
+.coursework ul{
+
+    margin-left: 10px;
+    margin-bottom: 200px;
+    
+
+}
+
+.coursework ul li{
+
+    text-align: left;
+    
+}
+
+.place{
+    flex: 1;
+    border: 2px solid transparence;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+.place h2{
+
+    background-color: #164e70;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+}
+
+.place img{
+    display: block;
+    width: 300px;
+    height: auto;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.coursework, .place{
+
+    min-height: 380px;
+}
+
+.certificates{
+    width: 100%;
+    border: 2px solid transparence;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 0px;
+    
+}
+
+.certificates h2{
+
+    background-color: #164e70;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+}
+
+/*cards container*/
+
+.course-list{
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 25px;
+}
+
+/*card individual- element created in js*/
+.course-card{
+    border: 2px solid #164e70;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-card h3 {
+    color: #021520;
+}
+
+.course-card p {
+    margin: 10px 0;
+}
+
+/*completed courses*/
+
+.completed {
+    background-color: #0e89c2; /* Verde claro */
+    border-color: #0e89c2;
+    color: white;
+    
+}
+/* Filtros */
+.filter-buttons {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #073653;
+    border: 2px solid transparence;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #0e89c2;
+}
+
+footer{
+    width: 100%;
+    background-color: #164e70;
+    gap:10px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 12px;
+    
+}
+
+footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+footer img{
+
+    width: 50px;
+    height: auto;
+
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    main{
+        
+        flex-direction: column;
+        
+    }
+
+    .coursework, .place, .certificates{
+
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .coursework ul {
+        margin-bottom: 20px; /* Ajustar margens inferiores em telas menores */
+    }
+    .coursework ul{
+
+        margin-left: 10px;
+        margin-bottom: 200px;
+        
+        }
+
+
+    .hamburguer {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .course-card{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .course-list{
+
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,186 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6f7ff; /* Azul muito claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho e rodapé */
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #00264d; /* Azul escuro */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+header{
+
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamanho maior para destaque */
+}
+
+/* Estilo do menu hambúrguer */
+.hamburguer {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Estilo do main */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo dos cartões */
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaçamento maior entre os cartões */
+    justify-content: center;
+}
+
+/* Estilo de cada cartão */
+.card {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 12px; /* Borda arredondada */
+    text-align: center;
+    padding: 25px; /* Espaçamento interno */
+    width: 320px; /* Largura fixa para os cartões */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+    transition: transform 0.3s; /* Transição suave para hover */
+}
+
+input,
+select,
+textarea,
+button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.active {
+    color: #fff;
+    background-color: #f8a602; /* Cor do botão ativo */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre botões */
+    padding: 10px;
+}
+
+/* Estilo geral dos botões */
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: #0059b3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Permite que o botão cresça ou diminua conforme necessário */
+    margin: 5px; /* Margem ao redor dos botões */
+}
+
+/* Container dos botões */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões "quebrem" em novas linhas em telas menores */
+    justify-content: center; /* Centraliza os botões */
+    gap: 5px; /* Espaçamento entre os botões */
+    margin-bottom: 20px; /* Espaço inferior entre os botões e o conteúdo */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #f8a602; /* Azul escuro ao passar o mouse */
+    border: 5px;
+}
+
+/* Estilo do h2 dentro dos cartões */
+.card h2 {
+    color: #003366; /* Azul escuro */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estilo da imagem dentro dos cartões */
+.card img {
+    width: 100%; /* Imagem ocupa a largura do cartão */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .button-container {
+        justify-content: space-around; /* Melhor distribuição em telas médias */
+    }
+    button {
+        flex: 1 1 35%; /* Botões ocupam cerca de metade da tela em dispositivos médios */
+    }
+}
+
+@media (max-width: 768px) {
+   
+    
+    nav.button-container {
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #00264d;
+    }
+    nav.button-container.active {
+        display: flex; /* Mostra o menu de botões quando ativo */
+    }
+
+    
+    
+    .hamburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    button {
+        width: 100%;
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+    
+    .card {
+        width: 100%; /* Largura maior em telas pequenas */
+        justify-content: center;
+        align-items: center;
+    }
+}

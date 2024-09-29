@@ -4,7 +4,7 @@
       "address": "123 Main St, Tech City, TX 75001",
       "phone": "(123) 456-7890",
       "website": "https://alphatech.com",
-      "icon": "images/alpha-tech-logo.png",
+      "icon": "/WDD231/chamber/images/nuances.png",
       "membershipLevel": 3,
       "additionalInfo": {
         "description": "Leading provider of IT consulting and software solutions.",

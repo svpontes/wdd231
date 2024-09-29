@@ -92,7 +92,7 @@ body {
 .social-icons a::after {
   content: '';
   display: block;
-  background-image: url('/WDD231/chamber/images/face-hover.png'); /* Substitua pelo caminho da sua imagem hover */
+  background-image: url('./images/face-hover.png'); /* Substitua pelo caminho da sua imagem hover */
   background-size: cover; /* Faz com que a imagem cubra o espaço */
   width: 40px; /* O mesmo tamanho que a imagem original */
   height: 40px; /* O mesmo tamanho que a imagem original */
@@ -109,15 +109,15 @@ body {
 
 /* Se você tiver ícones diferentes para cada rede social */
 .social-icons a:nth-child(1)::after {
-  background-image: url('/WDD231/chamber/images/face-hover-icon.png');
+  background-image: url('./images/face-hover-icon.png');
 }
 
 .social-icons a:nth-child(2)::after {
-  background-image: url('/WDD231/chamber/images/twitter-hover-icon.png');
+  background-image: url('./images/twitter-hover-icon.png');
 }
 
 .social-icons a:nth-child(3)::after {
-  background-image: url('/WDD231/chamber/images/insta-hover-icon.png');
+  background-image: url('./images/insta-hover-icon.png');
 }
 
 
@@ -261,7 +261,7 @@ footer p {
   margin-right: 60px;
 }
 main {
-  background-image: url('/WDD231/chamber/images/background.png'); /* Substitua pelo caminho da sua imagem */
+  background-image: url('./images/background.png'); /* Substitua pelo caminho da sua imagem */
   background-size:contain; /* Faz com que a imagem cubra toda a área */
   background-position: right; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Evita que a imagem se repita */

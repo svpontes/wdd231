@@ -3,68 +3,81 @@
 document.getElementById('lastModified').textContent = `(Last modified: ${document.lastModified})`;
 
 // Toggle the mobile menu
-const hamburger = document.querySelector('.hamburger');
-const closeBtn = document.querySelector('.close');
-const menuContainer = document.querySelector('.menu-container');
-
-hamburger.addEventListener('click', () => {
-  menuContainer.classList.add('menu-open');
-});
-
-closeBtn.addEventListener('click', () => {
-  menuContainer.classList.remove('menu-open');
-});
-
-//grid elements cards
-
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const membersContainer = document.getElementById('members-container');
     const gridViewButton = document.getElementById('grid-view');
     const listViewButton = document.getElementById('list-view');
-  
+    const directoryJSON = '/WDD231/chamber/data/member.json'; // Caminho do JSON
+
     async function fetchMembers() {
-      try {
-        const response = await fetch('WDD231/chamber/data/member.json');
-        const members = await response.json();
-        renderMembers(members);
-      } catch (error) {
-        console.error('Error fetching members:', error);
-      }
+        try {
+            const response = await fetch(directoryJSON);
+            const members = await response.json();
+            renderMembers(members);
+        } catch (error) {
+            console.error('Error fetching members:', error);
+        }
     }
-  
-    function renderMembers(members) {
-      membersContainer.innerHTML = ''; // Limpa o contêiner
-  
-      members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('member-card');
-  
-        memberCard.innerHTML = `
-          <img src="${member.icon}" alt="${member.name} Logo">
-          <h2>${member.name}</h2>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-          <p>Membership Level: ${member.membershipLevel}</p>
-          <p>${member.additionalInfo.description}</p>
-        `;
-        
-        membersContainer.appendChild(memberCard);
-      });
-    }
-  
+
+    const renderMembers = (members) => {
+        membersContainer.innerHTML = ''; // Limpa o contêiner
+
+        members.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+
+            // Criação dos elementos
+            const memberImg = document.createElement('img');
+            memberImg.src = member.icon;
+            memberImg.alt = `${member.name} Logo`;
+
+            const memberName = document.createElement('h2');
+            memberName.textContent = member.name;
+
+            const memberAddress = document.createElement('p');
+            memberAddress.textContent = member.address;
+
+            const memberPhone = document.createElement('p');
+            memberPhone.textContent = member.phone;
+
+            const memberWebsite = document.createElement('p');
+            const websiteLink = document.createElement('a');
+            websiteLink.href = member.website;
+            websiteLink.target = "_blank";
+            websiteLink.textContent = "Visit Website";
+            memberWebsite.appendChild(websiteLink);
+
+            const membershipLevel = document.createElement('p');
+            membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
+
+            const additionalInfo = document.createElement('p');
+            additionalInfo.textContent = member.additionalInfo.description;
+
+            // Adiciona os elementos ao card
+            memberCard.appendChild(memberImg);
+            memberCard.appendChild(memberName);
+            memberCard.appendChild(memberAddress);
+            memberCard.appendChild(memberPhone);
+            memberCard.appendChild(memberWebsite);
+            memberCard.appendChild(membershipLevel);
+            memberCard.appendChild(additionalInfo);
+
+            membersContainer.appendChild(memberCard);
+        });
+    };
+
     gridViewButton.addEventListener('click', () => {
-      membersContainer.classList.add('grid-view');
-      membersContainer.classList.remove('list-view');
+        membersContainer.classList.add('grid-view');
+        membersContainer.classList.remove('list-view');
+        fetchMembers(); // Atualiza os membros ao mudar para grade
     });
-  
+
     listViewButton.addEventListener('click', () => {
-      membersContainer.classList.add('list-view');
-      membersContainer.classList.remove('grid-view');
+        membersContainer.classList.add('list-view');
+        membersContainer.classList.remove('grid-view');
+        fetchMembers(); // Atualiza os membros ao mudar para lista
     });
-  
+
     // Chama a função para buscar os membros ao carregar a página
     fetchMembers();
-  });
-  
+});

@@ -307,10 +307,13 @@ footer p.copyrigths {
 }
 
 /*hamburguer em telas maiores*/
-.hamburger, .close {
+.hamburger {
   display: none; /* Esconde os botões de hambúrguer e fechar por padrão */
 }
 
+.close {
+  display: none; /* Esconde os botões de hambúrguer e fechar por padrão */
+}
 /* Responsividade */
 @media (max-width: 768px) {
   nav.menu {

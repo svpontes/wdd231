@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
   background-color: white; /* Define a cor de fundo do corpo como branco */
   color: #333; /* Define a cor do texto como um tom de cinza escuro */
-  background-image: url('/images/background-transparente.png'); /* Define a imagem de fundo */
+  background-image: url('/chamber/images/background-transparente.png'); /* Define a imagem de fundo */
   background-size: contain; /* Faz com que a imagem cubra todo o elemento */
   background-position: right; /* Alinha a imagem de fundo à direita */
   background-repeat: no-repeat; /* Não repete a imagem de fundo */
@@ -34,8 +34,8 @@ nav.menu.show {
   position: absolute; /* Mantém o menu no fluxo do documento */
   top: 50px; /* Define a distância do topo */
   right: 0; /* Alinha o menu à direita */
-  width: 100%; /* Faz o menu ocupar toda a largura */
-  background-color: white; /* Cor de fundo para o menu */
+  width: 50%; /* Faz o menu ocupar toda a largura */
+  background-color: rgba(255, 102, 0, 0.9); /* Laranja com 80% de opacidade */
   z-index: 1000; /* Garante que o menu fique acima de outros elementos */
   padding: 20px; /* Espaçamento interno do menu */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
@@ -118,7 +118,7 @@ nav.menu ul li a:hover {
 }
 
 .hamburger {
-  color: #cc7a00; /* Define a cor do botão hambúrguer como laranja */
+  color: #ff6600; /* Define a cor do botão hambúrguer como laranja */
 }
 
 .close {
@@ -293,7 +293,7 @@ footer .menu-footer ul li a {
 }
 
 footer .menu-footer ul li a:hover {
-  color: #ff9900; /* Muda a cor do texto dos links no rodapé ao passar o mouse */
+  color: #ff6600; /* Muda a cor do texto dos links no rodapé ao passar o mouse */
 }
 
 footer p.copyrigths {
@@ -336,7 +336,6 @@ footer p.copyrigths {
   nav.menu ul {
       flex-direction: column; /* Exibe os itens do menu em coluna no mobile */
       align-items: center; /* Centraliza os itens no menu */
-      background-color: rgb(242, 18, 18), .98; /* Opcional: adicionar fundo ao menu no mobile */
       width: 100%;
       padding: 10px 0;
   }
@@ -344,6 +343,9 @@ footer p.copyrigths {
   nav.menu ul li {
       margin-right: 0; /* Remove a margem lateral no mobile */
       margin-bottom: 10px; /* Adiciona espaçamento inferior entre itens */
+  }
+  nav.menu ul li a:hover {
+    color: white; /* Muda a cor do link ao passar o mouse */
   }
   
   .logo img {
@@ -423,7 +425,7 @@ footer p.copyrigths {
   nav.menu {
       display: none; /* Esconde o menu por padrão em telas menores */
       flex-direction: column; /* Alinha os itens verticalmente quando exibido */
-      background-color: white; /* Cor de fundo para o menu */
+      background-color: #ff6600; /* Cor de fundo para o menu */
       position: absolute; /* Posiciona o menu */
       top: 50px; /* Define a distância do topo da página */
       right: 0;
@@ -435,12 +437,14 @@ footer p.copyrigths {
   .hamburger {
       display: block; /* Exibe o ícone do hambúrguer em telas menores */
       cursor: pointer; /* Altera o cursor para indicar clicável */
+      
   }
 
   .close {
       display: none; /* Esconde o ícone de fechar inicialmente */
       font-size: 30px;
       cursor: pointer; /* Altera o cursor para indicar clicável */
+      margin-bottom: 20px;
   }
 
   /* Quando a classe 'show' é aplicada, o menu aparece */

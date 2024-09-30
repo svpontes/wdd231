@@ -25,6 +25,18 @@ const cards = document.querySelector("#cards"); // Seleciona o contêiner para o
 const gridButton = document.querySelector("#gridView"); // Botão de grid
 const listButton = document.querySelector("#listView"); // Botão de lista
 
+// Define que a página carregue no estilo "list-view"
+window.addEventListener('DOMContentLoaded', () => {
+    cards.classList.add("list-view"); // Adiciona a classe list-view ao carregar a página
+    cards.classList.remove("grid-view"); // Garante que o grid-view não esteja aplicado por padrão
+
+    // Esconde as imagens ao carregar no modo list-view
+    const images = cards.querySelectorAll("img");
+    images.forEach(img => {
+        img.style.display = 'none'; // Esconde as imagens ao carregar
+    });
+});
+
 async function getCompaniesData(directoryJSON) {
     try {
         const response = await fetch(directoryJSON);

@@ -8,7 +8,7 @@
   <meta name="author" content="Sergio Vieira Pontes">
   <link rel="icon" href="/WDD231/chamber/images/logo-favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/directory-style.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <!-- Open Graph Meta Tags (para Facebook e outras redes sociais) -->
   <meta property="og:site_name" content="WDD231 Web Frontend Development I - Project Chamber of Commerce"/>
   <meta property="og:title" content="Sergio Pontes - Project Chamber fo Commerce -Portfolio of Web Frontend Development I" />
@@ -17,12 +17,11 @@
   <meta property="og:url" content="https://svpontes.github.io/wdd231/chamber/directory.html" />
   <meta property="og:type" content="website" />
   <!--javascript-->
-  <script defer src="./scripts/script.js"></script>
+  <script defer src="./scripts/scripts.js"></script>
   
 </head>
 <body>
-
-  <!-- Header Section -->
+     <!-- Header Section -->
   <header>
     <div class="menu-container">
       <!-- Logo as Image -->
@@ -51,16 +50,31 @@
 
   <!-- Main content for mobile -->
   <main>
+    
     <div class="mobile-join">
       <button class="join-btn">Contact Us</button>
     </div>
-    <h1>Members</h1>
-        <div>
-            <button id="grid-view">Grid View</button>
-            <button id="list-view">List View</button>
+    
+    <h1>Business Directory</h1>
+    
+        
+        <div id="members-container" class="grid-view"></div>
+        <div id="toggleView">
+            <button id="gridView" type="button">
+                <img src="images/grid-view.png" alt="Toggle to grid view" width="65" height="auto" loading="lazy">
+            </button>
+            <button id="listView" type="button">
+                <img src="images/list-view.png" alt="Toggle to list view" width="65" height="auto" loading="lazy">
+            </button>
         </div>
-        <div id="members-container" class="grid-view"></div> <!-- Contêiner para os membros -->
-  </main>
+        <div>
+            <article id="cards" class="list">
+                
+
+            </article>
+        </div>
+        
+    </main>
 
   <!-- Footer Section -->
 <footer>
@@ -72,8 +86,8 @@
     </div>
     <div class="menu-footer">
         <img src="./images/logo-white.png" alt="Chamber Logo">
-        <p>| NAZARÉ  Chamber of Commerce. All rights reserved.</p>
-        <p class="update-modification" id="lastModified"></p>
+        
+        
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Directory</a></li>
@@ -82,12 +96,12 @@
             <li><a href="#">Terms of Use</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Coockies settings</a></li>
-            
          
         </ul>
         
     </div>
-    <p class="copyrigths">&copy; <span id="current-year">2024</span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes </p>
+    <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes </p>
+    <p class="update-modification" id="lastModified"></p>
     
 </footer>
 

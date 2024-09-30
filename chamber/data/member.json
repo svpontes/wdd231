@@ -1,14 +1,26 @@
 [
+  {
+    "name": "SURF Village",
+    "address": "230 North, Moon City, LA 12100",
+    "phone": "(720) 999-3456",
+    "website": "https://surfvillage.com",
+    "icon": "./images/surf.png",
+    "membershipLevel": 2,
+    "additionalInfo": {
+    "description": "Personal training surf - kids and adults.",
+    "foundingYear": 2018
+     }
+  },
     {
       "name": "Nuances",
       "address": "123 Main St, Tech City, TX 75001",
       "phone": "(123) 456-7890",
       "website": "https://www.nuancesrequinte.com/",
-      "icon": "/WDD231/chamber/images/nuances.png",
+      "icon": "./images/nuancescolor.png",
       "membershipLevel": 3,
       "additionalInfo": {
-        "description": "Leading provider of IT consulting and software solutions.",
-        "foundingYear": 2005
+      "description": "Leading provider of IT consulting and software solutions.",
+      "foundingYear": 2005
       }
     },
     {
@@ -16,11 +28,11 @@
       "address": "456 Oak Rd, Green Valley, CA 90210",
       "phone": "(234) 567-8910",
       "website": "https://greenearth.com",
-      "icon": "/WDD231/chamber/images/p7.png",
+      "icon": "./images/p7color.png",
       "membershipLevel": 2,
       "additionalInfo": {
-        "description": "Specialists in sustainable landscaping and garden design.",
-        "foundingYear": 2010
+      "description": "Specialists in sustainable landscaping and garden design.",
+      "foundingYear": 2010
       }
     },
     {
@@ -28,23 +40,23 @@
       "address": "789 Ocean Blvd, Sun City, FL 32004",
       "phone": "(345) 678-9012",
       "website": "https://bluehorizontravel.com",
-      "icon": "/WDD231/chamber/images/m.png",
+      "icon": "./images/m.png",
       "membershipLevel": 1,
       "additionalInfo": {
-        "description": "Vacation planning and travel services for all destinations.",
-        "foundingYear": 2000
+      "description": "Vacation planning and travel services for all destinations.",
+      "foundingYear": 2000
       }
     },
     {
       "name": "Estevas Garden",
       "address": "321 Bridge St, Bay Area, CA 94105",
       "phone": "(456) 789-0123",
-      "website": "https://estevasgarden.netlify.app/",
-      "icon": "/WDD231/chamber/images/estevas.png",
+      "website": "http://www.estevasgarden.netlify.app/",
+      "icon": "./images/estevascolor.png",
       "membershipLevel": 3,
       "additionalInfo": {
-        "description": "Residential and commercial construction services.",
-        "foundingYear": 1998
+      "description": "Residential and commercial construction services.",
+      "foundingYear": 1998
       }
     },
     {
@@ -52,36 +64,38 @@
       "address": "654 Armor Ave, Defense City, TX 76001",
       "phone": "(567) 890-1234",
       "website": "https://www.target.com/c/fly-fishing-gear-water-sports-activities-outdoors/-/N-kkyk8",
-      "icon": "/WDD231/chamber/images/flytarget.png",
+      "icon": "./images/flytargetcolor.png",
       "membershipLevel": 2,
       "additionalInfo": {
-        "description": "High-tech security solutions for businesses and homes.",
-        "foundingYear": 2015
+      "description": "High-tech security solutions for businesses and homes.",
+      "foundingYear": 2015
       }
     },
     {
       "name": "usxpressmoving",
       "address": "987 Orchard St, Farmville, OH 45005",
       "phone": "(678) 901-2345",
-      "website": "https://usxpressmoving.com/",
-      "icon": "/WDD231/chamber/images/usxpressmoving.png",
+      "website": "https://www.usxpressmoving.com/",
+      "icon": "./images/usxpressmovingcolor.png",
       "membershipLevel": 1,
       "additionalInfo": {
-        "description": "Supplier of organic and locally grown produce.",
-        "foundingYear": 2012
+      "description": "Supplier of organic and locally grown produce.",
+      "foundingYear": 2012
       }
     },
     {
       "name": "gspm group",
       "address": "111 Workout Dr, Fit City, NY 10001",
       "phone": "(789) 012-3456",
-      "website": "#",
-      "icon": "/WDD231/chamber/images/gspm.png",
+      "website": "https://gspm.com",
+      "icon": "./images/gspmcolor.png",
       "membershipLevel": 3,
       "additionalInfo": {
-        "description": "24/7 gym offering personal training and group classes.",
-        "foundingYear": 2008
+      "description": "24/7 gym offering personal training and group classes.",
+      "foundingYear": 2008
       }
     }
+   
+
   ]
   

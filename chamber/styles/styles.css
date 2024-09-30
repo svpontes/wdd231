@@ -1,0 +1,451 @@
+/* Estilos globais */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
+  background-color: white; /* Define a cor de fundo do corpo como branco */
+  color: #333; /* Define a cor do texto como um tom de cinza escuro */
+  background-image: url('/images/background-transparente.png'); /* Define a imagem de fundo */
+  background-size: contain; /* Faz com que a imagem cubra todo o elemento */
+  background-position: right; /* Alinha a imagem de fundo à direita */
+  background-repeat: no-repeat; /* Não repete a imagem de fundo */
+  text-align: center; /* Centraliza o texto dentro do corpo */
+}
+header {
+  
+  top: 0; /* Fixa o cabeçalho no topo */
+  padding: 10px 20px; /* Adiciona espaçamento interno ao cabeçalho */
+}
+header {
+  
+ 
+  padding: 10px 20px; /* Define o padding interno do cabeçalho */
+  display: flex; /* Usa flexbox para organizar os elementos do cabeçalho */
+  justify-content: space-around; /* Espaça os elementos dentro do cabeçalho */
+ 
+}
+/* Estilos do menu quando visível */
+nav.menu.show {
+  display: flex; /* Exibe o menu quando a classe 'show' for adicionada */
+  position: absolute; /* Mantém o menu no fluxo do documento */
+  top: 50px; /* Define a distância do topo */
+  right: 0; /* Alinha o menu à direita */
+  width: 100%; /* Faz o menu ocupar toda a largura */
+  background-color: white; /* Cor de fundo para o menu */
+  z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+  padding: 20px; /* Espaçamento interno do menu */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+/* Estilo para conteúdo que deve se mover para baixo */
+.content {
+  transition: margin-top 0.3s; /* Adiciona uma transição suave */
+}
+
+
+.menu-container {
+  display: flex; /* Usa flexbox para o contêiner do menu */
+  justify-content: space-between; /* Espaça os elementos dentro do contêiner do menu */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  width: 100%; /* Define a largura do contêiner como 100% */
+}
+
+.logo img {
+  width: 450px; /* Define a largura da imagem do logotipo */
+}
+
+nav.menu ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  display: flex; /* Usa flexbox para exibir a lista horizontalmente */
+}
+
+nav.menu ul li {
+  margin-right: 20px; /* Define a margem direita dos itens da lista */
+}
+
+nav.menu ul li a {
+  color: #0c3048; /* Define a cor do texto dos links do menu */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 18px; /* Define o tamanho da fonte dos links */
+  font-weight: 600; /* Define a espessura da fonte dos links */
+  transition: color 0.3s; /* Define a transição da cor para 0.3 segundos ao passar o mouse */
+}
+
+nav.menu ul li a:hover {
+  color: #ff9900; /* Muda a cor do link ao passar o mouse */
+}
+
+.social-icons {
+  display: flex; /* Usa flexbox para alinhar os ícones sociais */
+  align-items: center; /* Alinha os ícones verticalmente ao centro */
+}
+
+.social-icons a {
+  margin-left: 10px; /* Define a margem esquerda dos links de ícones sociais */
+}
+
+.social-icons img {
+  width: 30px; /* Define a largura das imagens dos ícones sociais */
+}
+
+.join-btn {
+  background-color: #ff9900; /* Define a cor de fundo do botão como laranja */
+  border: none;
+  color: white; /* Define a cor do texto do botão como branco */
+  outline: 2px solid #ff9900; /* Adiciona uma borda ao botão, afastada das margens */
+  outline-offset: 4px; /* Afasta a borda das margens do botão */
+  padding: 10px 20px; /* Define o padding interno do botão */
+  font-size: 16px; /* Define o tamanho da fonte do botão */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  border-radius: 5px; /* Arredonda as bordas do botão */
+  transition: background-color 0.3s; /* Define a transição da cor de fundo do botão */
+  margin-bottom: 5px;
+}
+
+.join-btn:hover {
+  background-color: #0c3048; /* Muda a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo do botão hambúrguer */
+.hamburger, .close {
+  display: none; /* Esconde os botões inicialmente */
+  font-size: 30px; /* Define o tamanho da fonte para os botões */
+  cursor: pointer; /* Altera o cursor para indicar que são clicáveis */
+}
+
+.hamburger {
+  color: #cc7a00; /* Define a cor do botão hambúrguer como laranja */
+}
+
+.close {
+  color: #0c3048; /* Define a cor do botão de fechar como branco */
+}
+
+/* Main Section */
+main h1 {
+  font-size: 36px; /* Define o tamanho da fonte do título principal */
+  margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+  color: #0d2235; /* Define a cor do título principal */
+}
+#gridView, #listView{
+
+  border: 1px solid #ff6600;
+  background-color: white;
+  margin-left: 10px;
+  
+}
+
+
+/* Grid View */
+.grid-view {
+  display: grid; /* Usa grid para a visualização em grade */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define colunas automáticas com largura mínima de 250px */
+  gap: 10px; /* Define o espaço entre os cartões */
+  padding: 10px;
+  max-width: 100%; /* Garante que o grid não ultrapasse a tela */
+  overflow-x: hidden; /* Oculta qualquer conteúdo que possa estar transbordando horizontalmente */
+  
+}
+
+.grid-view .member-card {
+  display: flex; /* Usa flexbox para os cartões de membros */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  text-align: center; /* Centraliza o texto dentro do cartão */
+}
+/* list View */
+
+/* List View */
+.list-view {
+  display: block; /* Exibe os cartões como blocos (um embaixo do outro) */
+  margin-bottom: 10px; /* Espaçamento entre os cartões */
+  margin-top: 10px; /* Espaçamento entre os cartões */
+  
+}
+
+.list-view .member-card {
+  display: flex; /* Usa flexbox para alinhar os itens na horizontal */
+  flex-direction: row; /* Coloca os itens lado a lado */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  /*justify-content: flex-start;  Alinha os itens à esquerda */
+  padding: 15px; /* Adiciona um espaçamento interno ao cartão */
+  margin-bottom: 20px; /* Espaçamento entre os cartões */
+  border: 1px solid #ccc; /* Adiciona uma borda para destacar os cartões */
+  border-radius: 10px; /* Arredonda os cantos do cartão */
+  background-color: rgb(193, 190, 190, 0.2); /* Define a cor de fundo dos cartões */
+  width: 80%; /* Garante que o cartão ocupe toda a largura disponível */
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+  margin: 0 auto;
+  
+}
+.list-view .card-content {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  white-space: normal; /* Permite que o texto quebre em várias linhas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-view h2{
+
+  margin-right: 50px;
+}
+
+.list-view p{
+
+  margin-right: 20px;
+ 
+}
+
+
+
+/* Estilo para os cartões de membros */
+
+
+.member-card {
+  
+  border: none; /* Adiciona uma borda cinza ao redor do cartão */
+  padding: 20px; /* Define o padding interno do cartão */
+  border-radius: 15px; /* Arredonda as bordas do cartão */
+  background-color: rgb(193, 190, 190, .3); /* Define a cor de fundo do cartão com leve transparência */
+  transition: transform 0.2s, box-shadow 0.2s; /* Define a transição para efeito de hover */
+  margin-bottom: 8px;
+}
+
+.member-card:hover {
+  transform: scale(0.98); /* Reduz levemente o tamanho do cartão ao passar o mouse */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao cartão ao passar o mouse */
+}
+
+.member-card img {
+  max-width: 50%; /* Garante que a imagem não ultrapasse a largura do cartão */
+  width: 80px;
+  height: auto; /* Mantém a proporção da altura da imagem */
+  margin-bottom: auto; /* Define a margem inferior automática para a imagem */
+  margin-right: 20px;
+    
+}
+
+.member-card a {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Define a largura do link como 100% do contêiner */
+  white-space: nowrap; /* Impede a quebra de linha do texto dentro do link */
+  overflow: hidden; /* Oculta o texto que ultrapassa o contêiner */
+  text-overflow: ellipsis; /* Adiciona reticências ao texto que não cabe no espaço */
+  color: #0d2235; /* Define a cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  margin-top: 10px; /* Define o espaço acima do link */
+  word-wrap: break-word; /* Permite a quebra de palavras longas */
+  transition: color 0.3s; /* Define a transição da cor do texto do link */
+}
+
+.member-card a:hover {
+  font-weight: 600; /* Torna o texto do link mais espesso ao passar o mouse */
+}
+
+
+/* Footer Section */
+footer {
+  background-color: #0d2235; /* Define a cor de fundo do rodapé */
+  color: white; /* Define a cor do texto do rodapé como branco */
+  padding: 40px 20px; /* Define o padding interno do rodapé */
+  text-align: center; /* Centraliza o texto dentro do rodapé */
+}
+
+.menu-footer img {
+  width: 200px; /* Define a largura das imagens no rodapé */
+}
+
+footer .social-footer a {
+  margin: 0 10px; /* Define a margem horizontal dos links sociais no rodapé */
+}
+
+footer .social-footer img {
+  width: 30px; /* Define a largura das imagens dos ícones sociais no rodapé */
+}
+
+footer .menu-footer {
+  margin-top: 20px; /* Define o espaço acima do contêiner de menu no rodapé */
+}
+
+footer .menu-footer ul {
+  list-style-type: none; /* Remove os marcadores da lista no rodapé */
+  padding: 0; /* Remove o padding padrão da lista no rodapé */
+  display: flex; /* Usa flexbox para o menu no rodapé */
+  justify-content: center; /* Centraliza os itens do menu no rodapé */
+}
+
+footer .menu-footer ul li {
+  margin: 0 15px; /* Define a margem horizontal dos itens da lista no rodapé */
+}
+
+footer .menu-footer ul li a {
+  color: white; /* Define a cor do texto dos links no rodapé como branco */
+  text-decoration: none; /* Remove o sublinhado dos links no rodapé */
+  transition: color 0.3s; /* Define a transição da cor do texto dos links no rodapé */
+  font-size: 14px;
+}
+
+footer .menu-footer ul li a:hover {
+  color: #ff9900; /* Muda a cor do texto dos links no rodapé ao passar o mouse */
+}
+
+footer p.copyrigths {
+  margin-top: 30px; /* Define o espaço acima do texto de direitos autorais */
+  font-size: 14px; /* Define o tamanho da fonte do texto de direitos autorais */
+}
+
+#lastModified, #current-year {
+  display: inline-block; /* Faz com que os elementos sejam exibidos em linha */
+  color: #ccc; /* Define a cor do texto como cinza claro */
+}
+
+/*hamburguer em telas maiores*/
+.hamburger, .close {
+  display: none; /* Esconde os botões de hambúrguer e fechar por padrão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav.menu {
+      display: none; /* Esconde o menu de navegação em telas menores que 768px */
+  }
+
+  .hamburger {
+      display: block; /* Exibe o botão hambúrguer em telas menores */
+  }
+
+  .close {
+      display: block; /* Exibe o botão de fechar em telas menores */
+  }
+
+  #members-container {
+      grid-template-columns: 1fr; /* Define uma única coluna para o contêiner de membros em telas menores */
+  }
+}
+@media (max-width: 768px) {
+  nav.menu ul {
+      flex-direction: column; /* Exibe os itens do menu em coluna no mobile */
+      align-items: center; /* Centraliza os itens no menu */
+      background-color: rgb(242, 18, 18), .98; /* Opcional: adicionar fundo ao menu no mobile */
+      width: 100%;
+      padding: 10px 0;
+  }
+  
+  nav.menu ul li {
+      margin-right: 0; /* Remove a margem lateral no mobile */
+      margin-bottom: 10px; /* Adiciona espaçamento inferior entre itens */
+  }
+  
+  .logo img {
+      width: 200px; /* Reduz o tamanho da logo no mobile */
+  }
+
+  .social-icons img {
+      width: 24px; /* Reduz o tamanho dos ícones sociais */
+  }
+}
+@media (max-width: 768px) {
+  /* Ajuste a Grid View para dispositivos menores */
+  .grid-view {
+      grid-template-columns: 1fr; /* Exibe uma única coluna no mobile */
+      padding: 10px;
+  }
+  
+  /* Ajuste a List View para dispositivos menores */
+  .list-view .member-card {
+      flex-direction: column; /* Coloca os itens em coluna no mobile */
+      align-items: center; /* Centraliza o conteúdo */
+  }
+
+  .list-view .member-card img {
+      margin-right: 0; /* Remove a margem lateral da imagem no mobile */
+      margin-bottom: 10px; /* Adiciona espaçamento abaixo da imagem */
+  }
+
+  .list-view .card-content {
+      text-align: center; /* Centraliza o texto dentro do conteúdo */
+      margin-left: 0; /* Remove a margem lateral no mobile */
+  }
+  .list-view h2{
+
+      margin-right: 0px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .join-btn {
+      width: 30%; /* O botão ocupará toda a largura em dispositivos móveis */
+      padding: 12px; /* Aumenta o padding no mobile */
+  }
+
+  footer .menu-footer ul {
+      flex-direction: column; /* Coloca o menu do rodapé em coluna no mobile */
+      align-items: center;
+  }
+
+  footer .menu-footer ul li {
+      margin: 10px 0; /* Adiciona espaçamento vertical no mobile */
+  }
+
+  footer .menu-footer ul li a {
+      font-size: 16px; /* Aumenta o tamanho da fonte dos links no mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      background-size: cover; /* Faz com que a imagem de fundo cubra toda a tela */
+      background-position: center; /* Centraliza a imagem no mobile */
+  }
+}
+@media (max-width: 768px) {
+  .join-btn {
+      display: none; /* Esconde o botão "Join" no modo responsivo */
+  }
+
+  .social-icons {
+      display: none; /* Esconde os ícones de redes sociais no menu em modo responsivo */
+  }
+}
+
+/* Responsividade: apenas para telas menores */
+@media (max-width: 768px) {
+  nav.menu {
+      display: none; /* Esconde o menu por padrão em telas menores */
+      flex-direction: column; /* Alinha os itens verticalmente quando exibido */
+      background-color: white; /* Cor de fundo para o menu */
+      position: absolute; /* Posiciona o menu */
+      top: 50px; /* Define a distância do topo da página */
+      right: 0;
+      width: 100%; /* Faz o menu ocupar toda a largura da tela */
+      padding: 20px; /* Espaçamento interno do menu */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+  }
+
+  .hamburger {
+      display: block; /* Exibe o ícone do hambúrguer em telas menores */
+      cursor: pointer; /* Altera o cursor para indicar clicável */
+  }
+
+  .close {
+      display: none; /* Esconde o ícone de fechar inicialmente */
+      font-size: 30px;
+      cursor: pointer; /* Altera o cursor para indicar clicável */
+  }
+
+  /* Quando a classe 'show' é aplicada, o menu aparece */
+  .menu.show {
+      display: flex; /* Exibe o menu quando a classe 'show' for adicionada */
+  }
+
+  .join-btn, .social-icons {
+      display: none; /* Esconde o botão "Join" e os ícones sociais no menu em telas menores */
+  }
+}

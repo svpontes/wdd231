@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
   background-color: white; /* Define a cor de fundo do corpo como branco */
   color: #333; /* Define a cor do texto como um tom de cinza escuro */
-  background-image: url('/chamber/images/background-transparente.png'); /* Define a imagem de fundo */
+  background-image: url('/chamber/images/background2.png'); /* Define a imagem de fundo */
   background-size: contain; /* Faz com que a imagem cubra todo o elemento */
   background-position: right; /* Alinha a imagem de fundo à direita */
   background-repeat: no-repeat; /* Não repete a imagem de fundo */

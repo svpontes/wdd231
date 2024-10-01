@@ -8,7 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
   background-color: white; /* Define a cor de fundo do corpo como branco */
-  color: #333; /* Define a cor do texto como um tom de cinza escuro */
+  color: #111; /* Define a cor do texto como um tom de cinza escuro */
   text-align: center; /* Centraliza o texto dentro do corpo */
 }
 
@@ -65,7 +65,7 @@ nav.menu ul li {
 }
 
 nav.menu ul li a {
-  color: #0c3048; /* Define a cor do texto dos links do menu */
+  color: #0b1d39; /* Define a cor do texto dos links do menu */
   text-decoration: none; /* Remove o sublinhado dos links */
   font-size: 18px; /* Define o tamanho da fonte dos links */
   font-weight: 600; /* Define a espessura da fonte dos links */
@@ -90,10 +90,10 @@ nav.menu ul li a:hover {
 }
 
 .join-btn {
-  background-color: #ff9900; /* Define a cor de fundo do botão como laranja */
+  background-color: #e68000; /* Define a cor de fundo do botão como laranja */
   border: none;
   color: white; /* Define a cor do texto do botão como branco */
-  outline: 2px solid #ff9900; /* Adiciona uma borda ao botão, afastada das margens */
+  outline: 2px solid #f9f9f9; /* Adiciona uma borda ao botão, afastada das margens */
   outline-offset: 4px; /* Afasta a borda das margens do botão */
   padding: 10px 20px; /* Define o padding interno do botão */
   font-size: 16px; /* Define o tamanho da fonte do botão */
@@ -104,7 +104,7 @@ nav.menu ul li a:hover {
 }
 
 .join-btn:hover {
-  background-color: #0c3048; /* Muda a cor de fundo do botão ao passar o mouse */
+  background-color: #1a4060; /* Muda a cor de fundo do botão ao passar o mouse */
 }
 
 /* Estilo do botão hambúrguer */
@@ -199,8 +199,6 @@ main h1 {
  
 }
 
-
-
 /* Estilo para os cartões de membros */
 
 
@@ -210,6 +208,7 @@ main h1 {
   padding: 20px; /* Define o padding interno do cartão */
   border-radius: 15px; /* Arredonda as bordas do cartão */
   background-color: rgb(193, 190, 190, .3); /* Define a cor de fundo do cartão com leve transparência */
+  color: #0a1926;
   transition: transform 0.2s, box-shadow 0.2s; /* Define a transição para efeito de hover */
   margin-bottom: 8px;
 }
@@ -250,7 +249,7 @@ main h1 {
 /* Footer Section */
 footer {
   background-color: #0d2235; /* Define a cor de fundo do rodapé */
-  color: white; /* Define a cor do texto do rodapé como branco */
+  color: #f0f0f0; /* Define a cor do texto do rodapé como branco */
   padding: 40px 20px; /* Define o padding interno do rodapé */
   text-align: center; /* Centraliza o texto dentro do rodapé */
 }

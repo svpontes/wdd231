@@ -5,6 +5,12 @@
   box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+  font-display: swap; /* This ensures text is displayed even before the font is loaded */
+}
+
 body {
   font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
   background-color: white; /* Define a cor de fundo do corpo como branco */
@@ -51,6 +57,12 @@ nav.menu.show {
   width: 100%; /* Define a largura do contêiner como 100% */
 }
 
+ul{
+
+  margin: 16px 0;
+  padding: 0;
+}
+
 .logo img {
   width: 450px; /* Define a largura da imagem do logotipo */
   height: auto;
@@ -71,6 +83,7 @@ nav.menu ul li a {
   font-size: 18px; /* Define o tamanho da fonte dos links */
   font-weight: 600; /* Define a espessura da fonte dos links */
   transition: color 0.3s; /* Define a transição da cor para 0.3 segundos ao passar o mouse */
+  
 }
 
 nav.menu ul li a:hover {
@@ -254,6 +267,7 @@ footer {
   color: #f0f0f0; /* Define a cor do texto do rodapé como branco */
   padding: 40px 20px; /* Define o padding interno do rodapé */
   text-align: center; /* Centraliza o texto dentro do rodapé */
+  min-height: 200px;
 }
 
 .menu-footer img {

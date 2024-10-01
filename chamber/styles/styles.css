@@ -53,6 +53,7 @@ nav.menu.show {
 
 .logo img {
   width: 450px; /* Define a largura da imagem do logotipo */
+  height: auto;
 }
 
 nav.menu ul {
@@ -87,6 +88,7 @@ nav.menu ul li a:hover {
 
 .social-icons img {
   width: 30px; /* Define a largura das imagens dos ícones sociais */
+  height: auto;
 }
 
 .join-btn {
@@ -221,7 +223,7 @@ main h1 {
 .member-card img {
   max-width: 50%; /* Garante que a imagem não ultrapasse a largura do cartão */
   width: 80px;
-  height: auto; /* Mantém a proporção da altura da imagem */
+  height: 70px; /* Mantém a proporção da altura da imagem */
   margin-bottom: auto; /* Define a margem inferior automática para a imagem */
   margin-right: 20px;
     
@@ -256,6 +258,7 @@ footer {
 
 .menu-footer img {
   width: 200px; /* Define a largura das imagens no rodapé */
+  height: auto;
 }
 
 footer .social-footer a {
@@ -264,6 +267,7 @@ footer .social-footer a {
 
 footer .social-footer img {
   width: 30px; /* Define a largura das imagens dos ícones sociais no rodapé */
+  height: 30px;
 }
 
 footer .menu-footer {

@@ -162,7 +162,8 @@ main{
 
 .coursework, .place{
 
-    min-height: 380px;
+    flex-basis: 48%; /* Ocupa aproximadamente metade da largura */
+    flex-grow: 1; /* Permite que o item cresça conforme o espaço disponível */
 }
 
 .certificates{

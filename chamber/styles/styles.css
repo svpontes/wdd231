@@ -5,13 +5,10 @@
   box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-  font-display: swap; /* This ensures text is displayed even before the font is loaded */
-}
+
 
 body {
+  
   font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
   background-color: white; /* Define a cor de fundo do corpo como branco */
   color: #111; /* Define a cor do texto como um tom de cinza escuro */

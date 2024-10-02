@@ -22,6 +22,7 @@
            
         <script defer src="./scripts/courses.js"></script>
         <script defer src="./scripts/scripts.js"></script>
+        <script defer src="./scripts/weather.js"></script>
     </head>
 <body>
     <header>
@@ -80,10 +81,14 @@
     </main>
 
     <footer>
+
         <p>
         &copy; <span id="currentyear"></span> Sergio Vieira Pontes
         <img src="./images/bandeira.jpg" alt="bandeira de Portugal">Portugal</p>
-        
+        <p>The current temperature in Nazaré, Portugal is <span id="current-temp"></span></p>
+        <img id="weather-icon" alt="Weather Icon">
+        <figcaption></figcaption>
+        <p> Sergio Pontes | OpenWeatherMap.org | CC BY-SA 4.0</p>    
         <p id="lastModified"></p>
         
     </footer>

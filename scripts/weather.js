@@ -1,43 +1,63 @@
+// Seleciona os elementos HTML para exibir os dados do clima
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('#weather-desc');
 const humidity = document.querySelector('#humidity');
 const windSpeed = document.querySelector('#wind-speed');
 
+// Seleciona os elementos do footer
+const footerCurrentTemp = document.querySelector('#footer-current-temp');
+const footerWeatherIcon = document.querySelector('#footer-weather-icon');
+const footerHumidity = document.querySelector('#footer-humidity');
+const footerWindSpeed = document.querySelector('#footer-wind-speed');
+const footerCaptionDesc = document.querySelector('#footer-weather-desc');
+
+// URL da API OpenWeatherMap
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=39.6029&lon=-9.0684&units=metric&appid=bbcae6077af379ec3f8342d9358b5efc';
 
-async function apiFetch(){
-    try{
+// Função para buscar os dados da API
+async function apiFetch() {
+    try {
         const response = await fetch(url);
         if (response.ok) {
-            const data = await response.json();
-            console.log(data); // Test the response
-            displayResults(data); 
+            const data = await response.json(); // Converte a resposta para JSON
+            console.log(data); // Testa os dados no console
+            displayResults(data); // Chama a função para exibir os dados na página
         } else {
-            throw Error(await response.text());
+            throw Error(await response.text()); // Lança erro se a resposta não for bem-sucedida
         }
     } catch (error) {
-        console.log(error); 
+        console.log(error); // Exibe erros no console
     }
 }
-      
-apiFetch();
 
+// Função para exibir os dados no HTML
 function displayResults(data) {
-    // Exibe a temperatura
-    currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+    // Exibe a temperatura na seção "place"
+    currentTemp.innerHTML = `${data.main.temp}`;
     
-    // Exibe o ícone do clima
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', data.weather[0].description);
+    // Exibe o ícone do clima na seção "place"
+    const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    weatherIcon.setAttribute('src', iconSrc);
+    weatherIcon.setAttribute('alt', data.weather[0].description); // Define a descrição para acessibilidade
     
-    // Descrição do clima
+    // Exibe a descrição do clima na seção "place"
     captionDesc.textContent = data.weather[0].description;
-
-    // Umidade
-    humidity.textContent = data.main.humidity;
-
-    // Velocidade do vento
-    windSpeed.textContent = (data.wind.speed * 3.6).toFixed(1); // Converte de m/s para km/h
+    
+    // Exibe a umidade na seção "place"
+    humidity.innerHTML = `${data.main.humidity}`;
+    
+    // Exibe a velocidade do vento na seção "place"
+    windSpeed.innerHTML = `${data.wind.speed}`;
+    
+    // Exibe os dados no footer
+    footerWeatherIcon.setAttribute('src', iconSrc);
+    footerWeatherIcon.setAttribute('alt', data.weather[0].description);
+    footerCurrentTemp.innerHTML = `${data.main.temp}`; // Temperatura
+    footerHumidity.innerHTML = `${data.main.humidity}`; // Umidade
+    footerWindSpeed.innerHTML = `${data.wind.speed}`; // Velocidade do vento
+    footerCaptionDesc.textContent = data.weather[0].description; // Descrição
 }
+
+// Invoca a função para buscar os dados da API
+apiFetch();

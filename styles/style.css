@@ -328,6 +328,22 @@ footer img{
     color: #021520;
     font-weight: 600;
 }
+.weather-footer {
+    
+    padding: 1px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+footer .weather-info{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
 
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
@@ -390,7 +406,25 @@ footer img{
         gap: 10px;
     }
 
-    .weather-widget {
-        width: 100%;
+    .weather-footer{
+
+        display: flex;
+
+        flex-direction: column;
+    }    
+    
+    .weather-widget{
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .weather-info{
+
+        display: flex;
+        flex-direction: column;
     }
 }

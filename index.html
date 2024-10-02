@@ -69,7 +69,7 @@
             
             <div class="weather-widget">
             <div class="weather-info">
-                <p class="title">Current Weather in Nazaré, Portugal</p>
+                <p class="title">Current Weather in Nazaré Portugal</p>
                 <div class="temperature">
                     <p>Temperature: <span id="current-temp"></span></p>
                 </div>
@@ -102,19 +102,28 @@
            
         </section>
     </main>
-
     <footer>
-
         <p>
-        &copy; <span id="currentyear"></span> Sergio Vieira Pontes
-        <img src="./images/bandeira.jpg" alt="bandeira de Portugal">Portugal</p>
-        <p>The current temperature in Nazaré, Portugal is <span id="current-temp"></span></p>
-        <img id="weather-icon" alt="Weather Icon">
-        <figcaption></figcaption>
+            &copy; <span id="currentyear"></span> Sergio Vieira Pontes
+            <img src="./images/bandeira.jpg" alt="bandeira de Portugal"> Portugal
+        </p>
+        
+        <div class="weather-footer">
+            <p>The current weather in Nazaré | Portugal:</p>
+            <div class="weather-info">
+                <figcaption id="footer-weather-desc"></figcaption> 
+                <img id="footer-weather-icon" alt="Weather Icon"> 
+                <p>Temperature: <span id="footer-current-temp"></span> &deg;C</p> 
+                <p>Humidity: <span id="footer-humidity"></span>%</p>
+                <p>Wind Speed: <span id="footer-wind-speed"></span> km/h</p> 
+            </div>
+            
+        </div>
+        
         <p> Sergio Pontes | OpenWeatherMap.org | CC BY-SA 4.0</p>    
         <p id="lastModified"></p>
-        
     </footer>
+    
 
     </body>
 </html>

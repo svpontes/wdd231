@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAZARÉ | Chamber of Commerce</title>
-  <meta name="description" content="Page directory of project chamber of commerce from week 2 assignment. Technologies of Web Development including HTML, CSS, and JavaScript.">
+  <meta name="description"
+    content="Page directory of project chamber of commerce from week 2 assignment. Technologies of Web Development including HTML, CSS, and JavaScript.">
   <meta name="author" content="Sergio Vieira Pontes">
   <link rel="icon" href="./images/logo-favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
-  
+
   <!-- Open Graph Meta Tags (para Facebook e outras redes sociais) -->
-  <meta property="og:site_name" content="WDD231 Web Frontend Development I - Project Chamber of Commerce"/>
-  <meta property="og:title" content="Sergio Pontes - Project Chamber fo Commerce -Portfolio of Web Frontend Development I" />
-  <meta property="og:description" content="Explore completed assignments and projects in the WDD 231 Web Development course - Project Chamber of Commerce" />
+  <meta property="og:site_name" content="WDD231 Web Frontend Development I - Project Chamber of Commerce" />
+  <meta property="og:title"
+    content="Sergio Pontes - Project Chamber fo Commerce -Portfolio of Web Frontend Development I" />
+  <meta property="og:description"
+    content="Explore completed assignments and projects in the WDD 231 Web Development course - Project Chamber of Commerce" />
   <meta property="og:image" content="https://svpontes.github.io/wdd231/chamber/images/face-banner.png" />
   <meta property="og:url" content="https://svpontes.github.io/wdd231/chamber/directory.html" />
   <meta property="og:type" content="website" />
+
   <!--javascript-->
   <script defer src="./scripts/scripts.js"></script>
   <script defer src="./scripts/companiesfilter.js"></script>
   <script defer src="./scripts/weather.js"></script>
-  
+  <scrip defer src="./scripts/logovideo.js"></scrip>
 </head>
-<body>
 
-     <!-- Header Section -->
+<body>
+  <video autoplay muted loop>
+    <source src="./video/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    <img id="fadeImage" src="/chamber/images/logo-chamber.webp" alt="Overlay Image" class="overlay-image" aria-hidden="true">
+  </video>
+
+  <!-- Header Section -->
   <header>
     <div class="menu-container">
       <!-- Logo as Image -->
@@ -55,18 +66,31 @@
 
   <!-- Main content for mobile -->
   <main>
-    
-    <div class="mobile-join">
-      <button class="join-btn">Contact Us</button>
-    </div>
-    <section id="hero" style="background-image: url('path/to/hero-image.jpg');">
+    <section id="hero">
+      <video autoplay muted loop>
+        <source src="./video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
       <div class="hero-content">
-        <h1>Join Our Chamber of Commerce</h1>
-        <p>Empower your business with the best local network</p>
-        <a href="#join" class="cta-button">Join Now</a>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="join-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        
+          <button type="submit" class="cta-button">Join Us Today</button>
+        </form>
+        
+        
+      </div>
+
+      <div class="mobile-join-contact">
+        <button class="join-btn-contact">Contact Us</button>
       </div>
     </section>
-    
+
     <section id="events">
       <h2>Current Events</h2>
       <ul id="eventList">
@@ -75,6 +99,7 @@
         <li>Holiday Gala - December 20th</li>
       </ul>
     </section>
+
     <section id="weather">
       <h2>Weather in [Chamber Location]</h2>
       <div id="weather-info">
@@ -83,43 +108,40 @@
         <div id="forecast"></div>
       </div>
     </section>
+
     <section id="spotlights">
       <h2>Member Spotlights</h2>
       <div id="spotlight-companies"></div>
     </section>
-    
-                         
-    </main>
+  </main>
 
   <!-- Footer Section -->
-<footer>
+  <footer>
     <div class="social-footer">
-        <!-- Social Media Icons in Footer -->
-        <a href="#"><img src="./images/face-white-icon.png" alt="Facebook Icon"></a>
-        <a href="#"><img src="./images/twitter-white-icon.png" alt="Twitter Icon"></a>
-        <a href="#"><img src="./images/insta-white-icon.webp" alt="Instagram Icon"></a>
+      <!-- Social Media Icons in Footer -->
+      <a href="#"><img src="./images/face-white-icon.png" alt="Facebook Icon"></a>
+      <a href="#"><img src="./images/twitter-white-icon.png" alt="Twitter Icon"></a>
+      <a href="#"><img src="./images/insta-white-icon.webp" alt="Instagram Icon"></a>
     </div>
-    <div class="menu-footer">
-        <img src="./images/logo-white.png" alt="Chamber Logo">
-        
-        
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Coockies settings</a></li>
-         
-        </ul>
-        
-    </div>
-    <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes </p>
-    <p class="update-modification" id="lastModified"></p>
-    
-</footer>
 
-  
- </body>
+    <div class="menu-footer">
+      <img src="./images/logo-white.png" alt="Chamber Logo">
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies settings</a></li>
+      </ul>
+    </div>
+
+    <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved.
+      Designed by Sergio Pontes </p>
+    <p class="update-modification" id="lastModified"></p>
+  </footer>
+</body>
+
 </html>

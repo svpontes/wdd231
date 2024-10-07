@@ -1,770 +1,621 @@
-/* Estilos globais */
-* {
-  margin: 0; /* Remove a margem padrão de todos os elementos */
-  padding: 0; /* Remove o padding padrão de todos os elementos */
-  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
-}
-
-
-
-body {
   
-  font-family: 'Poppins', sans-serif; /* Define a fonte do corpo como Poppins */
-  background-color: white; /* Define a cor de fundo do corpo como branco */
-  color: #111; /* Define a cor do texto como um tom de cinza escuro */
-  text-align: center; /* Centraliza o texto dentro do corpo */
-  background-image: url('/chamber/images/background2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header {
-  
-  top: 0; /* Fixa o cabeçalho no topo */
-  padding: 10px 20px; /* Adiciona espaçamento interno ao cabeçalho */
-}
-header {
-  padding: 10px 20px; /* Define o padding interno do cabeçalho */
-  display: flex; /* Usa flexbox para organizar os elementos do cabeçalho */
-  justify-content: space-around; /* Espaça os elementos dentro do cabeçalho */
-  animation: gradientShift 15s infinite; /* Apply the animation */
-}
+    body {
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center; /* Centraliza o texto */
+      background-size: cover;
+      min-height: 100vh; /* Altura mínima da viewport */
+      background-color: #d8d8d8;
+    }
 
-@keyframes gradientShift {
-  0% {
-    background-color: rgba(255, 165, 0, 0.3); /* Start with low opacity */
-  }
-  50% {
-    background-color: rgba(255, 165, 0, 0.6); /* Transition to higher opacity */
-  }
-  100% {
-    background-color: rgba(255, 165, 0, 0.9); /* Return to initial opacity */
-  }
-}
-/* Estilos do menu quando visível */
-nav.menu.show {
-  display: flex; /* Exibe o menu quando a classe 'show' for adicionada */
-  position: absolute; /* Mantém o menu no fluxo do documento */
-  top: 50px; /* Define a distância do topo */
-  right: 0; /* Alinha o menu à direita */
-  width: 50%; /* Faz o menu ocupar toda a largura */
-  background-color: rgba(255, 102, 0, 0.96); /* Laranja com 80% de opacidade */
-  z-index: 1000; /* Garante que o menu fique acima de outros elementos */
-  padding: 20px; /* Espaçamento interno do menu */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
-}
-
-/* Estilo para conteúdo que deve se mover para baixo */
-.content {
-  transition: margin-top 0.3s; /* Adiciona uma transição suave */
-}
-
-
-.menu-container {
-  display: flex; /* Usa flexbox para o contêiner do menu */
-  justify-content: space-between; /* Espaça os elementos dentro do contêiner do menu */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  width: 100%; /* Define a largura do contêiner como 100% */
-}
-
-ul{
-
-  margin: 16px 0;
-  padding: 0;
-}
-
-.logo img {
-  width: 450px; /* Define a largura da imagem do logotipo */
-  height: auto;
-}
-
-nav.menu ul {
-  list-style-type: none; /* Remove os marcadores da lista */
-  display: flex; /* Usa flexbox para exibir a lista horizontalmente */
-}
-
-nav.menu ul li {
-  margin-right: 20px; /* Define a margem direita dos itens da lista */
-}
-
-nav.menu ul li a {
-  color: #0b1d39; /* Define a cor do texto dos links do menu */
-  text-decoration: none; /* Remove o sublinhado dos links */
-  font-size: 18px; /* Define o tamanho da fonte dos links */
-  font-weight: 600; /* Define a espessura da fonte dos links */
-  transition: color 0.3s; /* Define a transição da cor para 0.3 segundos ao passar o mouse */
-  
-}
-
-nav.menu ul li a:hover {
-  color: #ff9900; /* Muda a cor do link ao passar o mouse */
-}
-
-.social-icons {
-  display: flex; /* Usa flexbox para alinhar os ícones sociais */
-  align-items: center; /* Alinha os ícones verticalmente ao centro */
-}
-
-.social-icons a {
-  margin-left: 10px; /* Define a margem esquerda dos links de ícones sociais */
-}
-
-.social-icons img {
-  width: 30px; /* Define a largura das imagens dos ícones sociais */
-  height: auto;
-}
-
-
-.join-btn:hover {
-  background-color: #1a4060; /* Muda a cor de fundo do botão ao passar o mouse */
-}
-
-
-/* Estilo do botão hambúrguer */
-.hamburger, .close {
-  display: none; /* Esconde os botões inicialmente */
-  font-size: 30px; /* Define o tamanho da fonte para os botões */
-  cursor: pointer; /* Altera o cursor para indicar que são clicáveis */
-}
-
-.hamburger {
-  color: #ff6600; /* Define a cor do botão hambúrguer como laranja */
-}
-
-.close {
-  color: #0c3048; /* Define a cor do botão de fechar como branco */
-}
-
-/* Main Section */
-main h1 {
-  font-size: 36px; /* Define o tamanho da fonte do título principal */
-  margin-bottom: 10px; /* Adiciona espaço abaixo do título */
-  color: #0d2235; /* Define a cor do título principal */
-}
-#gridView, #listView{
-
-  border: 1px solid #ff6600;
-  background-color: white;
-  margin-left: 10px;
-  
-}
-
-
-/* Grid View */
-.grid-view {
-  display: grid; /* Usa grid para a visualização em grade */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define colunas automáticas com largura mínima de 250px */
-  gap: 10px; /* Define o espaço entre os cartões */
-  padding: 10px;
-  max-width: 100%; /* Garante que o grid não ultrapasse a tela */
-  overflow-x: hidden; /* Oculta qualquer conteúdo que possa estar transbordando horizontalmente */
-  
-}
-
-.grid-view .member-card {
-  display: flex; /* Usa flexbox para os cartões de membros */
-  flex-direction: column; /* Alinha os itens na vertical */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  text-align: center; /* Centraliza o texto dentro do cartão */
-}
-/* list View */
-
-/* List View */
-.list-view {
-  display: block; /* Exibe os cartões como blocos (um embaixo do outro) */
-  margin-bottom: 10px; /* Espaçamento entre os cartões */
-  margin-top: 10px; /* Espaçamento entre os cartões */
-  
-}
-
-.list-view .member-card {
-  display: flex; /* Usa flexbox para alinhar os itens na horizontal */
-  flex-direction: row; /* Coloca os itens lado a lado */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  /*justify-content: flex-start;  Alinha os itens à esquerda */
-  padding: 15px; /* Adiciona um espaçamento interno ao cartão */
-  margin-bottom: 20px; /* Espaçamento entre os cartões */
-  border: 1px solid #ccc; /* Adiciona uma borda para destacar os cartões */
-  border-radius: 10px; /* Arredonda os cantos do cartão */
-  background-color: rgb(193, 190, 190, 0.2); /* Define a cor de fundo dos cartões */
-  width: 80%; /* Garante que o cartão ocupe toda a largura disponível */
-  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
-  margin: 0 auto;
-  
-}
-.list-view .card-content {
-  flex-grow: 1;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  white-space: normal; /* Permite que o texto quebre em várias linhas */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.list-view h2{
-
-  margin-right: 50px;
-}
-
-.list-view p{
-
-  margin-right: 20px;
  
-}
+    header {
 
-/* Estilo para os cartões de membros */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      gap: 30px;
+      animation: gradientShift 15s infinite;
+      
+    }
+    .conteudo-cabecalho {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 
+    header .logomarca{
 
-.member-card {
-  
-  border: none; /* Adiciona uma borda cinza ao redor do cartão */
-  padding: 20px; /* Define o padding interno do cartão */
-  border-radius: 15px; /* Arredonda as bordas do cartão */
-  background-color: rgb(193, 190, 190, .3); /* Define a cor de fundo do cartão com leve transparência */
-  color: #0a1926;
-  transition: transform 0.2s, box-shadow 0.2s; /* Define a transição para efeito de hover */
-  margin-bottom: 8px;
-}
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    header .logomarca img{
 
-.member-card:hover {
-  transform: scale(0.98); /* Reduz levemente o tamanho do cartão ao passar o mouse */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao cartão ao passar o mouse */
-}
+       max-width: 350px;
+        width: 350px;
+        height: auto;
+        margin-right: 5px;
+    }
 
-.member-card img {
-  max-width: 50%; /* Garante que a imagem não ultrapasse a largura do cartão */
-  width: 80px;
-  height: 70px; /* Mantém a proporção da altura da imagem */
-  margin-bottom: auto; /* Define a margem inferior automática para a imagem */
-  margin-right: 20px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     
-}
+    h1 {
+        text-align: left;
+        font-family: times, serif;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        color: navy;
+        text-align: left;
+        margin: 1rem;
+    }
+    
+    nav {
+        max-width: 700px;
+        margin: 1rem auto;
+    }
+    
+    /* small view navigation */
+    #menu {
+        font-size: 1.5rem;
+        border: 0;
+        background: none;
+        color: #ff6600;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    #menu::before {
+        content: "☰";
+        color: #ff6600;
+        font-weight: 600;
+    }
+    
+    #menu.open::before {
+        content: "X";
+        color: #ff6600;
+        font-weight: 600;
+    }
 
-.member-card a {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Define a largura do link como 100% do contêiner */
-  white-space: nowrap; /* Impede a quebra de linha do texto dentro do link */
-  overflow: hidden; /* Oculta o texto que ultrapassa o contêiner */
-  text-overflow: ellipsis; /* Adiciona reticências ao texto que não cabe no espaço */
-  color: #0d2235; /* Define a cor do texto do link */
-  text-decoration: none; /* Remove o sublinhado do link */
-  margin-top: 10px; /* Define o espaço acima do link */
-  word-wrap: break-word; /* Permite a quebra de palavras longas */
-  transition: color 0.3s; /* Define a transição da cor do texto do link */
-}
+  
+    
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        color: #fff;
+    }
+    
+    .navigation a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #0b1d39;
+        padding: 10px 15px;
+        transition: color 0.2s ease;
+    }
+    
 
-.member-card a:hover {
-  font-weight: 600; /* Torna o texto do link mais espesso ao passar o mouse */
-}
+    .navigation a:hover {
+        color: white;
+    }
+    
+    .navigation ul{
+
+        display: flex;
+        justify-content: center; /* Alinha os itens ao centro horizontalmente */
+        align-items: center; /* Alinha os itens ao centro verticalmente */
+        gap: 20px; /* Espaçamento entre os itens */
+        list-style: none;
+    }
+
+    /* when the button is clicked - the open class is toggled (added/removed) */
+    .open .navigation a {
+        display: block;
+    }
+    
+    .active::before { 
+        content: "📍";  /* just a wayfinding symbol for the user */
+    }
+    
+    header .social-media{
+        display: flex;
+        padding: 10px;
+        gap: 10px;        
+     }
+     header .social-media img{
+ 
+         width: 30px;
+         height: auto;
+         transition: transform 0.3s ease; 
+     }
+ 
+     .social-media img:hover {
+         transform: scale(1.1); 
+     }
+
+     header .botao-join-us button{
+        font-size: 1rem;
+        gap: 1px;
+        max-width: 150;
+        width: 100px;
+        background-color: #f06e04;
+        color: white;
+        padding: 10px;
+        border-radius: 8px; 
+        border: none;
+        outline: 2px solid #f9f9f9;
+        outline-offset: 5px; 
+        cursor: pointer;
+    }
+    header .botao-join-us button:hover {
+        background-color: #ff0000;;
+      }
+      .container {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+  
+    
+     /*main area video*/
+     main{
+    
+        margin-top: 1%; /*mantem a altura do main  e faz o video ficar corrreto na altura*/
+      }
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 100%; /* Garante que o main ocupe toda a largura */
+        max-width: 1200px; /* Limite de largura para não ficar muito grande em telas grandes */
+        margin: 0 auto; /* Centraliza o main */
+    }
+      body video {
+ 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the section without distortion */
+        transform: translate(-50%, -50%); /* Center the video */
+        z-index: -1; /* Behind the hero content */
+      }
+  
+      .content {
+        text-align: center;
+        max-width: 800px;
+      }
+/********************************/
+main h1{
+
+    display: grid;
+    grid-template-columns:  1fr;
+    text-align: center;        /* Centraliza o texto horizontalmente */
+    color: white; 
+           
+  }
+  /********************************/
+      /*hero content*/
 
 /*form*/
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: orange;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  margin-right: -80px; /* Add margin on the right to give space */
-  outline: 2px solid #f9f9f9; /* Adiciona uma borda ao botão, afastada das margens */
-  outline-offset: 7px; /* Afasta a borda das margens do botão */
-  position: relative;
-  align-self: flex-end; /* Align the form to the right of the container */
-}
 
 .hero-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; /* Align the content to the right */
-  margin-right: 5%;
-  padding: 20px;
-}
-
-.join-form label {
-  color: white;
-  font-size: 0.5 rem;
-  text-align: left;
-}
-
-.join-form input {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-}
-
-.join-form .cta-button {
-  background-color: #ff5100;
-  color: white;
-  padding: 10px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 15px; /* Space above the button */
-}
-
-.join-form .cta-button:hover {
-  background-color: #ff0000;
-}
-
-
-/***********/
-
-
-/* Footer Section */
-footer {
-  background-color: #0d2235; /* Define a cor de fundo do rodapé */
-  color: #f0f0f0; /* Define a cor do texto do rodapé como branco */
-  padding: 40px 20px; /* Define o padding interno do rodapé */
-  text-align: center; /* Centraliza o texto dentro do rodapé */
-  min-height: 200px;
-}
-
-.menu-footer img {
-  width: 200px; /* Define a largura das imagens no rodapé */
-  height: auto;
-}
-
-footer .social-footer a {
-  margin: 0 10px; /* Define a margem horizontal dos links sociais no rodapé */
-}
-
-footer .social-footer img {
-  width: 30px; /* Define a largura das imagens dos ícones sociais no rodapé */
-  height: 30px;
-}
-
-footer .menu-footer {
-  margin-top: 20px; /* Define o espaço acima do contêiner de menu no rodapé */
-}
-
-footer .menu-footer ul {
-  list-style-type: none; /* Remove os marcadores da lista no rodapé */
-  padding: 0; /* Remove o padding padrão da lista no rodapé */
-  display: flex; /* Usa flexbox para o menu no rodapé */
-  justify-content: center; /* Centraliza os itens do menu no rodapé */
-}
-
-footer .menu-footer ul li {
-  margin: 0 15px; /* Define a margem horizontal dos itens da lista no rodapé */
-}
-
-footer .menu-footer ul li a {
-  color: white; /* Define a cor do texto dos links no rodapé como branco */
-  text-decoration: none; /* Remove o sublinhado dos links no rodapé */
-  transition: color 0.3s; /* Define a transição da cor do texto dos links no rodapé */
-  font-size: 14px;
-}
-
-footer .menu-footer ul li a:hover {
-  color: #ff6600; /* Muda a cor do texto dos links no rodapé ao passar o mouse */
-}
-
-footer p.copyrigths {
-  margin-top: 30px; /* Define o espaço acima do texto de direitos autorais */
-  font-size: 14px; /* Define o tamanho da fonte do texto de direitos autorais */
-}
-
-#lastModified, #current-year {
-  display: inline-block; /* Faz com que os elementos sejam exibidos em linha */
-  color: #ccc; /* Define a cor do texto como cinza claro */
-}
-
-/*hamburguer em telas maiores*/
-.hamburger {
-  display: none; /* Esconde os botões de hambúrguer e fechar por padrão */
-}
-
-.close {
-  display: none; /* Esconde os botões de hambúrguer e fechar por padrão */
-}
-
-/*HERO STYLE*/
-picture{
-
-  height: 80vh; /* Ajustável entre 70-100vh para desktop */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/chamber/images/background2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    z-index: 2; /* Certifica-se de que está acima de outros elementos */
-}
-
-/*background image for hero*/
-
-/*video gero*/
-#hero{
-
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-}
-
-
-body video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the section without distortion */
-  transform: translate(-50%, -50%); /* Center the video */
-  z-index: -1; /* Behind the hero content */
-}
-#hero{
-
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-}
-
-
-#hero video {
-  display: none;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the section without distortion */
-  transform: translate(-50%, -50%); /* Center the video */
-  z-index: -1; /* Behind the hero content */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1; /* Ensures content appears above the video */
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/*join-btn header*/
-.join-btn {
-  background-color: #e68000; /* Define a cor de fundo do botão como laranja */
-  border: none;
-  color: white; /* Define a cor do texto do botão como branco */
-  outline: 2px solid #f9f9f9; /* Adiciona uma borda ao botão, afastada das margens */
-  outline-offset: 4px; /* Afasta a borda das margens do botão */
-  padding: 10px 20px; /* Define o padding interno do botão */
-  font-size: 16px; /* Define o tamanho da fonte do botão */
-  cursor: pointer; /* Altera o cursor para indicar que é clicável */
-  border-radius: 5px; /* Arredonda as bordas do botão */
-  transition: background-color 0.3s; /* Define a transição da cor de fundo do botão */
-  margin-bottom: 5px;
-}
-.join-btn-contact {
-  position: absolute;
-  bottom: 38%; /* Moves the button 1% from the bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 30px;
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  outline: 2px solid #f9f9f9; /* Adiciona uma borda ao botão, afastada das margens */
-  outline-offset: 4px; /* Afasta a borda das margens do botão */
-  font-size: 18px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-
-.cta-button{
+    position: absolute; /* Posiciona a div em relação ao elemento pai */
+    top: 30%; /* Define a distância do topo */
+    right: 20px; /* Define a distância da direita */
+    padding: 10px; /* Padding interno da div */
+    display: flex; /* Garante que o conteúdo dentro da div seja flexível */
+    justify-content: flex-end; /* Alinha o conteúdo (formulário) à direita */
+    z-index: 10; /* Coloca a div acima de outros elementos se necessário */
+  }
   
-  position: relative;
-  top:10%; /* Adjust this value to position the button vertically */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the button horizontally and vertically */
-  padding: 15px 30px;
-  background-color: #ff6600; /* Customize button color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  z-index: 1; /* Ensure the button stays on top of the video */
-}
-
-.cta-button-contact{
+  .join-form {
     
-  position: relative;
-
-}
-
-/*show logo over video*/
-.video-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.overlay-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.5s ease;
-  z-index: 2; /* Ensure it's above the video */
-}
-
-.show {
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-/*form*/
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: orange;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  margin-right: 80px; /* Add margin on the right to give space */
-  outline: 2px solid orange; /* Adiciona uma borda ao botão, afastada das margens */
-  outline-offset: 7px; /* Afasta a borda das margens do botão */
-  position: relative;
-  align-self: flex-end; /* Align the form to the right of the container */
-  
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; /* Align the content to the right */
-  padding: 20px;
-  z-index: 1;
-  
-}
-
-.join-form label {
-  color: white;
-  font-size: 0.5 rem;
-  text-align: left;
-}
-
-.join-form input {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-}
-
-.join-form .cta-button {
-  background-color: #ff5100;
-  color: white;
-  padding: 10px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 15px; /* Space above the button */
-}
-
-.join-form .cta-button:hover {
-  background-color: #ff0000;
-}
-
-}
-@media (max-width: 768px) {
-
-body video{
-
-  display: none;
-}
-  #hero {
-
-     height: 80vh; /* Adjust hero height for smaller screens */
-  }
-  #hero video {
-
-    display: block;
-    position: relative;
-    top: 10%;
-    left: 50%;
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the video covers the section without distortion */
-    transform: translate(-50%, -50%); /* Center the video */
-    z-index: -1; /* Behind the hero content */
-  }
-
- .cta-button{
-      
-      padding: 10px 20px;
-      font-size: 16px;
-      top: 50%; /* Move button higher on small screens */
-      
-  }
-  
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav.menu {
-      display: none; /* Esconde o menu de navegação em telas menores que 768px */
-  }
-
-  .hamburger {
-      display: block; /* Exibe o botão hambúrguer em telas menores */
-  }
-
-  .close {
-      display: block; /* Exibe o botão de fechar em telas menores */
-  }
-
-  #members-container {
-      grid-template-columns: 1fr; /* Define uma única coluna para o contêiner de membros em telas menores */
-  }
-}
-@media (max-width: 768px) {
-  nav.menu ul {
-      flex-direction: column; /* Exibe os itens do menu em coluna no mobile */
-      align-items: center; /* Centraliza os itens no menu */
-      width: 100%;
-      padding: 10px 0;
-  }
-  
-  nav.menu ul li {
-      margin-right: 0; /* Remove a margem lateral no mobile */
-      margin-bottom: 10px; /* Adiciona espaçamento inferior entre itens */
-  }
-  nav.menu ul li a:hover {
-    color: white; /* Muda a cor do link ao passar o mouse */
-  }
-  
-  .logo img {
-      width: 200px; /* Reduz o tamanho da logo no mobile */
-  }
-
-  .social-icons img {
-      width: 24px; /* Reduz o tamanho dos ícones sociais */
-  }
-}
-@media (max-width: 768px) {
-  /* Ajuste a Grid View para dispositivos menores */
-  .grid-view {
     display: flex;
     flex-direction: column;
-      grid-template-columns: 1fr; /* Exibe uma única coluna no mobile */
-      padding: 10px;
+    gap: 5px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin-right: 5%; /* Add margin on the right to give space */
+    outline: 2px solid #f9f9f9; /* Adiciona uma borda ao botão, afastada das margens */
+    outline-offset: 7px; /* Afasta a borda das margens do botão */
+    z-index: 9999;
   }
   
-  /* Ajuste a List View para dispositivos menores */
-  .list-view .member-card {
-      flex-direction: column; /* Coloca os itens em coluna no mobile */
-      align-items: center; /* Centraliza o conteúdo */
+  .join-form label {
+    color: white;
+    font-size: 0.5 rem;
+    text-align: left;
+    
   }
-
-  .list-view .member-card img {
-      margin-right: 0; /* Remove a margem lateral da imagem no mobile */
-      margin-bottom: 10px; /* Adiciona espaçamento abaixo da imagem */
-  }
-
-  .list-view .card-content {
-      text-align: center; /* Centraliza o texto dentro do conteúdo */
-      margin-left: 0; /* Remove a margem lateral no mobile */
-  }
-  .list-view h2{
-
-      margin-right: 0px;
-  }
-
   
-}
-@media (max-width: 768px) {
-   .join-btn {
-    display: none;
-      
+  .join-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .cta-button {
+    background-color: #ff5100;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px; /* Space above the button */
+  }
+  
+  .join-form .cta-button:hover {
+    background-color: #ff0000;
   }
 
-  header .cta-button{
-
+  /*events*/
+  
+/* Estilos das seções individuais */
+#events, #weather, #spotlights {
+  
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra leve nas seções */
+    padding: 20px; /* Espaçamento interno das seções */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    /*border: 0.2px solid grey;*/
+    background-color:rgba(255, 255, 255, 0.8);
+    
+  }
+  
+  #grid-events{
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    padding: 1%;
+    margin-top: 30%;
+  }
+  
+  
+  /* Estilo dos títulos das seções */
+  #events h2, #weather h2, #spotlights h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  /* Estilo específico para a lista de eventos */
+  #eventList {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin-top: 10px;
+  }
+  
+  #eventList li {
+    margin: 10px 0; /* Espaçamento entre os itens da lista */
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Estilo para a imagem dos eventos */
+  #events img {
+    margin-top: 20px;
+    width: 800px;
+    height: auto;
+  }
+  
+  /* Estilo para a seção de previsão do tempo */
+  
+  /*aproveitamento de codigo para weather*/
+  
+  .place{
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra leve nas seções */
+    border-radius: 10px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  .place h2{
+  
+    
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+  }
+  
+  .place img{
+    display: block;
+    width: 300px;
+    height: auto;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .weather-widget p{
+    text-align: left;
+    font-weight: 600;
+    margin-left: 25%;
+    
+  }
+  
+  /************************/
+  #weather-info {
+    text-align: center;
+  }
+  
+  #weather-info p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  #weather-icon{
+  
+    width: 100px;
+  }
+  
+  #forecast {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Estilo para a seção de destaque de membros */
+  
+  .spotlightsfilter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Define 3 colunas iguais */
+    gap: 1%; /* Espaçamento entre os itens do grid */
+    margin-top: 1%; /* Margem superior */
+    margin-bottom: 1%; /* Margem inferior */
+    padding: 1%; /* Padding interno */
+    
+  }
+  
+  /* Estilização adicional para os cards de destaque */
+  .spotlight-card {
+    background-color: #f0f0f0; /* Cor de fundo do card */
+    border-radius: 8px; /* Bordas arredondadas */
+    /*border: 2px solid grey;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+    padding: 16px; /* Padding interno do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+  }
+  
+  .spotlight-card img {
+    width: 100px; /* Largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-bottom: 8px; /* Espaçamento abaixo da imagem */
+  }
+  
+  .spotlight-card h3 {
+    margin: 8px 0; /* Margens acima e abaixo do título */
+    font-size: 1.2em; /* Tamanho da fonte do título */
+  }
+  
+  .spotlight-card p {
+    margin: 4px 0; /* Margens para os parágrafos */
+  }
+  
+  #forecast {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
   }
-
-  footer .menu-footer ul {
-      flex-direction: column; /* Coloca o menu do rodapé em coluna no mobile */
-      align-items: center;
-  }
-
-  footer .menu-footer ul li {
-      margin: 10px 0; /* Adiciona espaçamento vertical no mobile */
-  }
-
-  footer .menu-footer ul li a {
-      font-size: 16px; /* Aumenta o tamanho da fonte dos links no mobile */
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-      background-size: cover; /* Faz com que a imagem de fundo cubra toda a tela */
-      background-position: center; /* Centraliza a imagem no mobile */
-  }
-}
-@media (max-width: 768px) {
   
-
-  .social-icons {
-      display: none; /* Esconde os ícones de redes sociais no menu em modo responsivo */
+  .day-forecast {
+    background-color: #ffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 03);
+    text-align: center;
   }
-}
-
-/* Responsividade: apenas para telas menores */
-@media (max-width: 768px) {
-  nav.menu {
-      display: none; /* Esconde o menu por padrão em telas menores */
-      flex-direction: column; /* Alinha os itens verticalmente quando exibido */
-      background-color: #ff6600; /* Cor de fundo para o menu */
-      position: absolute; /* Posiciona o menu */
-      top: 50px; /* Define a distância do topo da página */
-      right: 0;
-      width: 100%; /* Faz o menu ocupar toda a largura da tela */
-      padding: 20px; /* Espaçamento interno do menu */
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+  
+  .day-forecast img {
+    width: 50px;
+    height: auto;
   }
-
-  .hamburger {
-      display: block; /* Exibe o ícone do hambúrguer em telas menores */
-      cursor: pointer; /* Altera o cursor para indicar clicável */
+  
+  #weather-logos {
+    width: 400px;
+  }
+      /****************/
+  
       
-  }
+      footer {
+        width: 100%;
+        background-color: #0b1d39;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        
+      }
 
-  .close {
-      display: none; /* Esconde o ícone de fechar inicialmente */
-      font-size: 30px;
-      cursor: pointer; /* Altera o cursor para indicar clicável */
-      margin-bottom: 20px;
-  }
+      footer a{
+        font-size: 0.8rem;
+        color: rgb(179, 177, 177);
+        
+      }
+      
+      footer .nav-footer lu{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
 
-  /* Quando a classe 'show' é aplicada, o menu aparece */
-  .menu.show {
-      display: flex; /* Exibe o menu quando a classe 'show' for adicionada */
-  }
+      footer .nav-footer ul li {
+        
+        margin: 0 10px; /* Espaçamento entre os itens */
+        display: inline-block;
+        
+    }
 
-}
+    footer .social-footer img{
+
+        width: 30px;
+        height: auto;
+        margin-bottom: 1%;
+        
+    }
+
+    footer .menu-footer img{
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    footer p.copyrigths {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+      }
+
+    /* Exibe a última modificação e o ano atual */
+    #lastModified, #current-year {
+    display: inline-block;
+    color: #ccc; /* Cor mais clara para destacar menos */
+  }
+    @keyframes gradientShift {
+    0% { background-color: var(--header-bg-color); }
+    50% { background-color: rgba(255, 165, 0, 0.6); }
+    100% { background-color: rgba(255, 165, 0, 0.9); }
+     }
+    
+    /* large view navigation ************************************/
+    @media (min-width: 37.5em) {
+        
+        #menu {
+            display: none; /* hide hamburger button */
+        }
+    
+            
+    }
+
+    @media (max-width: 768px) {
+        
+        body video {
+            position: absolute;
+            top: 50%; /* No desktop, centraliza verticalmente */
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que o vídeo cubra a área sem distorção */
+            transform: translate(-50%, -50%); /* Centraliza o vídeo */
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
+        .botao-join-us,
+        .navigation a {
+            display: block; /* Mostra os links como blocos */
+            padding: 15px; /* Espaço interno */
+            text-align: center; /* Centraliza o texto */
+        }
+        .navigation.open {
+            display: flex; /* Mostra o menu quando aberto */
+            flex-direction: column; /* Coloca os itens em coluna */
+            position: absolute; /* Para sobrepor outros elementos */
+            top: 50px; /* Ajuste conforme necessário */
+            left: 20;
+            right: 0;
+            background-color: #f06e04;
+            padding: 10px 0; /* Espaçamento interno */
+            z-index: 1000; /* Para garantir que fique sobre outros elementos */
+        }
+        header .social-media{
+
+            display: none;
+        }
+
+        header .botao-join-us button{
+            display: none;
+        }
+        .navigation {
+            display: none; /* hide hamburger button */
+        }
+
+         /* Ajustes para telas menores */
+        header {
+        flex-wrap: wrap;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        }
+
+        .logomarca img {
+        max-width: 80%; /* Ajusta o tamanho da logo */
+        }
+        body video {
+            top: 30%;
+            width: 100vw; /* Garante que o vídeo ocupe a largura total da viewport */
+            height: auto; /* Mantém a proporção do vídeo */
+             object-fit: contain; 
+        }
+    }
+
+    @media (max-width: 1024px) {
+        body video {
+            position: absolute;
+            top: 50%; /* No desktop, centraliza verticalmente */
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que o vídeo cubra a área sem distorção */
+            transform: translate(-50%, -50%); /* Centraliza o vídeo */
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
+      }
+      
+      @media (max-width: 480px) {
+        body video{
+            position: absolute;
+            top: 50%; /* No desktop, centraliza verticalmente */
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que o vídeo cubra a área sem distorção */
+            transform: translate(-50%, -50%); /* Centraliza o vídeo */
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+      }
+    }

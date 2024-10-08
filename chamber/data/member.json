@@ -4,7 +4,7 @@
     "address": "230 North, Moon City, LA 12100",
     "phone": "(720) 999-3456",
     "website": "https://surfvillage.com",
-    "icon": "../chamber/images/surf.webp",
+    "icon": "/chamber/images/surf.webp",
     "membershipLevel": 3,
     "additionalInfo": {
     "description": "Personal training surf - kids and adults.",
@@ -16,7 +16,7 @@
       "address": "123 Main St, Tech City, TX 75001",
       "phone": "(123) 456-7890",
       "website": "https://www.nuancesrequinte.com/",
-      "icon": "../chamber/images/nuancescolor.webp",
+      "icon": "/chamber/images/nuancescolor.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Leading provider of IT consulting and software solutions.",
@@ -28,7 +28,7 @@
       "address": "456 Oak Rd, Green Valley, CA 90210",
       "phone": "(234) 567-8910",
       "website": "https://greenearth.com",
-      "icon": "../chamber/images/p7color.webp",
+      "icon": "/chamber/images/p7color.webp",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "Specialists in sustainable landscaping and garden design.",
@@ -40,7 +40,7 @@
       "address": "789 Ocean Blvd, Sun City, FL 32004",
       "phone": "(345) 678-9012",
       "website": "https://bluehorizontravel.com",
-      "icon": "../chamber/images/m.webp",
+      "icon": "/chamber/images/m.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Vacation planning and travel services for all destinations.",
@@ -52,7 +52,7 @@
       "address": "321 Bridge St, Bay Area, CA 94105",
       "phone": "(456) 789-0123",
       "website": "http://www.estevasgarden.netlify.app/",
-      "icon": "../chamber/images/estevascolor.webp",
+      "icon": "/chamber/images/estevascolor.webp",
       "membershipLevel": 1,
       "additionalInfo": {
       "description": "Residential and commercial construction services.",
@@ -64,7 +64,7 @@
       "address": "654 Armor Ave, Defense City, TX 76001",
       "phone": "(567) 890-1234",
       "website": "https://www.target.com/c/fly-fishing-gear-water-sports-activities-outdoors/-/N-kkyk8",
-      "icon": "../chamber/images/flytargetcolor.webp",
+      "icon": "/chamber/images/flytargetcolor.webp",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "High-tech security solutions for businesses and homes.",
@@ -76,7 +76,7 @@
       "address": "987 Orchard St, Farmville, OH 45005",
       "phone": "(678) 901-2345",
       "website": "https://www.usxpressmoving.com/",
-      "icon": "../chamber/images/usxpressmovingcolor.webp",
+      "icon": "/chamber/images/usxpressmovingcolor.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Supplier of organic and locally grown produce.",
@@ -88,7 +88,7 @@
       "address": "111 Workout Dr, Fit City, NY 10001",
       "phone": "(789) 012-3456",
       "website": "https://gspm.com",
-      "icon": "../chamber/images/gspmcolor.webp",
+      "icon": "/chamber/images/gspmcolor.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "24/7 gym offering personal training and group classes.",

@@ -3,7 +3,7 @@
     "name": "SURF Village",
     "address": "230 North, Moon City, LA 12100",
     "phone": "(720) 999-3456",
-    "website": "https://surfvillage.com",
+    "website": "https://www.nazaresurfschool.pt/",
     "icon": "/chamber/images/surf.webp",
     "membershipLevel": 3,
     "additionalInfo": {
@@ -24,11 +24,11 @@
       }
     },
     {
-      "name": "P7",
+      "name": "keysights",
       "address": "456 Oak Rd, Green Valley, CA 90210",
       "phone": "(234) 567-8910",
-      "website": "https://greenearth.com",
-      "icon": "/chamber/images/p7color.webp",
+      "website": "https://www.keysight.com/us/en/home.html",
+      "icon": "/chamber/images/keysigths.png",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "Specialists in sustainable landscaping and garden design.",
@@ -36,11 +36,11 @@
       }
     },
     {
-      "name": "M",
+      "name": "Leonardo AI",
       "address": "789 Ocean Blvd, Sun City, FL 32004",
       "phone": "(345) 678-9012",
-      "website": "https://bluehorizontravel.com",
-      "icon": "/chamber/images/m.webp",
+      "website": "https://app.leonardo.ai/?via=cou2&gad_source=1&gclid=Cj0KCQjwsJO4BhDoARIsADDv4vB_Lcm2-8kJ-ZxB0KmBm4v16c-zg9G9hxQx8ahvqirqSQ6qLk_yvGQaAp6FEALw_wcB",
+      "icon": "/chamber/images/leo.png",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Vacation planning and travel services for all destinations.",
@@ -48,11 +48,11 @@
       }
     },
     {
-      "name": "Estevas Garden",
+      "name": "Edp",
       "address": "321 Bridge St, Bay Area, CA 94105",
       "phone": "(456) 789-0123",
-      "website": "http://www.estevasgarden.netlify.app/",
-      "icon": "/chamber/images/estevascolor.webp",
+      "website": "https://www.edp.pt/particulares/",
+      "icon": "/chamber/images/edp.png",
       "membershipLevel": 1,
       "additionalInfo": {
       "description": "Residential and commercial construction services.",
@@ -60,11 +60,11 @@
       }
     },
     {
-      "name": "Fly Target",
+      "name": "meo",
       "address": "654 Armor Ave, Defense City, TX 76001",
       "phone": "(567) 890-1234",
-      "website": "https://www.target.com/c/fly-fishing-gear-water-sports-activities-outdoors/-/N-kkyk8",
-      "icon": "/chamber/images/flytargetcolor.webp",
+      "website": "https://en.meo.pt/",
+      "icon": "/chamber/images/meo.png",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "High-tech security solutions for businesses and homes.",
@@ -84,11 +84,11 @@
       }
     },
     {
-      "name": "gspm group",
+      "name": "behance",
       "address": "111 Workout Dr, Fit City, NY 10001",
       "phone": "(789) 012-3456",
-      "website": "https://gspm.com",
-      "icon": "/chamber/images/gspmcolor.webp",
+      "website": "https://www.behance.net/gallery/181492339/Playing-Colors-Images#",
+      "icon": "/chamber/images/behance.png",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "24/7 gym offering personal training and group classes.",

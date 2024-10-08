@@ -1,6 +1,6 @@
 async function loadCompanies() {
   try {
-    const response = await fetch('/chamber/data/member.json'); // Faz a requisição para o arquivo JSON
+    const response = await fetch('./data/member.json'); // Faz a requisição para o arquivo JSON
 
     if (!response.ok) {
       throw new Error(`Erro ao carregar o arquivo: ${response.status}`);

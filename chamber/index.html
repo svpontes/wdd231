@@ -8,60 +8,60 @@
         content="Page directory of project chamber of commerce from week 3 assignment. Technologies of Web Development including HTML, CSS, and JavaScript.">
     <meta name="author" content="Sergio Vieira Pontes">
     <link rel="icon" href="./images/logo-favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <!-- Open Graph Meta Tags (para Facebook e outras redes sociais) -->
-    <meta property="og:site_name" content="WDD231 Web Frontend Development I - Project Chamber of Commerce" />
-    <meta property="og:title" content="Sergio Pontes - Project Chamber fo Commerce -Portfolio of Web Frontend Development I" />
-    <meta property="og:description" content="Explore completed assignments and projects in the WDD 231 Web Development course - Project Chamber of Commerce" />
-    <meta property="og:image" content="https://svpontes.github.io/wdd231/chamber/images/face-banner.png" />
-    <meta property="og:url" content="https://svpontes.github.io/wdd231/chamber/index.html" />
-    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/chamber/styles/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/chamber/styles/styles.css"></noscript>
     <script defer src="./scripts/hamburger.js"></script>
     <script defer src="./scripts/datetime.js"></script>
     <script defer src="./scripts/forecast.js"></script>
     <script defer src="./scripts/corpfilter.js"></script>
     <script defer src="./scripts/weather.js"></script>
 </head>
+
 <body>
-    <div class="video-container">
-        <video id="myVideo" autoplay muted loop>
-            <source src="./video/videos.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+
     <header>
-        <div class="logomarca">
-            <img src="./images/logo-chamber.webp" alt="logo">
+        <div class="container-menu">
+            <img src="./images/logo-chamber 1.webp" loading="lazy" width="350" height="136"alt="logo">
         </div>
-        <div class="conteudo-cabecalho">
+
+        <div>
             <button aria-label="Open menu" type="button" id="menu"></button>
             <nav class="navigation">
                 <ul>
                     <li>
                         <a href="#">Home</a>
-                        <a href="#">Directory</a>
+                        <a href="/chamber/directory.html">Directory</a>
                         <a href="#">Discover</a>
                         <a href="#">Join</a>
                     </li>
                 </ul>
             </nav>
-            <div class="social-media">
-                <a href="#"><img src="./images/face-white-icon150px.png" alt="Facebook Icon"></a>
-                <a href="#"><img src="./images/twitter-white-icon150px.png" alt="Twitter Icon"></a>
-                <a href="#"><img src="./images/insta-white-icon.png" alt="Instagram Icon"></a>
-            </div>
-            <div class="botao-join-us">
-                <button>Join us</button>
-            </div>
+        </div>
+        
+        <div class="social-media">
+            <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
+            <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>
+            <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="302" height="286" alt="Instagram Icon"></a>
+        </div>
+        <div class="botao-join-us">
+            <button>Join us</button>
         </div>
     </header>
-    <!-- Conteúdo Principal -->
+
+    <div class="container-initial">
+        <video id="myVideo" autoplay muted loop>
+            <source src="./video/videos.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <main class="container">
+        <div>
+            <!--<h1>Welcome to Nazaré Chamber of Commerce</h1>-->
+        </div>
         <section id="hero">
-            <div>
-                <h1>Welcome to Nazaré Chamber of Commerce</h1>
-            </div>
             <div class="hero-content">
                 <form action="https://formspree.io/f/your-form-id" method="POST" class="join-form">
                     <label for="name">Name:</label>
@@ -79,12 +79,13 @@
                         <li>Networking Breakfast - November 3rd</li>
                         <li>Holiday Gala - December 20th</li>
                     </ul>
-                    <img src="./images/event.png" alt="image of add event Annual Business Expo">
+                    <img loading="lazy" src="./images/evento-500-633.webp" width="500" height="633" alt="event annual business expo">
                 </section>
+
                 <section class="place">
                     <h2>Current Weather </h2>
                     <div>
-                        <img src="./images/nazare.webp" alt="image of Nazareth beach">
+                        <img loading="lazy" src="./images/nazare.webp" width="330" height="220" alt="image of Nazareth beach">
                         <p>Nazaré beach</p>
                     </div>
                     <div class="weather-widget">
@@ -106,50 +107,49 @@
                         </div>
                     </div>
                 </section>
-                <!-- Reaproveitamento de código -->
+              
                 <section id="spotlights">
                     <h2>Weather Forecast</h2>
                     <h3>Four Days Forecast, Nazaré Portugal</h3>
                     <div class="weather-widget">
                         <div class="weather-info">
                             <div class="icon">
-                                <img id="weather-logos" src="./images/weatherlogo.png" alt="Weather Icons">
+                                <img id="weather-logos" src="./images/weatherlogo.webp" width="348" height="34" alt="Weather Icons">
                             </div>
                         </div>
-                        <div id="forecast"></div> <!-- A previsão será inserida aqui pelo JavaScript -->
+                        <div id="forecast"></div> 
                     </div>
                 </section>
             </section>
-            <!-- *************companies filter************************************************ -->
-            <section class="spotlightsfilter" id="spotlights-filter">
-                <div id="spotlights-filter"></div> <!-- O filtro será inserido aqui pelo JavaScript -->
-            </section>
-        </main>
 
-        <!-- Rodapé -->
-        <footer>
-            <div class="social-footer">
-                <!-- Social Media Icons in Footer -->
-                <a href="#"><img src="./images/face-white-icon.png" alt="Facebook Icon"></a>
-                <a href="#"><img src="./images/twitter-white-icon.png" alt="Twitter Icon"></a>
-                <a href="#"><img src="./images/insta-white-icon.webp" alt="Instagram Icon"></a>
+            <section class="spotlightsfilter" id="spotlights-filter">
+                <div id="spotlights-filter"></div> 
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-footer">
+            <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
+            <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>
+            <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="302" height="286" alt="Instagram Icon"></a>
+        </div>
+        <div class="menu-footer">
+            <img loading="lazy" src="./images/logo-white.webp" width="299" height="133" alt="Chamber Logo">
+            <div class="nav-footer">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies settings</a></li>
+                </ul>
             </div>
-            <div class="menu-footer">
-                <img src="./images/logo-white.webp" alt="Chamber Logo">
-                <div class="nav-footer">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Directory</a></li>
-                        <li><a href="#">Discover</a></li>
-                        <li><a href="#">Join</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookies settings</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes </p>
-            <p class="update-modification" id="lastModified"></p>
-        </footer>
-    </body>
+        </div>
+        <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes </p>
+        <p class="update-modification" id="lastModified"></p>
+    </footer>
+</body>
 </html>

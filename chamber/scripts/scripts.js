@@ -1,7 +1,7 @@
 //hamburguer
 
 // Seleciona os elementos
-const hamburger = document.querySelector('.hamburger');
+/*const hamburger = document.querySelector('.hamburger');
 const close = document.querySelector('.close');
 const menu = document.querySelector('nav.menu');
 
@@ -34,7 +34,7 @@ close.addEventListener('click', () => {
     hamburger.style.display = 'block'; // Mostra o ícone do hambúrguer
     close.style.display = 'none'; // Esconde o ícone de fechar
 });
-
+*/
 const directoryJSON = "data/member.json"; // Caminho para o JSON
 const cards = document.querySelector("#cards"); // Seleciona o contêiner para os cartões
 

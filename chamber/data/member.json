@@ -4,7 +4,7 @@
     "address": "230 North, Moon City, LA 12100",
     "phone": "(720) 999-3456",
     "website": "https://www.nazaresurfschool.pt/",
-    "icon": "/chamber/images/surf.webp",
+    "icon": "../images/surf.webp",
     "membershipLevel": 3,
     "additionalInfo": {
     "description": "Personal training surf - kids and adults.",
@@ -16,7 +16,7 @@
       "address": "123 Main St, Tech City, TX 75001",
       "phone": "(123) 456-7890",
       "website": "https://www.nuancesrequinte.com/",
-      "icon": "/chamber/images/nuancescolor.webp",
+      "icon": "../images/nuancescolor.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Leading provider of IT consulting and software solutions.",
@@ -28,7 +28,7 @@
       "address": "456 Oak Rd, Green Valley, CA 90210",
       "phone": "(234) 567-8910",
       "website": "https://www.keysight.com/us/en/home.html",
-      "icon": "/chamber/images/keysigths.png",
+      "icon": "../images/keysigths.png",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "Specialists in sustainable landscaping and garden design.",
@@ -40,7 +40,7 @@
       "address": "789 Ocean Blvd, Sun City, FL 32004",
       "phone": "(345) 678-9012",
       "website": "https://app.leonardo.ai/?via=cou2&gad_source=1&gclid=Cj0KCQjwsJO4BhDoARIsADDv4vB_Lcm2-8kJ-ZxB0KmBm4v16c-zg9G9hxQx8ahvqirqSQ6qLk_yvGQaAp6FEALw_wcB",
-      "icon": "/chamber/images/leo.png",
+      "icon": "../images/leo.png",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Vacation planning and travel services for all destinations.",
@@ -52,7 +52,7 @@
       "address": "321 Bridge St, Bay Area, CA 94105",
       "phone": "(456) 789-0123",
       "website": "https://www.edp.pt/particulares/",
-      "icon": "/chamber/images/edp.png",
+      "icon": "../images/edp.png",
       "membershipLevel": 1,
       "additionalInfo": {
       "description": "Residential and commercial construction services.",
@@ -64,7 +64,7 @@
       "address": "654 Armor Ave, Defense City, TX 76001",
       "phone": "(567) 890-1234",
       "website": "https://en.meo.pt/",
-      "icon": "/chamber/images/meo.png",
+      "icon": "../images/meo.png",
       "membershipLevel": 2,
       "additionalInfo": {
       "description": "High-tech security solutions for businesses and homes.",
@@ -76,7 +76,7 @@
       "address": "987 Orchard St, Farmville, OH 45005",
       "phone": "(678) 901-2345",
       "website": "https://www.usxpressmoving.com/",
-      "icon": "/chamber/images/usxpressmovingcolor.webp",
+      "icon": "../images/usxpressmovingcolor.webp",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "Supplier of organic and locally grown produce.",
@@ -88,7 +88,7 @@
       "address": "111 Workout Dr, Fit City, NY 10001",
       "phone": "(789) 012-3456",
       "website": "https://www.behance.net/gallery/181492339/Playing-Colors-Images#",
-      "icon": "/chamber/images/behance.png",
+      "icon": "../images/behance.png",
       "membershipLevel": 3,
       "additionalInfo": {
       "description": "24/7 gym offering personal training and group classes.",

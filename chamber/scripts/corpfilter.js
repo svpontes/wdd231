@@ -1,6 +1,6 @@
 async function loadCompanies() {
   try {
-    const response = await fetch('./data/member.json'); // Faz a requisição para o arquivo JSON
+    const response = await fetch('../chamber/data/member.json'); // Faz a requisição para o arquivo JSON
 
     if (!response.ok) {
       throw new Error(`Erro ao carregar o arquivo: ${response.status}`);
@@ -21,7 +21,7 @@ function displaySpotlightCompanies(companies) {
   spotlightContainer.innerHTML = ''; // Limpa o container
 
   // Filtra membros Gold (membershipLevel 3) ou Silver (membershipLevel 2)
-  const spotlightMembers = companies.filter(company => company.membershipLevel >= 2);
+  const spotlightMembers = companies.filter(company => company.membershipLevel >= 3);
 
   // Embaralha os membros e seleciona 2 ou 3 aleatórios
   const shuffledMembers = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 3);

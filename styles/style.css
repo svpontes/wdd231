@@ -146,24 +146,28 @@ main{
     padding: 20px;
     text-align: center;
     color: white;
-    margin: 0;
+    margin: 0 auto;
     border-top-left-radius: 20px ;
     border-top-right-radius: 20px ;
+    max-width: 100%;
+    width: 220px;
 }
 
 .place img{
     display: block;
-    width: 300px;
+    width: 250px;
     height: auto;
-    max-width: 350px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
-.coursework, .place{
-
-    flex-basis: 48%; /* Ocupa aproximadamente metade da largura */
-    flex-grow: 1; /* Permite que o item cresça conforme o espaço disponível */
+.place{
+    
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    
 }
 
 .certificates{
@@ -252,6 +256,33 @@ main{
     background-color: #0e89c2;
 }
 
+/************DIAALOG MODAL STYLES****************************/
+dialog {
+    width: 50%;
+    border: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  button#closeModal {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+/*************************************************************/
+
+
 footer{
     width: 100%;
     background-color: #164e70;
@@ -261,15 +292,17 @@ footer{
     margin-top: 15px;
     padding: 10px;
     font-size: 12px;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
     
 }
 
 footer p{
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-
+    
 }
 footer img{
 
@@ -280,14 +313,14 @@ footer img{
 
 /* Weather widget */
 .weather-widget {
-    background-color: #f0f8ff;
-    border: 2px solid #164e70;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 10px auto;
-    text-align: center;
+ 
+   max-width: 100%;
+   margin: 0 auto;
+   top: 0;
+   bottom: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 0;
 }
 
 .weather-widget h2 {
@@ -295,27 +328,30 @@ footer img{
 }
 
 .weather-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+    display: block;
+    
+    
 }
 
 .temperature p,
 .description p,
 .extra-info p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0;
     color: #333;
 }
 
 .icon img {
-    width: 100px;
-    height: 100px;
-}
+    max-width: 100%;
+    width: 80px;
+    height: auto;
+    }
 
 .extra-info {
-    display: flex;
-    justify-content: space-around;
+    
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 .extra-info p {
@@ -327,6 +363,8 @@ footer img{
     font-size: 18px;
     color: #021520;
     font-weight: 600;
+    margin: 0 auto;
+    margin-top: 0;
 }
 .weather-footer {
     
@@ -406,7 +444,276 @@ footer .weather-info{
         gap: 10px;
     }
 
-    .weather-widget {
-        width: 100%;
+    /*.weather-widget {
+        /*width: 100%;*/
+    
+}
+
+
+
+
+/****** css da section CLONADA *************************/
+
+/* Estilos para a seção de cursos (Courses links) */
+
+#course-links{
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#course-links > ul {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#course-links > ul > li {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #E6EDEF;
+    border-radius: 0.3rem;
+    border: 0.1px solid rgb(169, 169, 169);
+}
+
+#course-links li:hover {
+    background-color: rgb(169, 169, 169);
+    cursor: pointer;
+}
+
+#course-links a:visited, #course-links a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#course-links p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#course-links .disabled {
+    background-color: rgb(94, 94, 94);
+    color: white;
+}
+
+#course-links .disabled:hover {
+    cursor: auto;
+}
+
+/* Botões de seleção para os cursos (All, CSE, WDD) */
+.selecting-buttons ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    min-width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    column-gap: 1rem;
+}
+
+.selecting-buttons li {
+    background-color: rgb(88, 85, 85);
+    color: white;
+    border-radius: 0.3rem;
+    padding-inline: 30px;
+    padding-block: 3px;
+}
+
+
+/* Estilos de grid para a section de cursos em telas maiores */
+@media only screen and (min-width: 450px) {
+    #course-links > ul {
+        display: grid;
+        grid: auto / repeat(3, auto);
     }
 }
+
+/* Para ajustar a responsividade da section de cursos */
+@media only screen and (min-width: 750px) {
+    #course-links {
+        grid-column: 1 / 3;
+    }
+}
+/* Estilos de responsividade para a lista de cursos */
+@media only screen and (min-width: 450px) {
+    #course-links > ul {
+        display: grid;
+        grid: auto / repeat(3, auto);
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    main {
+        display: grid;
+        grid: auto / 2fr 1fr;
+    }
+
+    #course-links {
+        grid-column: 1 / 3;
+
+    }
+    #course-links h2{
+        background-color: #164e70;
+        display: block;
+        text-align: center;
+        background-color: #164e70;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        margin: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #city-details img {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        max-height: 375px;
+    }
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    background: rgb(31, 31, 31);
+    text-align: center;
+    display: none;
+}
+
+nav li {
+    padding: 0.5rem;
+    padding-left: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li:hover {
+    background-color: gray;
+}
+
+#x-icon {
+    display: none;
+}
+
+/* Estilos para o botão de menu no cabeçalho */
+#header-details button {
+    background-color: transparent;
+    border-style: none;
+    color: white;
+}
+
+#header-details button:hover {
+    cursor: pointer;
+}
+
+/* Estilos para a lista de cursos */
+#course-links > ul {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#course-links > ul > li {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color:white;
+    border-radius: 0.3rem;
+    border: 0.001px solid rgb(231, 229, 229);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+#course-links > ul > li:hover {
+color: white;
+}
+#course-links li:hover {
+    background-color:  #0e89c2;
+    cursor: pointer;
+}
+
+#course-links .disabled {
+    background-color:  #0e89c2;
+    color: white;
+}
+
+#course-links .disabled:hover {
+    cursor: auto;
+}
+
+/* Estilos para o modal de detalhes do curso */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+dialog {
+    padding: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    border: none;
+}
+
+#dialog-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-headers);
+    padding: 1rem;
+   color: rgb(255, 0, 0);
+}
+
+#dialog-body {
+    padding: 1rem;
+}
+
+#close-dialog {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 1.5rem;
+
+}
+
+
+#close-dialog:hover {
+    font-weight: 600;
+
+}
+
+#close-dialog:focus {
+    outline: none;
+    
+}
+
+
+#close-dialog:hover {
+    cursor: pointer;
+}
+
+/* Estilos para os botões de seleção de cursos */
+.selecting-buttons ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    min-width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    column-gap: 1rem;
+}
+
+

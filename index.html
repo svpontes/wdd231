@@ -20,7 +20,9 @@
         <meta property="og:type" content="website" />
     
            
-        <script defer src="./scripts/courses.js"></script>
+        <!--<script defer src="./scripts/courses.js"></script>-->
+        <!--<script defer src="./scripts/coursesinfo.js" type='module'></script>-->
+        <script defer src="/scripts/course.js" type="module"></script>
         <script defer src="./scripts/scripts.js"></script>
         <script defer src="./scripts/weather.js"></script>
     </head>
@@ -44,19 +46,33 @@
             <span></span>
         </div>
     </header>
-    <!--
+        
     <nav class="breadcrumbs">
         <a href="./index.html">Home</a> &gt; 
         <a href="#">Courses</a> &gt; 
         <span>WDD 231</span>
     </nav>
-    -->
+    <div id="course-details">
+        <dialog>
+            <div id="dialog-header">
+                <h2 id="course-id"></h2>
+                <button id="close-dialog">X</button>
+            </div>
+            <div id="dialog-body">
+                <h3 id="course-title"></h3>
+                <p id="course-credits"></p>
+                <p id="course-certificate"></p>
+                <p id="course-description"></p>
+                <p id="course-technology"></p>
+            </div>
+        </dialog>
+    </div>
     <main>
         <section class="coursework">
             <h2>Course Work</h2>
             <ul>
                 <li><a href="./prophets.html">Latter-day Prophets Assignment</a></li>
-                <li>Task 2</li>
+                <li><a href="./chamber/index.html">Chamber of Commerce Project</a></li>
                 <li>Task 3</li>
              
             </ul>
@@ -69,40 +85,59 @@
                 <p>Nazaré beach</p>
             </div>
             <div class="weather-widget">
-            <div class="weather-info">
-                <div class="icon">
-                    <img id="weather-icon" alt="Weather Icon">
+                <div class="weather-info">
+                    <div class="icon">
+                        <img id="weather-icon" alt="Weather Icon">
+                    </div>
+                    <p class="title">Current Weather <br> Nazaré Portugal</p>
+                    <div class="temperature">
+                        <p>Temperature: <span id="current-temp"></span></p>
+                    </div>
+                    
+                    <div class="description">
+                        <p><span id="weather-desc"></span></p>
+                    </div>
+                    <div class="extra-info">
+                        <p>Humidity: <span id="humidity"></span>%</p>
+                        <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
+                    </div>
                 </div>
-                <p class="title">Current Weather in Nazaré Portugal</p>
-                <div class="temperature">
-                    <p>Temperature: <span id="current-temp"></span></p>
-                </div>
-                
-                <div class="description">
-                    <p><span id="weather-desc"></span></p>
-                </div>
-                <div class="extra-info">
-                    <p>Humidity: <span id="humidity"></span>%</p>
-                    <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
-                </div>
-            </div>
         </div>
             
         </section>
         <section >
             
         </section>
-
+        <!--
         <section class="certificates">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
                 <button id="filter-all">All Courses</button>
                 <button id="filter-cse">CSE Courses</button>
                 <button id="filter-wdd">WDD Courses</button>
+                
             </div>
             <div id="course-list" class="course-list"></div>
-           
+            <dialog id="course-details"></dialog>
+         
+        </section>-->
+        <!-- Courses links teste CLONADO --------------------------------------------------------------->
+        <section id="course-links">
+            <h2>Courses</h2>
+            <div class="selecting-buttons">
+                <ul>
+                    <li>All</li>
+                    <li>CSE</li>
+                    <li>WDD</li>
+                </ul>
+            </div>
+            <hr>
+            <ul id="course-list">
+            </ul>
+            <p>Total required Credits: <span id="required-credits"></span></p>
+            <dialog id="course-details dialog"></dialog>
         </section>
+        <!-- Courses links teste CLONADO --------------------------------------------------------------->
     </main>
     <footer>
         <p>

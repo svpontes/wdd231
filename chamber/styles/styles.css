@@ -27,7 +27,11 @@ header {
 
 .wayfinding{
 
+  color: white;
   display: block;
+  margin-inline-end: auto;
+  padding: 0;
+  margin-left: 30px;
 }
 
 @keyframes gradientShift {
@@ -236,8 +240,8 @@ header .botao-join-us button:hover {
   right: 30px; /* Define a distância da direita */
   padding: 10px; /* Padding interno da div */
   display: flex; /* Garante que o conteúdo dentro da div seja flexível */
-  justify-content: flex-end; /* Alinha o conteúdo (formulário) à direita */
-  z-index: 10; /* Coloca a div acima de outros elementos se necessário */
+  /*justify-content: flex-end; /* Alinha o conteúdo (formulário) à direita */
+  /*z-index: 10; /* Coloca a div acima de outros elementos se necessário */
 }
 .join-form {
   
@@ -295,7 +299,7 @@ header .botao-join-us button:hover {
   min-height: 300px;
   
   background-color:rgba(255, 255, 255, 0.8);
-  margin: 0 auto;
+  /*margin: 0 auto*/
   
   
 }
@@ -317,10 +321,10 @@ header .botao-join-us button:hover {
 
 #events{
 
-  flex-direction: column;
+  /*flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   
   width: 100%;
   height: auto;
@@ -345,10 +349,10 @@ header .botao-join-us button:hover {
 }
 
 /* Estilo para a imagem dos eventos */
-#events img {
+/*#events img {
 
   margin-top: 20px;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
 }
 /*aproveitamento de codigo para weather*/
@@ -622,8 +626,9 @@ footer p.copyrigths {
   #myVideo{
 
       position: absolute; /* Para preencher todo o contêiner */
-      top: 13%;
+      top: 0;
       left: 0;
+      max-width: 100%;
       width: 100%; /* O vídeo ocupa 100% da largura do contêiner pai */
       height: auto; /* O vídeo ocupa 100% da altura do contêiner pai */
       object-fit: cover;
@@ -633,7 +638,8 @@ footer p.copyrigths {
  
   .hero-content{
 
-      top: 35%; /* Define a distância do topo */
+    display: flex;  
+    top: 35%; /* Define a distância do topo */
       z-index: 10; /* Coloca a div acima de outros elementos se necessário */
     }
     .join-form{
@@ -712,7 +718,7 @@ align-items: center;     /* Centraliza o conteúdo verticalmente */
 }
 .weather-info .icon img {
   max-width:100%; /* Defina a largura máxima da imagem para garantir que não seja muito grande */
-  width: 400px;
+  /*width: 400px;
   height: auto;     /* Mantém a proporção da imagem */
 }
 

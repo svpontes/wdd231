@@ -232,7 +232,7 @@
   .member-card img {
     max-width: 50%; /* Garante que a imagem não ultrapasse a largura do cartão */
     width: 80px;
-    height: 70px; /* Mantém a proporção da altura da imagem */
+    height: auto; /* Mantém a proporção da altura da imagem */
     margin-bottom: auto; /* Define a margem inferior automática para a imagem */
     margin-right: 20px;
       

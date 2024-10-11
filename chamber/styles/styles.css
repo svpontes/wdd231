@@ -25,6 +25,10 @@ header {
   
 }
 
+.wayfinding{
+
+  display: block;
+}
 
 @keyframes gradientShift {
   0% { background-color: var(--header-bg-color); }
@@ -582,7 +586,10 @@ footer p.copyrigths {
 }
 
   @media(max-width: 768px){
+    .wayfinding{
 
+      display: block;
+    }
   header .social-media{
    display: none;
   }

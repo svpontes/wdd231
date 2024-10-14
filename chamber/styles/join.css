@@ -2,9 +2,9 @@
 /**********form styles*******************/
 body{
 
-  background-image: url('../images/join-bkg-image2.png');
+  background-image: url('../images/bkgform.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
  
 }
 /* MEMBERSHIP FORM =================================================================*/

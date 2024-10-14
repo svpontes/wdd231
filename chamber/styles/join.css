@@ -5,6 +5,7 @@ body{
   background-image: url('./images/join-bkg-image2.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #e60000; 
 }
 /* MEMBERSHIP FORM =================================================================*/
 .membership-section {

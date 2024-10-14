@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
  
@@ -21,24 +20,31 @@ header {
   align-items: center;
   text-align: center;
   gap: 30px;
-  animation: gradientShift 15s infinite;
+  /*animation: gradientShift 15s infinite;*/
+  background-color: rgba(255, 165, 0)
   
 }
 
 .wayfinding{
 
-  color: white;
+  
   display: block;
   margin-inline-end: auto;
   padding: 0;
   margin-left: 30px;
-}
-
-@keyframes gradientShift {
-  0% { background-color: var(--header-bg-color); }
   
-  100% { background-color: rgba(255, 165, 0, 0.9); }
-   }
+}
+div.wayfinding a:-webkit-any-link {
+  color:darkgrey ;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 5px;
+  
+}
+div.wayfinding{
+  
+  background-color:rgba(0, 0, 0, 0.1);
+}
 
 .conatiner-menu {
     display: flex;
@@ -196,8 +202,6 @@ header .botao-join-us button:hover {
   display: flex; /* Usando flexbox */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  /*height: 100vh; /* Ocupa toda a altura da viewport */
-  /* Mantém a proporção do vídeo e cobre o espaço disponível */
   padding-bottom: 56.25%;
   overflow: hidden;
   z-index: 1;
@@ -218,7 +222,7 @@ header .botao-join-us button:hover {
 } 
 
 .container  h1{
-      /* Centraliza o texto horizontalmente */
+     
   color: white; 
   display: flex;
   flex-wrap: wrap;
@@ -240,8 +244,7 @@ header .botao-join-us button:hover {
   right: 30px; /* Define a distância da direita */
   padding: 10px; /* Padding interno da div */
   display: flex; /* Garante que o conteúdo dentro da div seja flexível */
-  /*justify-content: flex-end; /* Alinha o conteúdo (formulário) à direita */
-  /*z-index: 10; /* Coloca a div acima de outros elementos se necessário */
+ 
 }
 .join-form {
   
@@ -299,8 +302,7 @@ header .botao-join-us button:hover {
   min-height: 300px;
   
   background-color:rgba(255, 255, 255, 0.8);
-  /*margin: 0 auto*/
-  
+    
   
 }
 
@@ -321,11 +323,8 @@ header .botao-join-us button:hover {
 
 #events{
 
-  /*flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;*/
   
+  max-width: 100%;
   width: 100%;
   height: auto;
   
@@ -347,15 +346,6 @@ header .botao-join-us button:hover {
 
   text-align: center;
 }
-
-/* Estilo para a imagem dos eventos */
-/*#events img {
-
-  margin-top: 20px;
-  max-width: 100%;
-  height: auto;
-}
-/*aproveitamento de codigo para weather*/
 
 .place{
   flex: 1;
@@ -592,7 +582,7 @@ footer p.copyrigths {
   @media(max-width: 768px){
     .wayfinding{
 
-      display: block;
+      display: none;
     }
   header .social-media{
    display: none;
@@ -625,12 +615,12 @@ footer p.copyrigths {
 }
   #myVideo{
 
-      position: absolute; /* Para preencher todo o contêiner */
+      /*position: absolute; /* Para preencher todo o contêiner */
       top: 0;
       left: 0;
       max-width: 100%;
       width: 100%; /* O vídeo ocupa 100% da largura do contêiner pai */
-      height: auto; /* O vídeo ocupa 100% da altura do contêiner pai */
+      height: 50vh; /* O vídeo ocupa 100% da altura do contêiner pai */
       object-fit: cover;
       z-index: -1;
   }
@@ -638,9 +628,9 @@ footer p.copyrigths {
  
   .hero-content{
 
-    display: flex;  
-    top: 35%; /* Define a distância do topo */
-      z-index: 10; /* Coloca a div acima de outros elementos se necessário */
+    position: relative;
+    top: 5%; /* Define a distância do topo */
+    z-index: 10; /* Coloca a div acima de outros elementos se necessário */
     }
     .join-form{
 
@@ -655,24 +645,10 @@ footer p.copyrigths {
       margin-right: 0%; /* Add margin on the right to give space */
    }
     
-   .hero-content{
-
-      right: 0px; /* Define a distância da direita */
-    }
- 
     
-      header {
-          
-          animation: gradientShift 15s forwards;
-          background-color: #f06e04;
-          
-      }
+    
 
-
-  @keyframes gradientShift {
-      0% { background-color: rgba(255, 165, 0, 0.9) }
-      100% { background-color: rgba(255, 165, 0, 0.6); }
-  }
+ 
   .container-menu img{
 
       max-width: 250px;
@@ -702,6 +678,7 @@ footer p.copyrigths {
       gap: 1%;
       padding: 1%;
       margin-top: 0;
+      
     }
      /* Estilo para a imagem dos eventos */
   #events img {
@@ -709,6 +686,8 @@ footer p.copyrigths {
       margin-top: 10px;
       max-width: 100%;
       height: auto;
+      padding: 30px;
+
   }
 
 .weather-info .icon {
@@ -762,7 +741,8 @@ gap: 15px;
 @media (max-width: 480px) {
   #myVideo {
       object-fit: contain; /* Para que o vídeo se ajuste melhor em telas menores */
-      height: 100vh;
+      height: 50vh;
   }
 }
+
 

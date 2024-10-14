@@ -12,11 +12,13 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="./styles/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="./styles/styles.css"></noscript>
+    
     <script defer src="./scripts/hamburger.js"></script>
     <script defer src="./scripts/datetime.js"></script>
     <script defer src="./scripts/forecast.js"></script>
     <script defer src="./scripts/corpfilter.js"></script>
     <script defer src="./scripts/weather.js"></script>
+   
 </head>
 
 <body>
@@ -32,10 +34,10 @@
                 <ul>
                     <li>
                         
-                        <a href="#">Home</a>
+                        <a href="/chamber/index.html">Home</a>
                         <a href="/chamber/directory.html">Directory</a>
                         <a href="#">Discover</a>
-                        <a href="#">Join</a>
+                        <a href="/chamber/join.html">Join</a>
                     </li>
                 </ul>
             </nav>
@@ -47,13 +49,17 @@
             <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="302" height="286" alt="Instagram Icon"></a>
         </div>
         <div class="botao-join-us">
-            <button>Join us</button>
+            <button onclick="window.location.href='/chamber/join.html'">Join us</button>
         </div>
     </header>
 
-    <div class="container-initial">
-        <a class="wayfinding" href="index.html">Home</a>
-        <video id="myVideo" autoplay muted loop>
+    
+        <div class="wayfinding">
+            <a  href="index.html">Home</a>
+            
+          </div>
+        <div class="container-initial"></div>
+            <video id="myVideo" autoplay muted loop>
             <source src="./video/videos.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -64,15 +70,19 @@
             <!-- <a class="wayfinding" href="index.html">Home</a>-->
             <!--<h1>Welcome to Nazaré Chamber of Commerce</h1>-->
         </div>
-        <section id="hero">
+        <section id="hero"> 
             <div class="hero-content">
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="join-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required aria-required="true">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
-                    <button type="submit" class="cta-button">Join Us Today</button>
-                </form>
+              <form action="/chamber/join.html" method="GET" class="join-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="first-name" autocomplete="given-name" required aria-required="true">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
+                
+                <button type="submit" class="cta-button">Join Us Today</button>
+              </form>
+            </div>
+
             </div>
             <section id="grid-events">
                 <section id="events">

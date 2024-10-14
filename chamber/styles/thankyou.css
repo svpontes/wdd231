@@ -1,0 +1,87 @@
+
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+/* Section Style */
+.thank-you-section {
+    text-align: center;
+}
+
+/* Headings */
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Highlighted Info */
+strong {
+    font-weight: bold;
+}
+
+/* Date and Time */
+#current-date-time {
+    font-style: italic;
+    color: #666;
+}
+
+/* Button Styles */
+button {
+    background-color: #ec6f08;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}

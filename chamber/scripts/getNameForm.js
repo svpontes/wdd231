@@ -1,3 +1,9 @@
+// Dynamically set the current year
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// Dynamically set the last modified date
+document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+
 function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     return {
@@ -22,3 +28,24 @@ function getQueryParams() {
     document.getElementById('first-name').value = formattedName;
     document.getElementById('email').value = email;
   };
+
+  function saveFormData() {
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const orgTitle = document.getElementById('org-title').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const organization = document.getElementById('organization').value;
+    const membershipLevel = document.getElementById('membership-level').value;
+    const description = document.getElementById('description').value;
+
+    // Salva os dados no localStorage
+    localStorage.setItem('firstName', firstName);
+    localStorage.setItem('lastName', lastName);
+    localStorage.setItem('orgTitle', orgTitle);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('organization', organization);
+    localStorage.setItem('membershipLevel', membershipLevel);
+    localStorage.setItem('description', description);
+}

@@ -260,7 +260,6 @@ header .botao-join-us button:hover {
   outline-offset: 7px; /* Afasta a borda das margens do botão */
   z-index: 9999;
 }
-
 .join-form label {
   color: white;
   font-size: 0.5rem;
@@ -737,13 +736,4 @@ gap: 15px;
   padding: 16px; /* Padding interno do card */
   text-align: center; /* Centraliza o texto dentro do card */
 }
-
-}
-@media (max-width: 480px) {
-  #myVideo {
-      object-fit: contain; /* Para que o vídeo se ajuste melhor em telas menores */
-      height: 50vh;
-  }
-}
-
-
+  }}

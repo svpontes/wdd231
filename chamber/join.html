@@ -12,29 +12,22 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="./styles/styles.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./styles/join.css">
-
     <script defer src="./scripts/hamburger.js"></script>
     <script defer src="./scripts/datetime.js"></script>
     <script defer src="./scripts/weather.js"></script>
-
     <script defer src="./scripts/jointimestamp.js"></script>
-
     <script defer src="./scripts/getNameForm.js"></script>
 </head>
-
 <body>
-
     <header>
         <div class="container-menu">
             <img src="./images/logo-chamber1.webp" loading="lazy" width="350" height="136"alt="logo">
         </div>
-
         <div>
             <button aria-label="Open menu" type="button" id="menu"></button>
             <nav class="navigation">
                 <ul>
                     <li>
-                        
                         <a href="index.html">Home</a>
                         <a href="directory.html">Directory</a>
                         <a href="#">Discover</a>
@@ -43,7 +36,6 @@
                 </ul>
             </nav>
         </div>
-        
         <div class="social-media">
             <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
             <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>
@@ -53,40 +45,28 @@
             <button onclick="window.location.href='join.html'">Join us</button>
         </div>
     </header>
-
     <div class="wayfinding">
         <a  href="index.html">Home</a>
         <a href="directory.html">Directory</a>
         <a  href="discover.html">Discover</a>
         <a  href="join.html">Join</a>
-       
     </div>
-
     <main class="container">
-              
         <section class="membership-section">
-            <!-- Membership Application Form -->
-            <form action="thankyou.html" method="GET" class="membership-form">
+              <form action="thankyou.html" method="GET" class="membership-form">
               <h2>Membership Application Form</h2>
-          
               <label for="first-name">First Name</label>
               <input type="text" id="first-name" name="first-name" title="First Name" required autocomplete="given-name">
-          
               <label for="last-name">Last Name</label>
               <input type="text" id="last-name" name="last-name" title="Last Name" required autocomplete="family-name">
-          
               <label for="org-title">Organization Title</label>
               <input type="text" id="org-title" name="organization-title" title="Title in Organization" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization" required>
-          
-              <label for="email">Email</label>
+             <label for="email">Email</label>
               <input type="email" id="email" name="email" title="Email Address" placeholder="yourname@domain.com" required autocomplete="email">
-          
-              <label for="phone">Cell Phone</label>
+             <label for="phone">Cell Phone</label>
               <input type="tel" id="phone" name="phone" title="Mobile Phone" required autocomplete="tel">
-          
               <label for="organization">Organization Name</label>
               <input type="text" id="organization" name="organization" title="Organization Name" required autocomplete="organization">
-          
               <label for="membership-level">Membership Level</label>
               <select id="membership-level" name="membership-level" title="Membership Level" required>
                 <option value="" disabled selected>Select Membership Level</option>
@@ -95,14 +75,11 @@
                 <option value="Silver Membership">Silver Membership</option>
                 <option value="Gold Membership">Gold Membership</option>
               </select>
-          
-              <label for="description">Organization Description</label>
+             <label for="description">Organization Description</label>
               <textarea id="description" name="description" title="Organization Description" rows="4"></textarea>
               <label><input type="hidden" name="timestamp" id="timestamp" value=""></label>
-              
-              <button type="submit">Submit My Membership Application</button>
+           <button type="submit">Submit My Membership Application</button>
             </form>
-        
         <section class="membership-cards">
             <div class="card">
               <h2>NP Membership</h2>
@@ -121,9 +98,7 @@
               <p><a href="#" onclick="openModal('goldModal')">Learn More</a></p>
             </div>
         </section>
-      
-          <!-- Modals for Membership Benefits -->
-           <div>
+         <div>
           <dialog id="npModal">
             <h2>NP Membership</h2>
             <p>This membership is tailored for non-profit organizations in the Lagos business community, offering benefits that cater to their specific needs. These include reduced membership fees, access to networking events focused on the non-profit sector, and specialized resources to support their missions and activities.</p>
@@ -156,7 +131,6 @@
             </div>
             <button onclick="closeModal('silverModal')">X</button>
           </dialog>
-      
           <dialog id="goldModal">
             <h2>Gold Membership</h2>
             <p>The Gold Membership is the top-tier plan, providing the most benefits and exclusive access to chamber resources. Members at this level receive invitations to VIP events, exclusive content, and personalized support to maximize their membership. This option is perfect for businesses and individuals aiming for high-level involvement and opportunities within the Lagos Chamber of Commerce.
@@ -169,8 +143,7 @@
           </dialog>
         </div> 
     </main>
-   
-    <footer>
+   <footer>
         <div class="social-footer">
             <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
             <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>

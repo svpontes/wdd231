@@ -11,7 +11,7 @@ body{
 .membership-section {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: center;*/
+  justify-content: center;
   padding: 20px;
   width: 100%;
   max-width: 100%; 
@@ -272,21 +272,21 @@ input, textarea, select {
     flex: 1;
     margin-right: 50px;
   }
-.membership-section{
-
-  align-items: center;
+  .membership-section{  
+    display: flex;
+    align-items: center;
     justify-content: center;
     margin:  0 auto;
     
-}
-  .membership-cards {
+  }
+  /*.membership-cards {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     margin:  0 auto;
     place-items: center;
     
-  }
+  }*/
 }
 
 dialog {

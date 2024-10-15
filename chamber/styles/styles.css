@@ -170,8 +170,8 @@ header .social-media{
 
  header .botao-join-us button{
     font-size: 1rem;
-    gap: 1px;
-    
+    gap: 1px;  
+  
     width: 100px;
     background-color: #f06e04;
     color: white;
@@ -606,13 +606,11 @@ footer p.copyrigths {
     flex-direction: column; /* Coloca os itens em coluna */
     position: absolute; /* Para sobrepor outros elementos */
     top: 50px; /* Ajuste conforme necessário */
-    left: 20;
     right: 0;
     background-color: #f06e04;
     padding: 10px 0; /* Espaçamento interno */
     z-index: 1000; /* Para garantir que fique sobre outros elementos */
-    transition: all 0.s ease-in-out;
-}
+    
   #myVideo{
 
       /*position: absolute; /* Para preencher todo o contêiner */

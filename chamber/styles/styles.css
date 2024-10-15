@@ -631,7 +631,7 @@ footer p.copyrigths {
     position: relative;
     top: 5%; /* Define a distância do topo */
     z-index: 10; /* Coloca a div acima de outros elementos se necessário */
-    right: -10px;
+    right: -20px;
     padding: -10px;
     }
     .join-form{
@@ -667,7 +667,7 @@ footer p.copyrigths {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 35%;
+        margin-top: 8%;
       
       }
    #grid-events{
@@ -687,6 +687,7 @@ footer p.copyrigths {
 
       margin-top: 10px;
       max-width: 100%;
+      width: 85%;
       height: auto;
       padding: 30px;
 

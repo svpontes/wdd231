@@ -241,8 +241,8 @@ header .botao-join-us button:hover {
 
   position: absolute; /* Posiciona a div em relação ao elemento pai */
   top: 30%; /* Define a distância do topo */
-  right: 30px; /* Define a distância da direita */
-  padding: 10px; /* Padding interno da div */
+  /*right: 30px; /* Define a distância da direita */
+  /*padding: 10px; /* Padding interno da div */
   display: flex; /* Garante que o conteúdo dentro da div seja flexível */
  
 }

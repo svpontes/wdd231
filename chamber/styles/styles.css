@@ -625,7 +625,7 @@ footer p.copyrigths {
     top: 5%; /* Define a distância do topo */
     z-index: 10; /* Coloca a div acima de outros elementos se necessário */
     right: -20px;
-    padding: -10px;
+    padding: 10px;
   }
 
   .join-form {

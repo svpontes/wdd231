@@ -577,30 +577,28 @@ footer p.copyrigths {
 
       
 }
-
-  @media(max-width: 768px){
-    .wayfinding{
-
-      display: none;
-    }
-  header .social-media{
-   display: none;
-  }
-
-  .botao-join-us{
-      display: none;
-  }
-
-  .navigation{
+@media(max-width: 768px) {
+  .wayfinding {
     display: none;
   }
 
-  .navigation a{
-      display: block;
+  header .social-media {
+    display: none;
   }
 
-  .navigation.open{
+  .botao-join-us {
+    display: none;
+  }
 
+  .navigation {
+    display: none;
+  }
+
+  .navigation a {
+    display: block;
+  }
+
+  .navigation.open {
     display: flex; /* Mostra o menu quando aberto */
     flex-direction: column; /* Coloca os itens em coluna */
     position: absolute; /* Para sobrepor outros elementos */
@@ -609,131 +607,107 @@ footer p.copyrigths {
     background-color: #f06e04;
     padding: 10px 0; /* Espaçamento interno */
     z-index: 1000; /* Para garantir que fique sobre outros elementos */
-    
-  #myVideo{
-
-      /*position: absolute; /* Para preencher todo o contêiner */
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      width: 100%; /* O vídeo ocupa 100% da largura do contêiner pai */
-      height: 50vh; /* O vídeo ocupa 100% da altura do contêiner pai */
-      object-fit: cover;
-      z-index: -1;
   }
 
- 
-  .hero-content{
+  #myVideo {
+    /* position: absolute; /* Para preencher todo o contêiner */
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%; /* O vídeo ocupa 100% da largura do contêiner pai */
+    height: 50vh; /* O vídeo ocupa 50% da altura da viewport */
+    object-fit: cover;
+    z-index: -1;
+  }
 
+  .hero-content {
     position: relative;
     top: 5%; /* Define a distância do topo */
     z-index: 10; /* Coloca a div acima de outros elementos se necessário */
     right: -20px;
     padding: -10px;
-    }
-    .join-form{
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      transform: translate(-50%, 0);
-      padding: 10px;
-      max-width: 350px;
-      margin-right: 0%; /* Add margin on the right to give space */
-   }
-    
-    
-    
-
- 
-  .container-menu img{
-
-      max-width: 250px;
-      width: 250px;
-      height: auto;
-       
-   }
-   
-      #events{
-
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 8%;
-      
-      }
-   #grid-events{
-
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: auto;
-      height: auto;
-      gap: 1%;
-      padding: 1%;
-      margin-top: 0;
-      
-    }
-     /* Estilo para a imagem dos eventos */
-  #events img {
-
-      margin-top: 10px;
-      max-width: 100%;
-      width: 85%;
-      height: auto;
-      padding: 30px;
-
   }
 
-.weather-info .icon {
-display: flex;
-justify-content: center; /* Centraliza o conteúdo horizontalmente */
-align-items: center;     /* Centraliza o conteúdo verticalmente */
-}
-.weather-info .icon img {
-  max-width:100%; /* Defina a largura máxima da imagem para garantir que não seja muito grande */
-  /*width: 400px;
-  height: auto;     /* Mantém a proporção da imagem */
-}
+  .join-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    max-width: 350px;
+    margin-right: 0%; /* Adiciona margem à direita para dar espaço */
+  }
 
-     
-#events h2, #weather h2, #spotlights h2 {
-font-size: 1.5rem;
-color: #ff7c02;
-font-weight: 600;
-}
+  .container-menu img {
+    max-width: 250px;
+    width: 250px;
+    height: auto;
+  }
 
-      
-/* Estilo para a seção de destaque de membros */
-      
-.spotlightsfilter {
+  #events {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 8%;
+  }
 
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-display: flex;
-height: auto;
-justify-content: center;
-margin: 0 auto;
-gap: 15px;
-/*align-items: center;*/
+  #grid-events {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    gap: 1%;
+    padding: 1%;
+    margin-top: 0;
+  }
 
+  #events img {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 85%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .weather-info .icon {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+
+  .weather-info .icon img {
+    max-width: 100%; /* Defina a largura máxima da imagem para garantir que não seja muito grande */
+  }
+
+  #events h2, #weather h2, #spotlights h2 {
+    font-size: 1.5rem;
+    color: #ff7c02;
+    font-weight: 600;
+  }
+
+  .spotlightsfilter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .spotlight-card {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none;
+    box-shadow: none;
+    padding: 16px; /* Padding interno do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+  }
 }
-      
-/* Estilização adicional para os cards de destaque */
-.spotlight-card {
-    
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* Bordas arredondadas */
-  border: none;
-  box-shadow: none;
-  padding: 16px; /* Padding interno do card */
-  text-align: center; /* Centraliza o texto dentro do card */
-}
-  }}

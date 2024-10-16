@@ -314,7 +314,27 @@ header .botao-join-us button:hover {
 }
 
 /* Estilo dos títulos das seções */
-#events h2, #weather h2, #spotlights h2 {
+#spotlights h5{
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+#spotlights h6{
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+#events h3{
+
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+.place h4 {
+  margin-top: 10px;
   font-size: 1.5rem;
   color: #333;
   text-align: center;

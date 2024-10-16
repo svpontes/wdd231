@@ -9,7 +9,7 @@
     <meta name="author" content="Sergio Vieira Pontes">
     <link rel="icon" href="./images/logo-favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>
+    <!--<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>-->
     <link rel="stylesheet" href="./styles/stylesd.css" media="print" onload="this.media='all'">
     
     <!-- Open Graph Meta Tags (para Facebook e outras redes sociais) -->
@@ -23,12 +23,13 @@
     
     <script defer src="./scripts/hamburger.js"></script>
     <script defer src="./scripts/datetime.js"></script>
+   
 </head>
 
 <body>
     <header>
         <div class="container-menu">
-            <img src="./images/logo-chamber1.webp" loading="lazy" width="350" height="136" alt="logo">
+            <img src="./images/logo-chamber1.webp" width="350" height="136" alt="logo">
         </div>
 
         <div>
@@ -44,9 +45,9 @@
         </div>
         
         <div class="social-media">
-            <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
-            <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>
-            <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="302" height="286" alt="Instagram Icon"></a>
+            <a href="#"><img  src="./images/face64x64.png" width="64" height="64" alt="Facebook Icon"></a>
+            <a href="#"><img  src="./images/twitter64x64.png" width="64" height="64" alt="Twitter Icon"></a>
+            <a href="#"><img  src="./images/insta64x64.png" width="64" height="64" alt="Instagram Icon"></a>
         </div>
         <div class="botao-join-us">
             <button onclick="window.location.href='join.html'">Join us</button>
@@ -67,21 +68,22 @@
    
     <footer>
         <div class="social-footer">
-            <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="302" height="286" alt="Facebook Icon"></a>
-            <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="302" height="286" alt="Twitter Icon"></a>
-            <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="302" height="286" alt="Instagram Icon"></a>
-        </div>
-        <div class="menu-footer">
-            <img loading="lazy" src="./images/logo-white.png" width="350" height="133" alt="Chamber Logo">
+            <ul>
+                <li>
+                    <a href="#"><img  src="./images/face64x64.png" width="64" height="64" alt="Facebook Icon"></a>
+                    <a href="#"><img  src="./images/twitter64x64.png" width="64" height="64" alt="Twitter Icon"></a>
+                    <a href="#"><img  src="./images/insta64x64.png" width="64" height="64" alt="Instagram Icon"></a>
+                </li>
+            </ul>
+            
+            <img id="logo-footer" loading="lazy" src="./images/logo-white.png" width="350" height="155" alt="Chamber Logo">
+            
             <div class="nav-footer">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
-                    <li><a href="#">Discover</a></li>
+                    <li><a href="discover.html">Discover</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookies settings</a></li>
                 </ul>
             </div>
         </div>

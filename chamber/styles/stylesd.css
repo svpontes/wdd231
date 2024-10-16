@@ -9,12 +9,17 @@
   }
   
   header {
+
     display: flex;
+    height: auto;
+    box-sizing: border-box;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    padding: 20px;
+    gap: 20px;
     background-color: rgba(255, 165, 0);
   }
   
@@ -31,24 +36,17 @@
     text-decoration: underline;
     margin: 5px;
   }
+
+  div.wayfinding ul{
+
+    list-style: none;
+    }
+
   
   div.wayfinding {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .container-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    z-index: 2;
-  }
-  
-  .container-menu img {
-    width: 350px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
   
   header .logomarca {
     display: flex;
@@ -132,9 +130,10 @@
   }
   
   header .social-media img {
-    width: 30px;
-    height: auto;
-    transition: transform 0.3s ease;
+   max-width: 100%;
+   width: 32px;
+   height: auto;
+   transition: transform 0.3s ease;
   }
   
   .social-media img:hover {
@@ -158,83 +157,7 @@
   header .botao-join-us button:hover {
     background-color: #ff0000;
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .container-initial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  #myVideo {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .container h1 {
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    z-index: 50;
-  }
-  
-  /*hero form*/
-  .hero-content {
-    position: absolute;
-    top: 30%;
-    right: 30px;
-    padding: 10px;
-    display: flex;
-  }
-  
-  .join-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-color: orange;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    margin-right: 5%;
-    outline: 2px solid #f9f9f9;
-    outline-offset: 7px;
-    z-index: 9999;
-  }
-  
-  .join-form label {
-    color: white;
-    font-size: 0.5rem;
-    text-align: left;
-  }
-  
-  .join-form input {
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-  }
+   
   
   .cta-button {
     background-color: #ff5100;
@@ -250,177 +173,128 @@
   .join-form .cta-button:hover {
     background-color: #ff0000;
   }
-  
-  /* Estilos das seções individuais */
-  #events, #weather, #spotlights {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    min-height: 300px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  #grid-events {
-    display: flex;
-    gap: 1%;
-    padding: 1%;
-    margin-top: -45%;
-  }
-  
-  /* Estilo dos títulos das seções */
-  #events h2, #weather h2, #spotlights h2 {
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  #eventList {
-    list-style-type: none;
-  }
-  
-  #eventList li {
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  #events li {
-    text-align: center;
-  }
-  
-  .place {
-    flex: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .place h2 {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-    margin: 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  
-  .place img {
-    display: block;
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .weather-widget p {
-    text-align: center;
-    font-weight: 600;
-    padding: 10px;
-  }
-  
-  #weather-info {
-    text-align: center;
-  }
-  
-  #weather-info p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  #weather-icon {
-    width: 100px;
-  }
-  
-  #forecast {
-    font-size: 1rem;
+
+  footer{
+
+    background-color: #0b1d39;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    gap: 10px;
+    padding: 20px;
+    color: #f9f9f9;
+
   }
-  
-  .spotlightsfilter {
-    display: flex;
-    height: auto;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 15px;
-    margin-left: 20px;
-  }
-  
-  .spotlight-card {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid rgb(231, 230, 230);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 16px;
-    text-align: center;
-  }
-  
-  .spotlight-card img {
+
+  div.social-footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 100px;
-    height: auto;
-    margin-bottom: 8px;
+    gap: 10px;
+    padding: 20px;
+
   }
-  
-  h3 {
-    text-align: center;
-  }
-  
-  .spotlight-card h3 {
-    font-size: 1.2em;
-  }
-  
-  .spotlight-card p {
-    margin: 4px 0;
-  }
-  
-  #forecast {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
+
+  footer #logo-footer{
+
     max-width: 100%;
-    width: 80%;
-    overflow: auto;
+    width: 150px;
+    height: auto;
+    
+  }
+
+  .social-footer img{
+    max-width: 100%;
+    width: 32px;
+    height: auto;
   }
   
-  @media (max-width: 600px) {
-    .container-initial {
-      flex-direction: column;
-    }
+  footer ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+  }
+  .nav-footer ul li a{
+    color: #f9f9f9;
+  }
+footer p{
+
+    font-size: 0.8rem;
+}
+
+  
+  @media (max-width: 768px) {
+   
   
     header .botao-join-us button {
       width: 80%;
     }
-  
-    .spotlight-card {
-      width: 80%;
-    }
-  
-    .join-form {
-      max-width: 90%;
-    }
-  
+    
     .social-media img {
       width: 40px;
     }
   
-    #forecast {
-      flex-direction: column;
+}
+  @media (max-width: 600px) {
+    
+    header .botao-join-us button {
+      width: 70%;
     }
+  
+    
+  
+    .social-media img {
+      width: 35px;
+    }
+  
+  }
+
+  @media (max-width: 410px) {
+    
+    header .botao-join-us button {
+      width: 70%;
+    }
+  
+  
+    .social-media img {
+      width: 30px;
+    }
+  
+    
+  }
+
+  @media (max-width: 375px) {
+    
+  
+    header .botao-join-us button {
+      width: 70%;
+    }
+  
+    
+  
+    .social-media img {
+      width: 30px;
+    }
+  
+   
+  }
+  @media (max-width: 360px) {
+    
+  
+    header .botao-join-us button {
+      width: 70%;
+    }
+  
+  
+    .social-media img {
+      width: 30px;
+    }
+  
+    
   }
   

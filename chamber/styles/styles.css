@@ -730,4 +730,18 @@ footer p.copyrigths {
     padding: 16px; /* Padding interno do card */
     text-align: center; /* Centraliza o texto dentro do card */
   }
+  .container  h1{
+     
+    color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 50; 
+    font-size: 0.6rem;   
+  }
 }

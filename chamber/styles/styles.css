@@ -568,8 +568,15 @@ footer .social-footer img{
   
 }
 
+#logo-footer{
+
+  width: 150px;
+  height: auto;
+}
+
 footer .menu-footer img{
-  width: 200px;
+  max-width: 100%;
+  width: 250px;
   height: auto;
   margin-top: 20px;
   margin-bottom: 20px;

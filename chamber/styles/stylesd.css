@@ -198,6 +198,128 @@
     padding: 20px;
 
   }
+  /*main grid layout*/
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Barra lateral 1fr, galeria 3fr */
+    gap: 20px; /* Espaçamento entre as colunas */
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+  
+  .container {
+
+    display: contents; /* Mantém a estrutura da grid */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;    
+}
+  .container h2{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Duas colunas: 1 para a sidebar e 1 para a galeria */
+    gap: 20px;
+    
+  }
+  
+  .sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo para a galeria */
+    gap: 15px;
+  }
+  
+  figure.inner_img {
+    position: relative;
+  }
+  
+  figure img {
+    
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+
+  /*////////////////////////////////*/
+/*calendario*/
+
+  #calendar {
+    
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .calendar-days div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ajuste a altura conforme o necessário */
+    width: 50px;  /* Ajuste a largura conforme o necessário */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+  }
+
+  
+  .calendar-days div:hover {
+    background-color: #ffb84d; /* Cor laranja ao passar o mouse */
+  }
+  
+  .current-day {
+    background-color: #ff9900; /* Cor laranja para o dia atual */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .selected-day {
+    background-color: #ff9900; /* Cor laranja ao clicar */
+    color: white;
+    font-weight: bold;
+  }
+  
+/*///////////////////////////////////*/
 
   footer #logo-footer{
 

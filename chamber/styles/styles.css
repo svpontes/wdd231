@@ -34,7 +34,7 @@ header {
   margin-left: 30px;
   
 }
-div.wayfinding a:-webkit-any-link {
+div.wayfinding a {
   color:darkgrey ;
   text-decoration: underline;
   margin: 5px;

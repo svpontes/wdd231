@@ -496,7 +496,7 @@ h3{
   background-color: #ffff;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   text-align: center;
   color: #413f3f;
   width: 100%;

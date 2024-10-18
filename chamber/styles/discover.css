@@ -1407,7 +1407,7 @@ body.dark-mode #location-name {
 .membership-levels .card {
     transform: translateY(100px); 
     opacity: 0; 
-    animation: slideUp 2s ease-out forwards, changeColor 4s ease-in-out infinite;
+    
     
 }
 

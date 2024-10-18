@@ -29,6 +29,13 @@ body {
     margin: 0 auto; 
 }
 
+.container h1{
+
+    color: #000;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    
+}
 /* Navbar Brand (Logo) */
 .navbar-brand {
     display: flex;
@@ -1839,15 +1846,7 @@ body.dark-mode .members-section h1 {
     
 }
 
-aside div h1#tittle-discover-aside{
 
-    color: #000000;
-    text-align: left;
-    margin-bottom: 20px;
-    top: 0;
-    
-
-}
 /* Full-width HR line inside the sidebar */
 
 

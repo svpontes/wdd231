@@ -175,7 +175,14 @@ div.wayfinding li{
     padding-left: 0;
 }
 
+.container #tittle-discover-aside{
+    color: #000000;
+    text-align: left;
+    margin-right: 80%;
+    width: 30%;
+    
 
+}
 /* Beautified Visitor Message Card =======================================================*/
 .visitor-message-card {
     
@@ -209,7 +216,6 @@ div.wayfinding li{
     .sidebar {
         width: 100%; 
     }
-}
 
 
 /* Calendar section styling ============================================================*/
@@ -257,6 +263,7 @@ div.wayfinding li{
     font-weight: 500;
     white-space: nowrap; 
     padding-left: 20px; 
+}
 }
 
 /* Responsive design for smaller screens */
@@ -490,7 +497,7 @@ div.wayfinding li{
 /* Styling the figcaption */
 .gallery .inner_img figcaption {
     position: absolute;
-    bottom: 10px; /* Alinha o figcaption na parte inferior */
+    margin-bottom: 20px; /* Alinha o figcaption na parte inferior */
     left: 50%; /* Centraliza horizontalmente, começando do centro */
     transform: translateX(-50%); /* Corrige o deslocamento para uma centralização perfeita */
     /*background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
@@ -563,7 +570,7 @@ div.wayfinding li{
     }
 
     .gallery .inner_img {
-        width: 100vw;
+        width: 100%;
         padding-left: 0; 
         padding-right: 0;
     }

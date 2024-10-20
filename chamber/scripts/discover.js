@@ -1,42 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Lazy loading de imagens
     const lazyImages = document.querySelectorAll('.lazy-load');
 
-    // Função para lidar com o lazy loading das imagens
-    const lazyLoad = () => {
-        lazyImages.forEach(image => {
-            if (image.getBoundingClientRect().top < window.innerHeight && image.dataset.src) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
                 image.src = image.dataset.src;
 
                 // Adiciona a classe 'loaded' após o carregamento da imagem
                 image.onload = () => {
                     image.classList.add('loaded');
                 };
-                image.removeAttribute('data-src');
+                observer.unobserve(image); // Para de observar a imagem após carregada
             }
         });
-    };
+    });
 
-    // Ocultar imagens inicialmente (lazy load)
     lazyImages.forEach(image => {
-        image.style.display = 'none'; 
+        imageObserver.observe(image);
     });
 
-    // Adiciona o listener de scroll para ativar o lazy load
-    window.addEventListener('scroll', () => {
-        lazyLoad();
-        lazyImages.forEach(image => {
-            image.style.display = 'block';
-        });
-    });
+    // Gerenciar item selecionado na sidebar
+    document.querySelector('.local-section').classList.add('selected');
 
-    lazyLoad();
-});
-
-// Gerenciar item selecionado na sidebar
-document.querySelector('.local-section').classList.add('selected');
-
-// Mensagem de visitante baseada na última visita
-document.addEventListener('DOMContentLoaded', () => {
+    // Mensagem de visitante baseada na última visita
     const lastVisit = localStorage.getItem('last-visit');
     const now = Date.now();
     const oneDay = 24 * 60 * 60 * 1000; // Milissegundos em um dia
@@ -59,12 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('visitor-message').textContent = message;
-
     localStorage.setItem('last-visit', now);
-});
 
-// Calendário
-document.addEventListener('DOMContentLoaded', function() {
+    // Calendário
     const calendar = document.getElementById('calendar');
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June', 

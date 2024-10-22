@@ -1,6 +1,5 @@
 * {
   margin: 0;
- 
   box-sizing: border-box;
 }
 
@@ -45,7 +44,7 @@ div.wayfinding{
   background-color:rgba(0, 0, 0, 0.1);
 }
 
-.conatiner-menu {
+.container-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,12 +151,6 @@ header .social-media{
     display: flex;
     padding: 10px;
     gap: 10px;        
- }
- header .social-media img{
-
-     width: 30px;
-     height: auto;
-      
  }
 
  .social-media img:hover {

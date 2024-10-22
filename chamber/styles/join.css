@@ -4,7 +4,7 @@ body{
 
   background-image: url('../images/bkgform.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
  
 }
 /* MEMBERSHIP FORM =================================================================*/
@@ -191,10 +191,17 @@ div.card h2:hover{
 
   color: rgb(255, 0, 0);
 }
+wayfinding{
 
-div.wayfinding a:-webkit-any-link {
+  
+  display: block;
+  margin-inline-end: auto;
+  padding: 0;
+  margin-left: 30px;
+  
+}
+div.wayfinding a {
   color:darkgrey ;
-  cursor: pointer;
   text-decoration: underline;
   margin: 5px;
   

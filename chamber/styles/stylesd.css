@@ -1,0 +1,606 @@
+/* Resetando estilos */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translate(-50% 50%);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    background-color: rgba(255, 165, 0);
+    padding: 10px;  
+}
+
+.wayfinding{
+
+  
+    display: block;
+    margin-inline-end: auto;
+    padding: 0;
+    margin-left: 30px;
+    
+  }
+  div.wayfinding a {
+    color:darkgrey ;
+    text-decoration: underline;
+    margin: 5px;
+    
+  }
+  div.wayfinding{
+    
+    background-color:rgba(0, 0, 0, 0.1);
+  }
+
+/* Botão do menu hambúrguer */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #ff6600;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+    color: #ff6600;
+    font-weight: 600;
+}
+
+#menu.open::before {
+    content: "X";
+    color: #ff6600;
+    font-weight: 600;
+}
+
+/* Navegação principal */
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #0b1d39;
+    padding: 10px 15px;
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+a.join-button{
+    font-size: 1rem;
+    gap: 1px;  
+    width: 100px;
+    background-color: #f06e04;
+    color: white;
+    padding: 10px;
+    border-radius: 8px; 
+    border: none;
+    outline: 2px solid #f9f9f9;
+    outline-offset: 5px; 
+    text-decoration: none;
+   
+}
+header .botao-join-us button:hover {
+    background-color: #ff0000;;
+  }
+
+  
+  /*//////////////main/////////////////////////////////////*/
+
+/* Estilos do container grid */
+figcaption{
+
+   margin-bottom: 10px ;
+   margin-left: 50px;
+}
+
+.inner_img img{
+    border-radius: 8px;
+    
+}
+.grid-layout{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    
+       
+}
+
+.current-day {
+    background-color: #ffeb3b; /* Cor de destaque para o dia atual */
+    color: #000;
+    font-weight: bold;
+}
+
+div#visitor-control.message{
+
+    color: rgba(255, 165, 0);
+    font-weight: 600;
+}
+div#calendar-header{
+    display: flex;
+    gap: 20px
+}
+
+button#nextButton, button#prevButton {
+    border: none;
+    background-color: white;
+    color: #ff6600;
+    font-weight: 600;
+}
+
+button#nextButton:hover, button#prevButton:hover {
+    color: #ff0000;
+    font-weight: 900;
+}
+
+.sidebar{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    width: 90%;
+    
+    
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #90caf9; /* Cor de hover */
+    cursor: pointer;
+}
+
+div#visitor-control, div.local-area, div.calendar-container, div.up-events, div.add{
+
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px; 
+   }
+div#calendar-header{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+div#visitor-control.message, div.local-area, div.calendar-container{
+    padding: 20px;
+}
+
+div.up-events{
+
+    padding: 20px;
+}
+
+div.add h2{
+
+    margin-top: 10px;
+}
+
+div.add {
+
+    text-align: center ;
+    
+}
+
+
+img.add-image{
+
+    border-radius:15px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+div.calendar-container{
+
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+text-align: center;
+max-width: 100%;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.gallery h2{
+
+margin-bottom: 10px;
+color: rgba(255, 165, 0);
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 50px;
+}
+
+td{
+
+border: 1px solid rgb(240, 240, 240);
+border-radius: 5px;
+gap: 5px;
+}
+
+th{
+
+font-size: 1rem;
+padding: 8px;
+background-color: rgba(255, 165, 0);
+color: white;
+border-radius: 5px;
+font-weight: 100;
+}
+
+#calendar-header h2{
+    font-size: 1rem;
+}
+
+h1{
+
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/*efeito imagem*/
+.inner_img{
+
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+.inner_img img:hover{
+
+    transform: scale(0.9);
+    border: 2px solid #fc0000;
+    padding: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    
+    
+    
+}
+/* Adicione quaisquer estilos adicionais que você deseja aqui */
+
+/* Estilo para a sidebar */
+
+  /*//////////////////////////////////////*/
+/*footer*/
+/*footer*/
+footer {
+    width: 100%;
+    background-color: #0b1d39;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    
+  }
+  footer a{
+       
+    font-size: 0.8rem;
+    color: rgb(179, 177, 177);
+    
+  }
+  footer .nav-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  footer .nav-footer{
+    text-decoration: none;
+  }
+
+ footer ul{
+
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+
+ }
+  
+  footer .nav-footer ul li a{
+    
+    margin: 0 10px; /* Espaçamento entre os itens */
+    display: inline-block;
+    
+  }
+  footer .social-footer img{
+  
+    width: 30px;
+    height: auto;
+    margin-bottom: 1%;
+    
+  }
+  
+  #logo-footer{
+  
+    width: 150px;
+    height: auto;
+  }
+  
+  footer .menu-footer img{
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  footer p.copyrigths {
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+  /* Exibe a última modificação e o ano atual */
+  #lastModified, #current-year {
+    display: inline-block;
+    color: #ccc; /* Cor mais clara para destacar menos */
+  }
+/*///////////////////////////////////////*/
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+   
+    .discover-main {
+        display: flex; /* Define o container como grid */
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    
+    
+    .grid-layout{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        
+        
+    }
+    .sidebar{
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+        
+        
+    }
+   div.local-area p{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+
+   }
+
+   h1{
+
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+   }
+   
+   
+    
+    #menu {
+        display: block; /* Mostrar o ícone hambúrguer no mobile */
+    }
+
+    /* Esconder os links do menu por padrão no mobile */
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navigation li a{
+        color: white;
+    }
+
+    /* Exibir os links quando o menu estiver aberto */
+
+    
+  .navigation.open {
+    display: flex; /* Mostra o menu quando aberto */
+    flex-direction: column; /* Coloca os itens em coluna */
+    position: absolute; /* Para sobrepor outros elementos */
+    top: 50px; /* Ajuste conforme necessário */
+    right: 0;
+    background-color: #f06e04;
+    padding: 10px 0; /* Espaçamento interno */
+    z-index: 1000; /* Para garantir que fique sobre outros elementos */
+  }
+    .navigation.open ul {
+        display: flex;
+    }
+
+    div.social-media {
+        display: none;
+    }
+
+    .wayfinding {
+        display: none;
+    }
+
+    a.join-button{
+
+        display: none;
+    }
+    .gallery h2{
+
+        margin-bottom: 10px;
+        color: rgba(255, 165, 0);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .add h2{
+
+        margin-bottom: 20px;
+    }
+}
+/* Estilo para dispositivos desktop */
+@media (min-width: 769px) {
+    #menu {
+        display: none; /* Esconder o ícone hambúrguer no desktop */
+    }
+
+    /* Mostrar o menu de navegação no desktop */
+    .navigation ul {
+        display: flex;
+    }
+}
+
+/*media queries for main*/
+/* ****** Responsiveness with media queries ****** */
+
+/* Adjustments for tablets (width up to 1024px) */
+@media (max-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* Sidebar and content stack vertically */
+        gap: 15px;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    #tittle-discover-aside, #gallery-tittle {
+        margin-top: 40px;
+    }
+
+    /* Calendar adjustments */
+    #calendar {
+        grid-template-columns: repeat(4, 1fr); /* Reduce grid columns */
+        gap: 8px;
+    }
+}
+
+/* Adjustments for mobile devices (width up to 768px) */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* Full width layout */
+    }
+
+    .sidebar {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #tittle-discover-aside, #gallery-tittle {
+        margin-top: 30px;
+    }
+
+    .calendar-header {
+        font-size: 1rem;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(3, 1fr); /* Further reduce columns */
+        gap: 6px;
+    }
+
+    #calendar div {
+        padding: 8px;
+    }
+    .inner_img img{
+        max-width: 100%;
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Adjustments for small mobile devices (width up to 480px) */
+@media (max-width: 480px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* Full width layout */
+        gap: 10px;
+    }
+
+    .sidebar {
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    #tittle-discover-aside, #gallery-tittle {
+        margin-top: 20px;
+    }
+
+    .calendar-header {
+        font-size: 0.9rem;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(2, 1fr); /* Further reduce columns */
+        gap: 5px;
+    }
+
+    #calendar div {
+        padding: 5px;
+    }
+}

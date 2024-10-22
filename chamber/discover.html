@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAZARÉ | Chamber of Commerce</title>
     <meta name="description"
-        content="Page Join of project chamber of commerce from week 4 assignment. Technologies of Web Development including HTML, CSS, and JavaScript.">
+        content="Page Discover of project chamber of commerce from week 4 assignment. Technologies of Web Development including HTML, CSS, and JavaScript.">
     <meta name="author" content="Sergio Vieira Pontes">
     <link rel="icon" href="./images/logo-favicon.png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" as="style" onload="this.rel='stylesheet'">
-    <!--<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></noscript>-->
-    <link rel="stylesheet" href="./styles/styles.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="./styles/discover.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" as="style" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/stylesd.css" media="print" onload="this.media='all'">
+    
     <!-- Open Graph Meta Tags (para Facebook e outras redes sociais) -->
     <meta property="og:site_name" content="WDD231 Web Frontend Development I">
     <meta property="og:title" content="Sergio Pontes - Portfolio of Web Frontend Development I">
@@ -24,179 +24,152 @@
     <script defer src="./scripts/hamburger.js"></script>
     <script defer src="./scripts/datetime.js"></script>
     <script defer src="./scripts/discover.js"></script>
+    <script defer src="./scripts/calendar.js"></script>
+    <script defer src="./scripts/lazyloadimgs.js"></script>
    
 </head>
-
 <body>
-    <header>
-        <div class="container-menu">
-            <img src="./images/logo-chamber1.webp" width="350" height="136" alt="logo">
-        </div>
-
-        <div>
-            <button aria-label="Open menu" type="button" id="menu"></button>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="social-media">
-            <a href="#"><img  src="./images/face64x64.png" width="64" height="64" alt="Facebook Icon"></a>
-            <a href="#"><img  src="./images/twitter64x64.png" width="64" height="64" alt="Twitter Icon"></a>
-            <a href="#"><img  src="./images/insta64x64.png" width="64" height="64" alt="Instagram Icon"></a>
-        </div>
-        <div class="botao-join-us">
-            <button onclick="window.location.href='join.html'">Join us</button>
-        </div>
-    </header>
-
-    <div class="wayfinding">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="discover.html">Discover</a></li>
-        </ul>
+  <header>
+    <div class="container-menu">
+        <img src="./images/logo-chamber1.webp" loading="lazy" width="350" height="136" alt="Chamber of Commerce Logo">
     </div>
-
-<!-- Main Content -->
-<main class="discover-main">
-    <div class="container">
-        <!-- Title Section -->
-        <h1 id="tittle-discover-aside">Discover</h1>
-        <div class="grid-layout">
-
-            <!-- Sidebar content -->
-             
-            <aside class="sidebar">
-                <!-- Visitor message from localStorage -->
-                 
-                <div id="visitor-message" class="visitor-message-card"></div>
-            
-                <!-- Local Business Section -->
-                <div class="local-section">
-                    <h2>Local Attractions</h2>
-                    <div class="local-attractions-card">
-                        <p>Explore our area's beautiful beaches, landscapes, museums, and historic landmarks, while dealing with the perfect venues for business meetings and corporate events. Whether you're here for professional purposes or seeking a balance between work and leisure, our local attractions offer a unique opportunity to blend business with pleasure seamlessly. With state-of-the-art facilities for meetings and conferences, you can focus on your goals, while taking advantage of the natural beauty and cultural experiences during your free time. From a productive day of business to relaxing moments in nature or historical tours.</p>
-                    </div>
-                </div>
-
-                <!-- Calendar Section -->
-                <div class="calendar-section">
-                    <h2>Upcoming Events</h2>
-                    <ul class="calendar">
-                        <li>
-                            <span class="event-name">Web Summit 2024</span>
-                            <span class="event-date">Nov 11-14, 2024</span>
-                        </li>
-                        <li>
-                            <span class="event-name">Classic Music Festival</span>
-                            <span class="event-date">Nov 19, 2024</span>
-                        </li>
-                        <li>
-                            <span class="event-name">Business Awards - Startups</span>
-                            <span class="event-date">Dec 15, 2024</span>
-                        </li>
-                    </ul>
-                </div>
-            
-               
-                <!-- Advertisement Section -->
-                <div class="advertisement">
-                    <h2>Support Local Businesses</h2>
-                    <img src="./images/events.jpg" alt="Local Businesses" class="advert-image" width="350" height="229">
-                    <p>Discover and support local businesses with special offers and promotions just for you!</p>
-                </div>
-                        
-                <!-- Local Business Highlight -->
-                <div class="business-highlight">
-                    <h2>Business Awards 2024</h2>
-                    <div class="highlight-card">
-                        <div class="highlight-info">
-                            <h3>Startups 2024 </h3>
-                            <img src="./images/featured-busness.jpg" alt="add business awards 2024 featured startups" width="599" height="337">
-                            <p>Nazaré Chamber of Commerce awards featured startups 2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Calendar Section -->
-                <div class="calendar-section">
-                    <h2>Calendar</h2>
-                    <div id="calendar"></div>
-                </div>
-
-               
-            </aside>
-
-
-            <!-- Main content with images -->
-            <section class="gallery">
-
-                <section class="attraction-section">
-                    <h2 id="gallery-tittle">Business Environment</h2>
-                </section>
-
-                <figure class="inner_img">
-                    <img src="./images/websummit.webp" alt="web summit event add" width="480" height="319">
-                    <figcaption>Technology Conference</figcaption>
-                </figure>
-                <figure class="inner_img">
-                    <img src="." data-src="./images/concerts.webp" alt="classic music event add" class="lazy-load img" loading="lazy" width="480" height="319">
-                    <figcaption>Classic Music Events</figcaption>
-                </figure>
-                <figure class="inner_img">
-                    <img src="." data-src="./images/centrodeconvencoes1.webp" alt="convention center local image" class="lazy-load img" loading="lazy" width="944" height="627">
-                    <figcaption>Large Auditorium</figcaption>
-                </figure>
-                <figure class="inner_img">
-                    <img src="." data-src="./images/laser.webp" alt="beautifull beach image" class="lazy-load img" loading="lazy" width="480" height="319">
-                    <figcaption>Tourism</figcaption>
-                </figure>
-                <figure class="inner_img">
-                    <img src="." data-src="./images/eventsexpo.webp" alt="image building arts gallery and expo" class="lazy-load img" loading="lazy" width="480" height="319">
-                    <figcaption>Art Expo</figcaption>
-                </figure>
-                <figure class="inner_img">
-                    <img src="." data-src="./images/conference-center.webp" alt="chamber commerce plaza" class="lazy-load img" loading="lazy" width="480" height="319">
-                    <figcaption>Chamber Plaza </figcaption>
-                </figure>
-
-            </section>
-            
-        </div>
-    </div>
-</main>
-
-<!-- Footer -->
-<footer>
-    <div class="social-footer">
-        <ul>
-            <li>
-                <a href="#"><img  src="./images/face64x64.png" width="64" height="64" alt="Facebook Icon"></a>
-                <a href="#"><img  src="./images/twitter64x64.png" width="64" height="64" alt="Twitter Icon"></a>
-                <a href="#"><img  src="./images/insta64x64.png" width="64" height="64" alt="Instagram Icon"></a>
-            </li>
-        </ul>
-        
-        <img id="logo-footer" loading="lazy" src="./images/logo-white.png" width="350" height="155" alt="Chamber Logo">
-        
-        <div class="nav-footer">
+    <div>
+        <button aria-label="Open menu" type="button" id="menu"></button>
+        <nav class="navigation" aria-label="Primary navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="join.html">Join</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="directory.html">Directory</a></li>
+              <li><a href="discover.html">Discover</a></li>
+              <li><a href="join.html">Join</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
-    <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved. Designed by Sergio Pontes</p>
+    <div class="social-media" aria-label="Social media links">
+        <a href="#" aria-label="Visit our Facebook page"><img loading="lazy" src="./images/face-white-302-286.webp" width="30" height="30" alt="Facebook Icon"></a>
+        <a href="#" aria-label="Visit our Twitter profile"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="30" height="30" alt="Twitter Icon"></a>
+        <a href="#" aria-label="Visit our Instagram profile"><img loading="lazy" src="./images/insta-white-302-286.webp" width="30" height="30" alt="Instagram Icon"></a>
+    </div>
+    <div class="botao-join-us">
+        <a href="join.html" class="join-button" aria-label="Join us button">Join us</a>
+    </div>
+  </header>
+
+  <div class="wayfinding" aria-label="Breadcrumb navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+      
+  </div>
+
+  <main class="container-main">
+    <!-- Main Content -->
+    <section class="discover-main">
+      <div class="grid-layout">
+        <!-- Sidebar content -->
+        <aside class="sidebar">
+          <section>
+            <h1>Discover</h1>
+            <!-- Visitor message from localStorage -->
+            <div id="visitor-control" class="message"></div>
+
+            <div class="local-area">
+              <h2>Local Attractions</h2>
+              <p>Explore our area's beautiful beaches, landscapes, 
+                 museums, and historic landmarks...</p>
+            </div>
+
+            <!-- Calendar Section -->
+              <div class="calendar-container">
+                <div id="calendar-header">
+                  <button id="prevButton"><<</button>
+                  <h2 id="monthYear">October 2024</h2>
+                  <button id="nextButton">>></button>
+                </div>
+                <table id="calendar-table"> <!-- ID alterado para evitar conflitos -->
+                  <thead>
+                    <tr>
+                      <th>Sun</th>
+                      <th>Mon</th>
+                      <th>Tue</th>
+                      <th>Wed</th>
+                      <th>Thu</th>
+                      <th>Fri</th>
+                      <th>Sat</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- As células do calendário serão preenchidas dinamicamente pelo JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="up-events">
+                <h2>Upcoming Events</h2>
+                <ul class="calendar">
+                  <li><span class="event-name">Web Summit 2024</span><span class="event-date">Nov 11-14, 2024</span></li>
+                  <li><span class="event-name">Classic Music Festival</span><span class="event-date">Nov 19, 2024</span></li>
+                </ul>
+              </div>
+            
+
+            <!-- Advertisement Section -->
+            <div class="add">
+              <h2>Support Local Businesses</h2>
+              <img src="./images/events.webp" alt="Support local businesses" class="add-image" width="350" height="229">
+            </div>
+          </section>
+        </aside>
+
+        <!-- Main content with images -->
+        <section class="gallery">
+          <h2>Business and Relax Environment</h2> <!-- Único h1 -->
+          <figure class="inner_img">
+              <img src="./images/websummit.webp" alt="Web Summit event" width="480" height="319">
+              <figcaption>Technology Conference</figcaption>
+          </figure>
+          <figure class="inner_img">
+              <img data-src="./images/centrodeconvencoes.webp" alt="Classic music event" class="lazy-load img" loading="lazy" width="480" height="319">
+              <figcaption>Large Convention Center</figcaption>
+          </figure>
+          <figure class="inner_img">
+            <img data-src="./images/concerts.webp" alt="Classic music event" class="lazy-load img" loading="lazy" width="480" height="319">
+              <figcaption>Classical Music Events</figcaption>
+          </figure>
+          <figure class="inner_img">
+            <img data-src="./images/conference-center.webp" alt="Classic music event" class="lazy-load img" loading="lazy" width="480" height="319">
+            <figcaption>Chamber Plaza promotes outside events</figcaption>
+          </figure>
+          <figure class="inner_img">
+            <img data-src="./images/laser.webp" alt="Classic music event" class="lazy-load img" loading="lazy" width="480" height="319">
+            <figcaption>Tourism</figcaption>
+          </figure>
+          <figure class="inner_img">
+          <img data-src="./images/eventsexpo.webp" alt="Classic music event" class="lazy-load img" loading="lazy" width="480" height="319">
+          <figcaption>Cultural expositions</figcaption>
+          </figure>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-footer">
+      <a href="#"><img loading="lazy" src="./images/face-white-302-286.webp" width="30" height="30" alt="Facebook Icon"></a>
+      <a href="#"><img loading="lazy" src="./images/twitter-white-302-286.webp" width="30" height="30" alt="Twitter Icon"></a>
+      <a href="#"><img loading="lazy" src="./images/insta-white-302-286.webp" width="30" height="30" alt="Instagram Icon"></a>
+    </div>
+    <div class="menu-footer">
+      <img loading="lazy" src="./images/logo-white.webp" width="250" height="111.2" alt="Chamber Logo">
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copyrigths">&copy; <span id="current-year"></span> NAZARÉ | Chamber of Commerce. All rights reserved.</p>
     <p class="update-modification" id="lastModified"></p>
-</footer>
-   
+  </footer>
 </body>
 </html>

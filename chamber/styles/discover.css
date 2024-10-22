@@ -108,7 +108,6 @@ div.wayfinding li{
 
 /* Card style for each section */
 .sidebar .local-section,
-.sidebar .calendar-section,
 .sidebar .advertisement,
 .sidebar .business-highlight {
     background-color: #fff;
@@ -121,7 +120,6 @@ div.wayfinding li{
 
 /* Hover effect for the card */
 .sidebar .local-section:hover,
-.sidebar .calendar-section:hover,
 .sidebar .advertisement:hover,
 .sidebar .business-highlight:hover {
     transform: translateY(-5px); 
@@ -160,10 +158,6 @@ div.wayfinding li{
     margin-bottom: 8px;
 }
 
-/* Extra padding for specific sections */
-.sidebar .calendar-section ul li {
-    padding-left: 0;
-}
 
 .container #tittle-discover-aside{
     color: #000000;
@@ -202,43 +196,6 @@ div.wayfinding li{
 }
 
 /* Responsive design for mobile */
-@media (max-width: 992px) {
-    .sidebar {
-        width: 100%; 
-    }
-
-
-/* Calendar section styling ============================================================*/
-.calendar-section {
-    margin-bottom: 20px;
-}
-
-.calendar-section h2 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.calendar {
-    list-style: none;
-    padding-left: 0;
-}
-
-.calendar li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    margin-bottom: 10px;
-    background-color: #f3f4f6; 
-    border-radius: 8px;
-   
-}
-
-.calendar li:hover {
-    background-color: #e1e3e8;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
 .event-name {
     font-size: 1rem;
@@ -263,23 +220,6 @@ div.wayfinding li{
     
 
 }
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .calendar li {
-        flex-direction: column; 
-        align-items: flex-start;
-    }
-
-    .event-date {
-        padding-left: 0;
-        margin-top: 5px;
-        font-size: 0.85rem; 
-        color: #333;
-    }
-}
-
 
 /* Featured Business Styling =========================================================*/
 .business-highlight {
@@ -365,7 +305,7 @@ div.wayfinding li{
 }
 
 /* Active Selected sidebar item styling */
-.sidebar .selected, .calendar-section, .advertisement, .business-highlight {
+.sidebar .selected, .advertisement, .business-highlight {
     
     padding: 10px;
     border: 2px solid rgba(255, 165, 0);
@@ -381,68 +321,14 @@ div.wayfinding li{
     margin-bottom: 10px;
 }
 
-/* Calendar Styles */
-#calendar {
+#startup{
     
-    width: 100%;
-    background-color: #fff;
-    border: 0.2px solid #dbd9d9;
-    border-radius: 12px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-}
-
-.calendar-header button {
-    background: none;
-    border: none;
-    font-size: 1.7rem;
-    color:rgba(255, 165, 0);
-    margin: 25px 25px;
-}
-
-.calendar-days div {
-
-    padding: 10px;
-    border-radius: 10%;
-    background-color: #f9f9f9;
-    max-width: 100%;
-    width: 33.14px;
+    max-width: 599px;
+    width: 150px;
     height: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    object-fit: cover;
+    
 }
-
-.calendar-days div.current-day {
-   
-    color: #fff;
-    background-color: rgba(255, 165, 0);
-}
-
-.calendar-days div:hover {
-    background-color: #f06e04;
-    color: #fff;
-}
-
 
 /* Gallery, Grid layout ======================================================================*/
 .grid-layout {

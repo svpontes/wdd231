@@ -76,7 +76,7 @@ const displayProducts = (products) => {
 
         // Ícone do carrinho com evento de clique para adicionar ao carrinho
         const cartIcon = document.createElement("img");
-        cartIcon.setAttribute("src", "/images/cart.png"); // Defina o caminho para o ícone do carrinho
+        cartIcon.setAttribute("src", "./images/cart.png"); // Defina o caminho para o ícone do carrinho
         cartIcon.setAttribute("alt", "Add to the cart");
         cartIcon.classList.add("cart-icon");
 

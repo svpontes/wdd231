@@ -78,7 +78,9 @@ header{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    max-width: 100%;
     width: 200px;
+    height: auto;
 }
 
 .welcome-title{
@@ -318,7 +320,9 @@ footer {
 }
 
 .logo-area img {
-    max-width: 150px;
+    max-width: 100%;
+    width: 150px;
+    height: auto;
     display: block;
     margin: 0 auto;
 }

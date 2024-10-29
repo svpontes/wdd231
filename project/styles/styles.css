@@ -25,6 +25,7 @@ main{
 /* Menu principal */
 
 header{
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -160,23 +161,23 @@ z-index: 999;
     text-decoration: none;
 }
 
-.nav-links-icones li a.home:hover img {
+.nav-links-icones li .home:hover img {
     content: url('../images/home40x40hoverpng.png');
 }
 
-.nav-links-icones li a.bubbletea:hover img {
+.nav-links-icones li .bubbletea:hover img {
     content: url('../images/bubbletea40x40hoverpng.png');
 }
 
-.nav-links-icones li a.cakes:hover img {
+.nav-links-icones li .cakes:hover img {
     content: url('../images/cake40x40hoverpng.png');
 }
 
-.nav-links-icones li a.snacks:hover img {
+.nav-links-icones li .snacks:hover img {
     content: url('../images/snack40x40hoverpng.png');
 }
 
-.nav-links-icones li a.order:hover img {
+.nav-links-icones li .order:hover img {
     content: url('../images/order40x40hoverpng.png');
 }
 

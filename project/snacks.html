@@ -14,8 +14,8 @@
     <link rel="icon" href="./images/favicon-2_2_11zon.webp" type="image/png">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="styles/styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles/styles.css"></noscript>
+    <link rel="stylesheet" href="/styles/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/styles/styles.css"></noscript>
     
     <!-- Fonte Google Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +36,12 @@
     <meta name="twitter:title" content="Estevas Garden Snack Bar">
     <meta name="twitter:description" content="Immerse yourself in the unique flavors and cozy atmosphere of Estevas Garden Snack Bar. Perfect for relaxing and enjoying!">
     
-    <script defer src="/scripts/hamburger.js"></script>
-    <script defer src="/scripts/time.js"></script>
-    <script defer src="/scripts/wayfinding.js"></script>
+    <script defer src="./scripts/hamburger.js"></script>
+    <script defer src="./scripts/time.js"></script>
+    <script defer src="./scripts/wayfinding.js"></script>
     <script type="module">
-        import{loadProducts} from '/scripts/cards.js';
-        loadProducts('/data/snacks.json');
+        import{loadProducts} from './scripts/cards.js';
+        loadProducts('./data/snacks.json');
     </script>
 
 </head>
@@ -128,7 +128,7 @@
         </div>
         <!-- Navegação por Ícones -->
         <ul class="nav-links-icones">
-            <li><a href="/index.html" class="home"><img src="./images/home40x40png.png" alt="Home"></a></li>
+            <li><a href="./index.html" class="home"><img src="./images/home40x40png.png" alt="Home"></a></li>
             <li><a href="beverages.html" class="bubbletea"><img src="./images/bubbletea40x40png.png" alt="Bubble Tea"></a></li>
             <li><a href="sweets.html" class="cakes"><img src="./images/cake40x40png.png" alt="Cakes"></a></li>
             <li><a href="snacks.html" class="snacks"><img src="./images/snack40x40png.png" alt="Snacks"></a></li>
@@ -153,7 +153,7 @@
             </ul>
         </div>
         <p>&copy; <span id="currentyear"></span> Sergio Vieira Pontes
-            <img src="/images/bandeira.jpg" alt="Bandeira de Portugal"> Portugal
+            <img src="./images/bandeira.jpg" alt="Bandeira de Portugal"> Portugal
         </p>
     </div>
 </footer>

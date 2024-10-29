@@ -27,7 +27,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--background); /* Usa a variável CSS */
+    background-color: var(--background);
     transition: background-color 0.3s ease;
     
     
@@ -85,8 +85,7 @@ header{
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
-    
-    
+    background-color: var(--background);
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -99,20 +98,6 @@ header{
     text-align: center;
 
 }
-
-#welcome-title{ 
-
-    color: white;
-    font-size: 3rem;
-    z-index: 9999;
-}
-
-.hero-button p{
-font-size: 1.3rem;
-font-weight: 600;
-z-index: 999;
-}
-
 
 
 
@@ -127,13 +112,13 @@ z-index: 999;
 /* Links de navegação */
 
 :root {
-    --background: rgba(179, 178, 178, 0.2); /* Cor base applyed in the header*/
+    --background: rgba(220, 79, 15, 1); /* Cor base */
 }
 
 .nav-links li a.active{
 
     color: rgb(252, 227, 5);
-    font-weight: bold;
+    font-weight: 500;
     border-bottom: 2px solid rgb(252, 227, 5);
 }
 
@@ -158,25 +143,16 @@ z-index: 999;
 }
 
 .nav-links-icones li a.home:hover img {
-    content: url('../images/home40x40hoverpng.png');
+    content: url('../images2/resized/home40x40hoverpng.png');
 }
 
 .nav-links-icones li a.bubbletea:hover img {
-    content: url('../images/bubbletea40x40hoverpng.png');
+    content: url('../images2/resized/bubbletea40x40hoverpng.png');
 }
 
 .nav-links-icones li a.cakes:hover img {
-    content: url('../images/cake40x40hoverpng.png');
+    content: url('../images2/resized/cake40x40hoverpng.png');
 }
-
-.nav-links-icones li a.snacks:hover img {
-    content: url('../images/snack40x40hoverpng.png');
-}
-
-.nav-links-icones li a.order:hover img {
-    content: url('../images/order40x40hoverpng.png');
-}
-
 
 .contact-button {
 
@@ -216,6 +192,14 @@ z-index: 999;
     color: rgb(255, 255, 255);
 }
 
+
+.nav-links-icones li a.snacks:hover img {
+    content: url('../images2/resized/snack40x40hoverpng.png');
+}
+
+.nav-links-icones li a.order:hover img {
+    content: url('../images2/resized/order40x40hoverpng.png');
+}
 
 
 .nav-links a:hover, .nav-links-footer a:hover {
@@ -258,44 +242,45 @@ z-index: 999;
 }
 
 
+
 /* Imagens padrão */
 .social-media .face {
-    background-image: url('../images/face40x40.png');
+    background-image: url('../images2/resized/face40x40.png');
 }
 
 .social-media .insta {
-    background-image: url('../images/insta40x40.png');
+    background-image: url('../images2/resized/insta40x40.png');
 }
 
 .social-media .twitter {
-    background-image: url('../images/twitter40x40.png');
+    background-image: url('../images2/resized/twitter40x40.png');
 }
 .social-media .talktous {
-    background-image: url('../images/talk40x40.png');
+    background-image: url('../images2/resized/talk40x40.png');
 }
 
 .social-media .email {
-    background-image: url('../images/email38x27png.png');
+    background-image: url('../images2/resized/email38x27png.png');
 }
 
 /* Efeito hover para alterar a imagem */
 .social-media .face:hover {
-    background-image: url('../images/face40x40hover.png');
+    background-image: url('../images2/resized/face40x40hover.png');
 }
 
 .social-media .insta:hover {
-    background-image: url('../images/insta40x40hover.png');
+    background-image: url('../images2/resized/insta40x40hover.png');
 }
 
 .social-media .twitter:hover {
-    background-image: url('../images/twitter40x40hover.png');
+    background-image: url('../images2/resized/twitter40x40hover.png');
 }
 .social-media .talktous:hover {
-    background-image: url('../images/talk40x40hover.png');
+    background-image: url('../images2/resized/talk40x40hover.png');
 }
 
 .social-media .email:hover {
-    background-image: url('../images/email38x28e32png.png');
+    background-image: url('../images2/resized/email38x28e32png.png');
 }
 
 
@@ -405,7 +390,7 @@ footer {
 
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: contain;
     object-position: center;
    
@@ -451,114 +436,30 @@ footer {
 
 /*////////PAGE FORM*/
 /*formulario//////////////////////////////////////////*/
+
 body.form{
 
     background: linear-gradient(#ff2d02, #ffb100); /* Degradê do fundo */
-    
-    
 }
-
-body.success{
-    background: linear-gradient(#ff2d02, #ffb100);
-    
-}
-
-/*pop up thanks form style*/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+.contact-container {
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
+    overflow: hidden;
+    padding: 20px; /* Adiciona espaçamento interno */
+    z-index: 3;
+    margin-top: -350px;
+    
+}
+
+.imgbkg{
+
+    opacity: 0.2;
     z-index: 2;
 }
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 600px;
-    height: 600px;
-    max-width: 100%;
-    padding: 30px;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    display: none;
-    z-index: 3;
-}
-
-.leftside-popup{
-
-    background-color: #ff2d02;
-    border-radius: 20px;
-    
-}
-
-.leftside-popup img{
-
-    max-width: 100%;
-    width: 300px;
-    height: auto;
-    padding: 20px;
-    
-    
-}
-
-.popup .leftside-popup h2{
-
-    font-size: 3rem;
-    padding: 10px;
-    
-}
-
-
-.rigthside-popup{
-
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.rigthside-popup{
-    
-    color: #000000;
-    background-color: white;
-    border-radius: 20px;
-}
-.popup .rigthside-popup h2{
-    
-    color: #000000;
-    font-size: 2rem;
-    font-weight: bold;
-    
-}
-
-.popup .rigthside-popup p{
-    color: #000000;
-    font-size: 1rem;
-    font-weight: bold;
-    
-}
-
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: white;
-}
-/* Estilos para o pop-up */
-
-
-/*///////*/
 
 .contact-info {
     flex: 1;
@@ -569,7 +470,7 @@ body.success{
 .contact-info h1 {
     font-size: 24px;
     color: white;
-    margin-top: 1px; /* Adiciona margem superior */
+    margin-top: 20px; /* Adiciona margem superior */
 }
 .contact-info p {
     margin-top: 10px;
@@ -589,6 +490,14 @@ body.success{
     gap: 5px;
     padding: 10px;
 
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
 }
 
 .contact-form {
@@ -632,209 +541,24 @@ body.success{
     background-color: #b41c01;
 }
 
+iframe {
+    padding: 15px;             /* Espaçamento interno entre o iframe e a borda */
+    background-color: none;    /* Cor de fundo para simular a borda */
+    box-shadow: 0 0 0 2px white; /* Borda branca */
+    border: none;              /* Remove qualquer borda padrão do iframe */
+    display: block;
+}
 span {
     font-size: 13px;
     color: white;
-    text-align: center;
+    text-align: left;
 }
+
 /*////////////////////////////////////////////////////*/
-/*thanks page*/
 
-.thanks-container{
-
-    /*border-radius: 10px;*/
-    display: flex;
-    gap: 10px;
-    
-    max-width: 600px;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px; /* Adiciona espaçamento interno */
-    z-index: 3;
-   
-    background-repeat: no-repeat;
-   background-size: cover;
-    background-position:center;
-    height: 70vh;  
-   
-}
-/*beverages pages styles*/
-
-/*styles test*/
-.beverages-title{
-
-    font-size: 3rem;
-    padding: 20px;
-    color: white;
-
-}
-
-/* Container dos cartões */
-/* Container dos cartões */
-#cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px; /* Espaçamento entre os cartões */
-    padding: 20px; /* Adiciona um espaçamento interno ao container */
-    max-width: 1200px;
-    overflow-x: hidden;
-    
-}
-
-/* Estilos dos cartões individuais */
-.card {
-    background-color:  rgb(255, 255, 255);
-    border-radius: 12px;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para o cartão */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px; /* Espaçamento interno do cartão */
-    box-sizing: border-box; /* Inclui padding e border nas dimensões do cartão */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-
-/* Imagem dentro do cartão */
-.card img {
-    max-width: 100%;
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 8px;
-}
-
-/* Título do produto */
-.card h2 {
-    font-size: 1.3rem;
-    color: #333;
-    margin: 10px 0;
-    text-align: center;
-}
-
-/* Texto de descrição e preço */
-.card p {
-    color: #000;
-    font-size: 1rem;
-    margin: 5px 0;
-    text-align: center;
-}
-
-/* Botões de tamanho */
-.size-buttons {
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.size-button {
-    background-color: #ff2d02;
-    padding: 5px 12px; /* Ajusta o padding para se adaptar melhor ao conteúdo */
-    color: white;
-    border: none;
-    border-radius: 12px; /* Arredondamento maior para efeito de pílula */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-    font-size: 0.8rem;
-    min-width: 36px; /* Define uma largura mínima para garantir uma boa aparência */
-    min-height: 36px; /* Define uma altura mínima */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Efeito de hover */
-.size-button:hover {
-    background-color: #000000;
-}
-
-.price-display {
-    font-weight: bold;
-    font-size: 0.5rem;
-    color: #333;
-    margin-top: 8px;
-}
-
-.product-card .cart-icon {
-    width: 35px; /* Ajuste o tamanho do ícone */
-    height: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: transform 0.2s;
-}
-
-.cart-icon:hover {
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
-}
-
-.cart-message {
-    font-size: 0.9rem; /* Tamanho da fonte */
-    color: #000702; /* Cor verde para indicar sucesso */
-    margin-top: 8px; /* Espaçamento acima da mensagem */
-    display: none; /* Esconde a mensagem inicialmente */
-}
-
-/* Exibe a mensagem quando o carrinho for clicado */
-.cart-message.show {
-    display: block; /* Exibe a mensagem */
-}
-
-/*snacks page styles*/
-
-.snacks-title{
-
-    font-size: 3rem;
-    padding: 20px;
-    color: white;
-
-}
-/*////consuming api weather/////////**/
-
-
-/* Weather widget */
-
-.weather-info{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    margin-left: 30px;
-} 
-
-.weather-info span, p{
-    
-    color: white;
-} 
-
-
-
-/*/////////////*/
 /* Responsividade */
 @media (max-width: 768px) {
-    .weather-info{
     
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-        margin-left: 30px;
-    } 
-    
-    .weather-info span, p{
-        
-        color: white;
-    } 
     .nav-links {
         display: none; /* Esconde os links de navegação no modo responsivo */
         flex-direction: column;
@@ -868,11 +592,10 @@ span {
         display: none; /* Esconde o menu no mobile */
         flex-direction: column;
         position: absolute;
-        gap: 10px;
         top: 90px;
         left: 0;
         width: 100%;
-        background: linear-gradient(#ff2d02, #f51d00); /* Degradê do fundo */
+        background-color: rgba(0, 0, 0, .5);
         padding: 20px;
         z-index: 50;
     }
@@ -909,7 +632,6 @@ span {
     }
     footer .nav-links-footer {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         list-style: none;
         padding: 0;
@@ -927,7 +649,7 @@ span {
     /*slider styles responsivo*/
     .carrocel img{
 
-        margin-top: 0;
+        margin-top: -50px;
     }
     
     .carrocel-button{
@@ -937,94 +659,14 @@ span {
     }
     .highlight {
         
-      
+       
         font-size: 2rem; /* Aumenta o tamanho da fonte */
         
     }
    
     /*/////////*/
-
-    /*//form styles//*/
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-      
-    }
-
-    .contact-container {
-        border-radius: 10px;
-        display: flex;
-        gap: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        max-width: 1200px;
-        width: 100%;
-        overflow: hidden;
-        padding: 20px; /* Adiciona espaçamento interno */
-        z-index: 3;
-        height: auto;
-        
-        
-    }
-    
-    .contact-info h1 {
-        text-align: center;
-        font-size: 20px;
-        
-    }
-
-    .contact-info p {
-        display: flex;
-        font-size: 12px;
-    }
-
-    .contact-info .info-item {
-        display: flex; /* Esconde as info-items */
-        align-items: center;
-    }
-
-    .contact-info .info-item img {
-        display: inline-block; /* Esconde as imagens dos info-items */
-    }
-
-    .contact-form {
-        padding: 0 auto;
-    }
-
-    .contact-form h2 {
-        display: flex; /* Esconde o título do formulário */
-        justify-content: center;
-    }
-
-  
-    span {
-        display: flex; /* Esconde o span */
-    }
-    /*////////*/
-   
-
-
-    /*cards style responsive*/
-
-    #cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px; /* Espaçamento entre os cartões */
-        padding: 20px; /* Adiciona um espaçamento interno ao container */
-        max-width: 1200px;
-        overflow-x: hidden;
-        
-    }
-
-    .card{
-
-        border-radius: 0;
-    }
-
-   
-
    
 }
-
 
 @media (max-width: 480px) {
     /* Para dispositivos ainda menores */
@@ -1042,7 +684,7 @@ span {
     footer {
         display: grid;
         grid-template-columns: 1fr;
-        
+
     }
     footer .nav-links-footer {
         display: flex;
@@ -1057,4 +699,6 @@ span {
         flex-direction: column;
        
     }
+    
+    /*////////*/
 }

@@ -1,0 +1,243 @@
+construção da página:
+
+A estrutura da construção dessa página deve obedecer aos estilos requisitados
+
+Primeira parte do código deve ser este:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estevas Garden Snack Bar</title>
+    
+    <!-- Descrição e Autor -->
+    <meta name="description" content="Welcome to Estevas Garden Snack Bar - Immerse yourself in a unique experience with Brazilian cuisine and its flavors, as well as drinks and enjoy a welcoming and relaxing atmosphere.">
+    <meta name="author" content="Sergio Vieira Pontes">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./images2/favicon-2_2_11zon.webp" type="image/png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/styles2.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles/styles2.css"></noscript>
+    
+    <!-- Fonte Google Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Meta Tags para Redes Sociais (Open Graph) -->
+    <meta property="og:site_name" content="Estevas Garden Snack Bar">
+    <meta property="og:title" content="Estevas Garden Snack Bar - Brazilian cuisine and its flavors">
+    <meta property="og:description" content="Immerse yourself in the unique flavors and cozy atmosphere of Estevas Garden Snack Bar. Perfect for relaxing and enjoying!">
+    <!--<meta property="og:image" content="https://svpontes.github.io/wdd231/project/images/logo-estevas-completo_11zon">-->
+    <meta property="og:url" content="https://svpontes.github.io/wdd231/project/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estevas Garden Snack Bar">
+    <meta name="twitter:description" content="Immerse yourself in the unique flavors and cozy atmosphere of Estevas Garden Snack Bar. Perfect for relaxing and enjoying!">
+    <!--<meta name="twitter:image" content="https://svpontes.github.io/wdd231/project/images/logo-estevas-completo_11zon">-->
+</head>
+
+conteúdo do BODY:
+
+HEADER:
+	<!--Menu de navegação-->
+	
+	Tag: <nav> nome da classe: "menu". 
+		
+		CSS para a classe .menu: 
+			.menu { justify-content: space-around;}
+
+		dentro da classe <nav class:"menu"> deve estar presente as seguintes <div>:
+		
+            		<div class="logo"> <!-- Logo image posicionado a esquerda da tela  -->
+                		<img src="./images2/logoNameEstevasGardenSombra_20_11zon.webp" alt="Logo Estevas Garden" class="logo-name">
+            		</div>
+
+				CSS para a classe .logo .logo-name:
+					.logo .logo-name { display: none;} /*no modo responsivo deve estar com display: none*/
+							 
+
+ 			         	
+			<div class="logo-modo-responsivo">
+                		<img src="./images2/logo-estevas-completo_11zon.webp" alt="Logo Estevas Garden" class="logocomplete">
+            		</div>
+				
+				CSS para a classe .logo-modo-responsivo .logocomplete:
+					.logo-modo-responsivo .logocomplete {width: 200px}
+
+			<ul class="nav-links">
+
+                		<li><a href="./index.html">Home</a></li>
+		                <li><a href="#snacks">Snacks</a></li>
+                		<li><a href="#beverages">Beverages</a></li>
+		                <li><a href="#sweets">Sweets</a></li>
+                		<li><a href="#order">Order Now</a></li>
+	               </ul>
+				
+				CSS para a classe .nav-links:
+					.nav-links { display: none;} /*no modo responsivo deve estar com display: none*/
+				
+				/*links dos itens dos menus nav-links*/
+
+				.nav-links{list-style: none; /*remove os bullets dos links index, snack etc...*/
+    						display: flex;}
+
+			.nav-links a{
+    
+    			color: white;
+   			 font-weight: 200;
+    			font-size: 12px;
+			}
+
+			.nav-links li{
+
+    			margin: 0 15px; /*espaço entre os itens do links home, snacks etc...*/
+			}
+
+
+			.nav-links a:hover {
+    			color: rgb(252, 227, 5);
+    			font-weight: 310;
+			}
+			
+			ul li a{ text-decoration: none;}
+
+
+
+	 <!-- Ícones de redes sociais à direita da tela-->
+            
+            <ul class="social-media">
+                <li class="face">
+                    <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page"></a>
+                </li>
+                <li class="insta">
+                    <a href="https://instagram.com" target="_blank" aria-label="Visit our Instagram profile"></a>
+                </li>
+                <li class="twitter"> <!-- Corrigido 'twiter' -->
+                    <a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter profile"></a>
+                </li>
+                <li class="talktous">
+                    <a href="#" target="_blank" aria-label="Talk to us via form"></a>
+                </li>
+                <li class="email">
+                    <a href="mailto:geral@estevasgarden.com" aria-label="Send us an email"></a>
+                </li>
+            </ul>
+
+</nav><!--fechamento da tag nav-->
+
+		importante:
+	
+	 	1 - Criar uma estrutura para um menu responsivo com o hamburguer menu exibido a esquerda e com a imagem da classe .logo-name exibido ao lado do hamburguer menu
+		2 - O  menu hamburger deve ter o seguinte comportamento:
+			2.a - Ao receber um clique deve exibir em coluna os itens da classe class="nav-links"
+			2.b - Ao receber um clique o menu hamburger deve ser substituído por um "X" indicando fechamento do menu
+			2.c - O "X" ao receber um clique deve fechar o menu ou seja deixar de exibir os itens da classe class="nav-links" e passar a exibir o menu hamburger
+
+		3- O menu hamburger deve ter um CSS style display: none; no modo desktop e ser exibido somente em dispositivos mobile
+
+		4 - A responsividade para a pagina deve ser capaz de atender as medidas básicas descritas a seguir que estão em px:
+
+
+		360 x 640
+
+		375 x 667
+
+		360 x 720
+
+		375 x 812
+
+		411 x 731
+
+		768 x 1024
+
+		1366 x 768
+		
+		1920 x 1080, portanto providenciar um @media(max-width: "medida em px")
+
+		
+
+MAIN:
+
+	O main deve ficar vazio pois vou enviar o conteúdo posteriormente.
+
+FOOTER:
+
+	Quero o footer divido em três blocos ou divisões. Pode usar grid ou flex box para mantê-lo adequado a responsividade.
+
+	<div class:"logo-area">
+		<img src="./images2/logo-estevas-completo_11zon.webp" alt="Logo Estevas Garden">
+	</div> 
+		CSS: Deve estar centralizada vertical e horizontalmente
+	<div class:"icons-links-area">
+
+	
+			<div>			
+			<ul class="nav-links-icones">
+                
+                		<li><a href="#" class="home"><img src="../images2/resized/home40x40png.png" alt="link return home page"></a></li>
+                		<li><a href="#" class="bubbletea"><img src="../images2/resized/bubbletea40x40png.png" alt="link bubbletea page"></a></li>
+                		<li><a href="#" class="cakes"><img src="../images2/resized/cake40x40png.png" alt="link cakes page"></a></li>
+               	 		<li><a href="#" class="snacks"><img src="../images2/resized/snack40x40png.png" alt="link snacks page"></a></li>
+                		<li><a href="#" class="order"><img src="../images2/resized/order40x40png.png" alt="link order page"></a></li>
+               		</ul>
+			</div>
+
+			<div>
+			<ul class="social-media">
+	                	<li class="face">
+                    			<a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page"></a>
+                		</li>
+                		<li class="insta">
+                    			<a href="https://instagram.com" target="_blank" aria-label="Visit our Instagram profile"></a>
+                		</li>
+                		<li class="twitter"> <!-- Corrigido 'twiter' -->
+                    			<a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter profile"></a>
+                		</li>
+                		<li class="talktous">
+                    			<a href="#" target="_blank" aria-label="Talk to us via form"></a>
+                		</li>
+                		<li class="email">
+                    			<a href="mailto:geral@estevasgarden.com" aria-label="Send us an email"></a>
+                		</li>
+            		</ul>
+			</div>
+
+			<div>
+           
+            		<ul class="nav-links">
+                		<li><a href="./index.html">Home</a></li>
+                		<li><a href="#snacks">Snacks</a></li>
+                		<li><a href="#beverages">Beverages</a></li>
+                		<li><a href="#sweets">Sweets</a></li>
+                		<li><a href="#order">Order Now</a></li>
+            		</ul>
+			</div>
+
+	</div>
+
+	<div class: "author-rights">
+		<div>
+			<p>
+            			&copy; <span id="currentyear"></span> Sergio Vieira Pontes
+            			<img src="./images/bandeira.jpg" alt="bandeira de Portugal"> Portugal
+        		</p>
+
+			</div>
+	</div>
+	
+	
+	
+
+
+
+
+
+

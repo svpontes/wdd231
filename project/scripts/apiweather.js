@@ -1,9 +1,9 @@
 // Seleciona os elementos HTML para exibir os dados do clima
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('#weather-desc');
-const humidity = document.querySelector('#humidity');
-const windSpeed = document.querySelector('#wind-speed');
+
+
+
 
 // Seleciona os elementos do footer
 const footerCurrentTemp = document.querySelector('#footer-current-temp');

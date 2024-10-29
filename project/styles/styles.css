@@ -822,6 +822,11 @@ span {
     transition: transform 0.2s;
 }
 
+section.product-card{
+
+
+}
+
 .cart-icon:hover {
     transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
@@ -1089,7 +1094,12 @@ span {
         display: flex; /* Esconde o título do formulário */
         justify-content: center;
     }
+    section.product-card{
 
+        border: 1px solid rgba(184, 184, 184, 0.4);
+        border-radius: 12px;
+        
+    }
   
     span {
         display: flex; /* Esconde o span */

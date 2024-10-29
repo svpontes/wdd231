@@ -1,13 +1,11 @@
-document.getElementById("form").onsubmit = function(event) {
-    event.preventDefault(); // Evita o envio do formulário
-    document.getElementById("overlay").style.display = "block"; // Exibe o fundo escurecido
-    document.getElementById("popup").style.display = "block";   // Exibe o pop-up
-    
-    // Limpa o formulário
-    document.getElementById("form").reset();
-};
+document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+});
 
-document.querySelector(".close-btn").onclick = function() {
-    document.getElementById("overlay").style.display = "none"; // Esconde o fundo escurecido
-    document.getElementById("popup").style.display = "none";   // Esconde o pop-up
-};
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("form").reset();
+}

@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
    
 }
 main{
@@ -298,6 +299,9 @@ z-index: 999;
     background-image: url('../images/email38x28e32png.png');
 }
 
+/*images background*/
+
+
 
 /*//////////////////////*/
 /*footer styles*/
@@ -411,6 +415,45 @@ footer {
    
 
 }
+#bkg2{
+
+    display: block;
+    max-width: 100%;
+    width: 1200px;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    
+        
+}
+
+#bkg3{
+
+    display: block;
+    width: 800px;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    
+        
+}
+#soft-drinks{
+
+    display: block;
+    max-width: 100%;
+    width: 1200px;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin-top: 10%;
+        
+}
+
 
 .carrocel > ul{
 
@@ -464,7 +507,9 @@ body.success{
 }
 
 /*pop up thanks form style*/
-
+#popup, #overlay {
+    display: none; /* Oculta inicialmente */
+}
 .overlay {
     position: fixed;
     top: 0;
@@ -573,7 +618,7 @@ body.success{
 }
 .contact-info p {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 1rem;
     color: white;
 }
 .contact-info .info-item img {
@@ -901,6 +946,19 @@ span {
     }
     /*/////////////*/
 
+    #welcome-title{ 
+
+        color: white;
+        font-size: 2rem;
+        z-index: 9999;
+    }
+    
+    .hero-button p{
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 999;
+    }
+    
     /*footer responsivo*/
     footer {
         display: grid;
@@ -921,7 +979,35 @@ span {
         justify-content: center;
     }
    
-       
+    /**/
+    #bkg2{
+
+        display: block;
+        width: 500px;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        /*transform: translate(-50%, -50%);*/
+        object-fit: cover;
+            
+    }
+    #soft-drinks{
+
+        display: block;
+        width: 500px;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        margin-top: 10%;
+            
+    }
+  
+
+
     /*////*/
     
     /*slider styles responsivo*/

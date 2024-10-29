@@ -1,5 +1,5 @@
 [
-     { "icon":"/images/coca383x384.webp",
+     { "icon":"./images/coca383x384.webp",
        "productName": "Coca-Cola",
        "description": "Soda 200cal.",
        "priceS": 1.29,
@@ -15,7 +15,7 @@
          }
        }
      },
-     {"icon":"/images/sprite_11zon.webp",
+     {"icon":"./images/sprite_11zon.webp",
        "productName": "Sprite",
        "description": "Soda 190cal.",
        "priceS": 1.29,
@@ -31,7 +31,7 @@
          }
        }
      },
-     {"icon":"/images/drpaper_11zon.webp",
+     {"icon":"./images/drpaper_11zon.webp",
        "productName": "Dr Pepper",
        "description": "Soda 190cal.",
        "priceS": 1.29,
@@ -47,7 +47,7 @@
          }
        }
      },
-     {"icon":"/images/fanta_11zon.webp",
+     {"icon":"./images/fanta_11zon.webp",
        "productName": "Fanta Orange",
        "description": "Soda 210cal.",
        "priceS": 1.29,
@@ -63,7 +63,7 @@
          }
        }
      },
-     {"icon":"/images/limonade _11zon.webp",
+     {"icon":"./images/limonade _11zon.webp",
        "productName": "Lemonade",
        "description": "Lemon Juice 120cal.",
        "priceS": 1.29,
@@ -79,7 +79,7 @@
          }
        }
      },
-     {"icon":"/images/bubbleatea.webp",
+     {"icon":"./images/bubbleatea.webp",
        "productName": "BubbleTea",
        "description": "Bubble Tea 220cal.",
        "priceS": 1.69,
@@ -95,7 +95,7 @@
          }
        }
      },
-     {"icon":"/images/smoothie.webp",
+     {"icon":"./images/smoothie.webp",
      "productName": "Smoothie",
      "description": "Smoothies 220cal.",
      "priceS": 2.69,
@@ -111,7 +111,7 @@
        }
      }
      },
-     {"icon":"/images/watter.webp",
+     {"icon":"./images/watter.webp",
      "productName": "Watter",
      "description": "Watter 0cal.",
      "priceS": 0.99,

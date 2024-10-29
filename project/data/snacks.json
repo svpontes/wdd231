@@ -1,5 +1,5 @@
 [
-    { "icon":"/images/coxinha.webp",
+    { "icon":"./images/coxinha.webp",
       "productName": "Coxinha",
       "description": "Chicken Croquet",
       "priceS": 1.29,
@@ -15,7 +15,7 @@
         }
       }
     },
-    { "icon":"/images/kibes.webp",
+    { "icon":"./images/kibes.webp",
       "productName": "Kibes",
       "description": "Arabic Food",
       "priceS": 1.29,
@@ -31,7 +31,7 @@
         }
       }
     },
-    { "icon":"/images/sticks.webp",
+    { "icon":"./images/sticks.webp",
       "productName": "Breaded Mozzarela Sticks",
       "description": "Breaded Mozzarela Sticks",
       "priceS": 1.29,
@@ -47,7 +47,7 @@
         }
       }
     },
-    { "icon":"/images/empada.webp",
+    { "icon":"./images/empada.webp",
       "productName": "Small Chicken pie",
       "description": "Small Chicken pie",
       "priceS": 1.29,
@@ -63,7 +63,7 @@
         }
       }
     },
-    { "icon":"/images/paoqueijo.webp",
+    { "icon":"./images/paoqueijo.webp",
       "productName": "Bread Cheese",
       "description": "Bead Cheese",
       "priceS": 1.29,
@@ -79,7 +79,7 @@
         }
       }
     },
-    { "icon":"/images/pastel.webp",
+    { "icon":"./images/pastel.webp",
       "productName": "Coxinha",
       "description": "Chicken Coxinha",
       "priceS": 1.29,

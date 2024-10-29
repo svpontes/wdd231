@@ -1,5 +1,5 @@
 [
-    { "icon":"/images/macarrons.jpg",
+    { "icon":"./images/macarrons.jpg",
       "productName": "Macaron",
       "description": "Macaron mix flavors",
       "priceS": 1.29,
@@ -15,7 +15,7 @@
         }
       }
     },
-    {"icon":"/images/churros.webp",
+    {"icon":"./images/churros.webp",
       "productName": "Churros",
       "description": "Churros milk cream",
       "priceS": 1.29,
@@ -31,7 +31,7 @@
         }
       }
     },
-    {"icon":"/images/brigadeiro1.webp",
+    {"icon":"./images/brigadeiro1.webp",
       "productName": "Brigadeiro",
       "description": "Chocolate milk",
       "priceS": 1.29,
@@ -47,7 +47,7 @@
         }
       }
     },
-    {"icon":"/images/paodemel.jpg",
+    {"icon":"./images/paodemel.jpg",
       "productName": "Honey Bread",
       "description": "Bread honey made",
       "priceS": 1.29,
@@ -63,7 +63,7 @@
         }
       }
     },
-    {"icon":"/images/quindim.jpg",
+    {"icon":"./images/quindim.jpg",
       "productName": "Eggs Candy",
       "description": "Quindin Eggs Coconut",
       "priceS": 1.29,
@@ -79,7 +79,7 @@
         }
       }
     },
-    {"icon":"/images/cajuzinho.jpg",
+    {"icon":"./images/cajuzinho.jpg",
       "productName": "Cajuzinho Candy",
       "description": "Cajuzinho peanuts Candy",
       "priceS": 1.69,

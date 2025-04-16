@@ -48,7 +48,7 @@ function capitalizeFirstLetter(name) {
 }
 
 function saveFormData() {
-  const firstName = document.getElementById('formattedName')?.value || '';
+  const firstName = document.getElementById('first-name')?.value || '';
   const lastName = document.getElementById('last-name')?.value || '';
   const orgTitle = document.getElementById('org-title')?.value || '';
   const email = document.getElementById('email')?.value || '';
